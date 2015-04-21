@@ -1,0 +1,379 @@
+@media (max-width: 550px) {
+
+
+/* gio + styles START  */
+
+
+.page-id-58 .filter-controls h3 {
+    margin-left: auto!important;
+    margin-right: auto!important;
+    width: 270px!important;
+}
+
+.page-id-58 .post-filter {
+    width: 100% !important;
+}
+
+.page-id-58 .post-filter .grid-info-tags {
+   float: none !important;
+}
+
+.page-id-58 .calendar-container {
+   
+    margin-left: auto!important;
+    margin-right: auto!important;
+    float: none !important;
+}
+
+
+header .mmenu {
+margin: 0px!important;
+    margin-top: 38px!important;
+}
+
+/* 
+header  */
+header .identity {
+    width: 185px!important;
+}
+
+/* 
+header  */
+header .identity .logo a {
+   width: 185px!important;
+}
+ 
+
+/* 
+home teasers line height  */
+
+.homeTeasers h6 {
+line-height: 42px!important;
+}
+
+.homeTeasers p {
+line-height: 32px!important;
+}
+
+
+
+/* 
+#Leadership name tittle and confirmed from blue box */
+.page-id-54 .mobile-grid .grid-alt ul {
+   display:none;
+}
+
+
+
+
+/* 
+removing grey lines on upcoming events */
+
+.teaser-events .grid-info {
+    border-bottom: 0px!important;
+}
+
+/* 
+Boards margin under sections */
+.page-id-52 .col-md-5{
+    margin-bottom: 40px!important;
+}
+
+
+
+
+/* 
+Home labels */
+.home .content a {
+font-size: 12px!important;
+}
+
+/* 
+about timeline */
+.timeline-page .col-md-4 {
+padding: 20px!important;
+}
+
+
+.news-blog .grid-info {
+    padding: 0px 20px 0 0;
+}
+
+/* pages with filters */
+.post-filter {
+margin-left: 5px!important;
+}
+
+
+
+/* pages with filters */
+.filter-controls h3 {
+margin-left: 5px!important;
+}
+
+
+/* pages with filters */
+.filter-controls .go-button {
+margin-left: 5px!important;
+}
+
+
+/* get around // targeting specifics */
+.page-id-38 .header {
+padding: 20px!important;
+}
+
+/* get around // targeting specifics */
+.page-id-38 #main {
+    margin: 0px!important;
+}
+
+/* get around // targeting specifics */
+.page-id-38 h4 {
+    margin: 0px!important;
+   
+}
+
+
+/* board event teaser */
+.events {
+padding: 20px!important;
+padding-left:0!important;
+
+}
+
+/* board alerts teaser */
+.historic {
+padding: 20px!important;
+}
+
+/* board row */
+.board-committees {
+padding: 20px!important;
+}
+
+/* col padding */
+.col{ padding: 20px!important;}
+
+/* about board column */
+.col-md-5, .col-md-4 {
+padding: 0px!important;
+}
+
+
+
+
+/* header */
+
+header .identity { 
+float: left; 
+width: 100%; 
+padding: 20px 0; 
+ 
+}
+
+
+
+
+
+/* download forward friends btns */
+.accordion .download-link-area {
+    padding:0px!important;
+}
+
+/* checkboxes */
+.accordion-child .downloadform {
+     padding:0px!important;
+}
+
+.accordion.two {
+    margin-left: 0px!important;
+}
+
+.teaser-events .grid-info:last-of-type {
+display:none;
+}
+
+h6 {
+    margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.grid-info-list { 
+    padding: 20px!important;
+}
+
+/* logo footer */
+.symbol {
+    width: 90%!important;
+}
+
+
+.col-md-8 {
+padding: 0px!important;
+}
+
+.content-wrapper {
+  
+padding: 0px!important;
+}
+
+/* breadcrumb padding */
+.breadcrumb {
+ padding-left: 20px!important;
+    padding-right: 20px!important;
+}
+
+
+
+
+/* home-teasers padding */
+#main .content .teaser {
+padding: 20px!important;
+}
+
+/* reset home events teaser left margin */
+#main .content .teaser-events {
+padding-left:0px!important;
+
+}
+
+/* teasers buttons */
+#main .content .teaser .btn-bpca {
+    bottom: 20px!important;
+    right: 20px!important;
+}
+
+
+
+
+
+/* home-teasers */
+.content.map {
+    height: 350px;
+}
+
+
+/* home-teasers */
+.homeTeasers .row {
+width: 100%!important;
+float: left!important;
+}
+/* home-teasers */
+.homeTeasers .col-md-4 {
+    width:100%!important;
+}
+
+/* home-teasers */
+.teaserMap {
+    height: 350px!important;
+float: left!important;
+width: 100%!important;
+    }
+
+
+.teaserMap img {
+display: none;
+}
+
+.teaserMap{
+background: url("http://www.revolverbranding.com/ernesto/wp-content/uploads/2015/03/get_directions.png");
+background-size: auto 100%;
+}
+
+.exploreTeaser {
+width: 100%!important;
+height: 350px!important;
+float: left!important;
+background: url("http://www.revolverbranding.com/ernesto/wp-content/uploads/2015/03/leed_buildings_800px.jpg");
+
+
+}
+
+.exploreTeaser .content.image a {
+top: 320px;
+height: 32px;
+}
+
+.exploreTeaser .content.image img {
+    display: none;
+}
+    
+    
+/* home-teasers */
+.teaserMap .col-md-4 {
+    padding-right: 0px!important;
+padding-left: 0px!important;
+    }
+    
+/* home-teasers */
+.homeTeasers .col-md-8 {
+     padding-right: 0px!important;
+padding-left: 0px!important;
+
+}
+ 
+ /* gio + styles END  */
+
+
+	.filter-header img.img-responsive {		
+		height: 170px !important;
+	}
+
+
+	header #menu { display: none; }
+
+	header #mobile-menu { display: block; }
+	
+	a.mmenu { display: block; }
+
+	header .mmenu { background: url("images/menu-24-24.png") no-repeat; width: 24px; height: 24px; float: right; margin: 20px; margin-top: -50px; }
+
+	header .identity .logo a {
+	    font-size: 18px;
+	}
+
+	h2.who-we-are-overview,
+	img.bpca-diagrams {
+		display: none;	
+	}
+	
+	#main { padding: 0; margin:40px 0; }
+
+	#main .content.header { height: 350px; overflow: hidden; position: relative; }
+
+	.row.table { display: block; }
+	.row.table .col { display: block; }
+
+	#main .row.two-column .col-md-8 { min-height: 350px; overflow: hidden; }
+	#main .row.two-column .col-md-8 img { width: auto; height: 100%; }
+
+
+
+
+	.row .col { width: 100%; }
+
+
+
+	.row .col img { left: 0; }
+
+	.row.table .col .content { height: 350px; }
+
+	.grid-mobile { display: block; }
+	.grid-desktop, .grid-tablet { display: none; }
+
+	.grid-info {
+		border-bottom: 1px solid #ebedee;
+	}
+
+	.leadership-list.full-list li { width: 100%; height: 350px; }
+
+	.museum-list.full-list li { width: 100%; height: 350px; }
+
+	.museum-content .museum-container.row:nth-child(1) .col:first-child { height: 350px; overflow: hidden; position: relative; width: 100%; }
+	.museum-content .museum-container.row:nth-child(1) .col:first-child img { width: auto; height: 100%; position: absolute; top: 0; left: 0; }
+
+	.museum-container.row:before { display: none; }
+
+	.museum-content .museum-container.row .col { margin: 0 0 0 0; }
+}

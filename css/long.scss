@@ -1,0 +1,37 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+$red: #790000;
+
+$currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ancestor, &.current-menu-parent';
+
+@include media($smallDesktop) {
+  .page-home #main { margin: -20px 0 !important;}
+}
+
+@include media($tablet) {
+  .places-pn .left-col, .news-events .left-col { padding-right: 0 !important;}
+  .about-leadership {
+    .grid-image { opacity: 0;}
+    .active {
+      .grid-image { opacity: 1;}
+    }
+  }
+}
+
+@include media($smallTablet) {
+  .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important;}
+}
+
+@include media($mobile) {
+  .page-id-38 #main .header { padding: 0 !important;
+    .content { padding: 20px !important;}
+  }
+}
+
+.page-id-38 #main .header {
+  .content {
+    h4 { font-size: 24px !important; font-weight: 500 !important; font-family: "proxima_nova_rgbold" !important;}
+  }
+}

@@ -1,0 +1,272 @@
+/* CHECKBOX STYLING */
+.downloadform input[type="checkbox"] {
+    opacity: 0;
+    -webkit-appearance: checkbox;
+    cursor: pointer;
+    margin: 0px;
+
+}
+
+.downloadform ul {
+    margin-left: 0px;
+    padding-left: 0px; 
+}
+
+.downloadform input[type=checkbox]:checked + .checkcheck
+{
+  background: #000;
+  border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  height: 4px;
+  width: 4px;
+  /*display: inline-block;*/
+  position: absolute;
+  padding: 0 0 0 0px;
+  margin: -8px 0px 5px 4px;
+}
+
+.downloadform ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.downloadform label {
+    cursor: pointer;  
+}
+
+.checker,
+.sub-checker {
+    clear: both;
+    height: 14px;
+    width: 14px;
+    background: none repeat scroll 0% 0% transparent;
+    border: 1px solid #111;
+    margin: 2px 0px 0px 0px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+
+.checker + label {
+  padding-left: 40px;
+  position: relative;
+  margin-left: -30px;
+}
+
+
+.download-link-area {
+    cursor: pointer;
+}
+
+.download-link-area.unclickable {
+    cursor: not-allowed;
+    /*opacity: 0.5;*/
+}
+
+
+
+.download-items .fa, .forward-to-friends .fa {
+  margin-right: 2px;
+  width: 20px;
+}
+
+
+/* MENU CSS */
+header #menu .menu li ul.show {
+  display: block;
+  position: absolute;
+  margin: 0 0 0 0;
+  padding: 10px 0 0 0;
+  list-style: none;
+}
+
+header #menu .menu li:hover ul{
+  display: none !important;
+}
+
+header #menu .menu li:hover ul.show{
+  display: block !important;
+}
+
+header #menu .menu li:hover+a {
+    border: none;
+}
+
+.mobile-grid .grid {
+  height: 170px;
+}
+
+.mobile-grid .grid .grid-content .grid-info ul li img {
+    height: 80px;
+    margin-top: 0px;
+}
+
+.mobile-grid .grid .grid-content .grid-image img {
+    display: none;
+}
+
+.about-leadership .mobile-grid .grid.active .grid-info-list, .about-leadership .grid:hover .grid-info-list {
+  display: inherit; 
+}
+
+.building-loading {
+  text-align: center;
+  width:100%;
+  background-color: #fff;
+  padding: 50px 30px 50px;
+  font-size: 20px;
+}
+
+.building-loading .fa {
+  margin-right: 10px;
+}
+
+.grid-aside-content ul li.snippet {
+  margin-bottom: 25px;
+}
+
+/*
+.grid.active .grid-info {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.grid.imgactive .grid-info {
+  background-color: rgba(255, 255, 255, 0);
+}
+*/
+
+.accordion h4 {
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+}
+
+.accordion h4:hover {
+  border-bottom: 2px solid #fcd036;
+}
+
+.accordion-child {
+  display: none;
+  
+}
+
+.acctoggle {
+  margin-bottom: 10px !important;
+}
+
+.accordion.one {
+  margin-bottom: 0px;
+}
+
+.accordion.two {
+  margin-left: 20px;
+}
+
+.accordion.two h4{
+  margin: 5px 0px !important;
+}
+
+.accordion.three {
+  margin-left: 40px;
+}
+
+.accordion .download-link-area {
+  display: block;
+  margin-top: -32px;
+  padding: 0px 10px 20px;
+}
+
+.accordion-child .downloadform {
+  padding: 8px 10px;
+}
+
+.gform_body input[type="checkbox"] {
+    opacity: 5;
+    -webkit-appearance: checkbox;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.hideuntilsubmit {
+  position: relative;
+  margin-top: -216px;
+  /* margin-left: -90%; */
+  margin-left: 50%;
+}
+
+.hidelayer {
+  background-color: rgba(255,255,255, .8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  cursor: not-allowed;
+}
+
+.accordion.two {
+  display: none;
+}
+
+.accordion.two.show {
+  display: inherit;
+}
+
+.accordion.two.show:last-of-type {
+  margin-bottom: 30px;
+}
+
+.showlayer {
+  margin-top: 0px;
+  margin-left: inherit;
+}
+
+.gform_confirmation_wrapper {
+  padding-top: 60px;
+}
+
+#field_1_14 {
+  margin-top: 30px;
+}
+
+#footer .gform_wrapper form {
+  text-align: inherit; 
+}
+
+header .identity .logo a span:nth-child(1) {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+
+  .gform_wrapper .gform_body .top_label li.gfield.gf_right_half { 
+    float: left; 
+    clear: left !important;
+    width: 99%;
+  } 
+
+  .gform_wrapper .gform_body .top_label li.gfield.gf_left_half { 
+    float: left; 
+    clear: left !important;
+    width: 99%;
+  }
+
+  .hideuntilsubmit {
+    position: relative;
+    margin-top: 0px;
+    margin-left: inherit;
+  }
+
+  .content.resources, .content.newsletter {
+	  background-color: #eee;
+	}
+
+   #footer {
+   	 margin-top:-10px;
+   }
+
+   header .identity .logo a span {
+      line-height: 111%;
+  }
+
+}

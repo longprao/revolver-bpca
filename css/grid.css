@@ -1,0 +1,728 @@
+
+/****************************************************************************************/
+/* BOX GRID STYLES
+/****************************************************************************************/
+
+/* STANDARD CLASSES */
+.desktop-grid:before,
+.desktop-grid:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.grids {
+  background-color: #fff;
+  padding: 0px;
+}
+
+.grids img {
+    vertical-align: middle;
+}
+
+.grids,
+.grid-info-list,
+.grid-alt ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.about-leadership .grid-alt ul{
+  margin-bottom: 40px;
+}
+
+.grid-info-list h3 { text-transform: uppercase;  text-align: left; border: none;}
+
+.grid {
+    border-right:  1px solid #ebedee;
+    border-bottom: 1px solid #ebedee;
+    float:         left;
+    position:      relative;
+    width:         33.333333333%;
+}
+
+.grid-alt {
+    background-color: #19a6e2;
+    color:            #fff;
+    display:          none;
+    float:            left;
+    position:         relative;
+    width:            100%;
+    z-index:          9999;
+}
+
+
+.about-leadership .grid-alt{
+  padding: 40px;
+}
+
+.about-leadership .mobile-grid .grid-alt{
+  padding: 20px;
+}
+
+.grid-alt p:last-of-type {
+    margin-bottom: 0;
+}
+
+.grid-alt{
+  font-family: proxima_nova_ltlight;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.grid-alt .left-col{
+  white-space:   pre-line;
+}
+
+.residential .grid-alt{
+  background-color: #19a6e2;
+  color:            #fff;
+}
+
+.desktop-grid .grid-alt .left-col {
+  width: 66%;
+  padding-right: 40px;
+}
+.grid-alt .right-col {
+  width: 33%;
+  font-family: proxima_nova_ltsemibold;
+}
+
+.mobile-grid .grid-alt .right-col,
+.tablet-grid .grid-alt .right-col,
+.mobile-grid .grid-alt .left-col,
+.tablet-grid .grid-alt .left-col {
+  width: 100%;
+}
+
+.mobile-grid .grid-alt .right-col ul,
+.tablet-grid .grid-alt .right-col ul,
+.mobile-grid .grid-alt .left-col ul,
+.tablet-grid .grid-alt .left-col ul{
+  margin-top: 40px;
+  padding-left: 0px;
+}
+
+.mobile-grid .grid-alt ul {
+  font-size: 14px;
+}
+
+.grid-aside { overflow: auto; }
+
+.grid-aside-content {
+  overflow: auto;
+  line-height: 27px;
+}
+
+.grid-aside-content ul li.snippet{
+  font-family: proxima_nova_ltlight;
+  white-space: pre-line;
+  margin-bottom: 10px
+}
+
+li.snippet:empty{
+  display: none;
+}
+
+.grid-alt .grid-aside-content ul{
+  font-size: 16px;
+}
+
+.grid-aside-content i{
+  font-size: 18px;
+  width: 30px;
+}
+
+.residential .grid-aside-content a {
+  line-height: 24px;
+}
+.residential .grid-aside-content a:hover {
+  color: #197bc2;
+}
+
+.grid-aside-content input[type=submit] {
+    margin-top: 5px;
+}
+
+.grid-aside-content ul {
+    list-style: none;
+}
+
+.grid-aside-content li:before,
+.grid-aside-content li:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.grid-button {
+    background-color: #dad9d7;
+    bottom:           0;
+    color:            #333;
+    cursor:           pointer;
+    font-size:        16px;
+    font-weight:      bold;
+    height:           32px;
+    position:         absolute;
+    right:            0;
+    width:            32px;
+}
+
+.grid-content {
+    height:   inherit;
+    position: relative;
+}
+
+.grid-description { display: none; }
+
+.grid-description-content.places ul { list-style: none;}
+
+.grid-description-content.places {
+    padding: 40px;
+    overflow: auto;
+}
+
+.desktop-grid .grid-description-content.places{
+  padding-right: 0px;
+}
+
+/* TODO: How did this shit get back here? Check and remove. */
+@media screen and (max-width: 479px) {
+    .grid-description-content.places {
+        padding: 20px;
+    }
+}
+
+.grid-description-images ul {
+    list-style: none;
+    padding: 0;
+}
+
+.grid-description-images ul:before,
+.grid-description-images ul:after {
+    clear:      both;
+    content:    '';
+    display:    table;
+}
+
+.grid-description-images li { float: left; }
+
+.grid-info {
+    background-color: #fff;
+    height:           100%;
+    left:             0;
+    position:         absolute;
+    top:              0;
+    width:            100%;
+}
+
+.grid-info-tags {
+  list-style: none;
+  text-transform: uppercase;
+  padding-left: 0px;
+  width: 120px;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 0px;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.grid-info-tags li{
+  font-family: oswald;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 3px 0px 3px 10px;
+}
+
+.grid-info-tags li.category-header{
+  padding-top: 0px;
+}
+
+.grid-info-tags li.category-header{
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  text-align: right;
+  margin-bottom: 10px;
+  font-family: 'proxima_nova_rgbold';
+  line-height: 27px;
+}
+.grid-info-tags li.category-header:empty{
+  display: none;
+}
+
+.grid-info-tags li.apartment, .grid-info-tags li.parks-rec,
+.filter .grid-info-tags li.apartment span, .filter .grid-info-tags li.parks-rec span,
+.grid-info-tags li.community, .filter .grid-info-tags li.community span{
+  background-color: #fcd036;
+}
+
+.grid-info-tags li.condo, .grid-info-tags li.art-culture,
+.filter .grid-info-tags li.condo span, .filter .grid-info-tags li.art-culture span{
+  background-color: #19a6e2;
+  color: #fff !important;
+}
+
+.grid-info-tags li.environment,
+.filter .grid-info-tags li.environment span{
+  background-color: #000000;
+  color: #fff;
+}
+
+.grid-info-tags li.green, .grid-info-tags li.volunteer,
+.filter .grid-info-tags li.green span, .filter .grid-info-tags li.volunteer span{
+  background-color: #dad9d7;
+}
+
+.grid-info-tags li.governance,
+.filter .grid-info-tags li.governance span{
+  background-color: #69696C;
+  color: #fff;
+}
+
+.grid-info-tags li.kids-family, .filter .grid-info-tags li.kids-family span,
+.grid-info-tags li.rfpbid-opps, .filter .grid-info-tags li.rfpbid-opps span{
+  background-color: #1B2A5E;
+  color: #fff;
+}
+
+.filter .grid-info-tags li{
+  background-color: transparent !important;
+  padding-left: 0px;
+}
+
+.filter .grid-info-tags li span{
+  width: 120px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 3px 0px 3px 10px;
+  cursor: pointer;
+}
+
+/* Parks & Rec: #FCD036
+Art & Culture: #19A6E2
+Environment: #000000
+Kids & Family: #1B2A5E
+Governance: #69696C
+Volunteer: #DAD9D7 */
+
+.grid-info-list,
+.grid-alt ul{
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.grid-info-list{
+    float: left;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.news-events .grid-info-list,
+.residential-buildings .grid-info-list{
+  width: 60%; /* for browsers that can't calc() */
+  width: calc(100% - 120px);
+}
+
+.about-leadership .mobile-grid .grid-info-list{
+  width: 100%;
+}
+
+.mobile-grid .grid-info-list{
+  overflow: hidden;
+}
+
+.places-get-around ul.grid-info-list{
+  width: 100%;
+}
+.places-get-around ul.grid-info-list li h3{
+  text-align: center;
+}
+.places-get-around li.transport-img img{
+  margin: 40px auto;
+}
+
+/* We're expecting users to enter the text (for address, for example) without html */
+.grid-info-list li{
+  white-space:   pre-line;
+}
+
+.grid-info-list h3,
+.about-leadership .grid-alt ul li:first-child{
+    font-size:   24px;
+    margin-top: 0px;
+    line-height: 27px;
+    margin-bottom: 10px;
+    font-family: 'proxima_nova_rgbold';
+    text-transform: uppercase;
+}
+
+.mobile-grid .grid-info-list h3,
+.tablet-grid .grid-info-list h3 {
+  font-size:   22px;
+  line-height: 1.25;
+}
+
+.grid-map {
+    float: left;
+    width: 33.333333333%;
+}
+
+.grid-map a { display: inline-block; }
+
+.grid-places { padding-bottom: 15%;}
+
+.grid-thumbnail {
+    float: left;
+    width: 66.666666667%;
+}
+
+.school-side-content a { color: #fff; }
+
+.show-mobile-tablet { display: none; }
+
+/* PSEUDO-ELEMENTS */
+.grids:before,
+.grids:after {
+    clear:   both;
+    content: '';
+    display: table;
+}
+
+.grid-button:after {
+    content:   '+';
+    left:      50%;
+    position:  absolute;
+    top:       50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.grid-description:before,
+.grid-description:after {
+    clear:   both;
+    content: '';
+    display: table;
+}
+
+/* HOVER ACTIONS */
+.grid.places:hover .grid-button {
+    background-color: #fcd036;
+    color:            #000;
+}
+
+.grid .grid-button:hover,
+.grid .grid-button.schools:hover {
+    background-color: #19a6e2;
+    color:            #fff;
+}
+
+.grid:hover .grid-info {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.grid.places:hover .grid-info {
+    background-color: #fff;
+}
+
+.grid.places .grid-info-list {
+    display: block;
+}
+
+
+/* Background colors */
+/* TODO: Some of this can be simplified- there aren't really grids for all of these */
+
+/* blue things */
+.about .grid:hover .grid-button, .about .grid-alt,
+.news .grid:hover .grid-button, .news .grid-alt,
+.residential .grid:hover .grid-button, .residential .grid-alt,
+.about .grid-aside-content, .about .grid-aside-content a,
+.news .grid-aside-content, .news .grid-aside-content a,
+.residential .grid-aside-content, .residential .grid-aside-content a,
+.about .grid-alt a.mail-wg,
+.news .grid-alt a.mail-wg,
+.residential .grid-alt a.mail-wg,
+.about .grid-alt a.link-wg,
+.news .grid-alt a.link-wg,
+.residential .grid-alt a.link-wg
+{
+  background-color: #19a6e2;
+  color: #fff !important;
+}
+
+.grid-alt a.mail-wg,
+.grid-alt a.link-wg{
+  font-family: proxima_nova_ltsemibold !important;
+}
+
+.about .grid-alt a.mail-wg:hover,
+.news .grid-alt a.mail-wg:hover,
+.residential .grid-alt a.mail-wg:hover{
+  color: #69696c !important;
+}
+.about .grid-alt a.link-wg:hover,
+.news .grid-alt a.link-wg:hover,
+.residential .grid-alt a.link-wg:hover{
+  color: #197bc2 !important;
+}
+
+.about .grid-alt .right-col input,
+.news .grid-alt .right-col input,
+.residential .grid-alt .right-col input{
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+
+
+/* yellow things */
+.places-pn .grid:hover .grid-button, .places-pn .grid-alt,
+.apply .grid:hover .grid-button, .apply .grid-alt,
+.public-info .grid:hover .grid-button, .public-info .grid-alt,
+.places-pn .grid-aside-content, .places-pn .grid-aside-content a,
+.apply .grid-aside-content, .apply .grid-aside-content a,
+.public-info .grid-aside-content, .public-info .grid-aside-content a {
+  background-color: #fcd036;
+  color: #000;
+}
+
+.places-pn .grid-alt .right-col input,
+.apply .grid-alt .right-col input,
+.public-info .grid-alt .right-col input{
+  color: #000 !important;
+  border-color: #000 !important;
+}
+
+/* ACTIVE STATES */
+.grid.active {
+    border-bottom: none;
+}
+
+.grid.active .grid-button {
+    background-color: #fcd036;
+    color:            #000;
+}
+
+.about .grid.active .grid-button,
+.news .grid.active .grid-button,
+.residential .grid.active .grid-button{
+    background: #19a6e2;
+    color:      #fff;
+}
+
+.grid.active .grid-button:after {
+    content: '-';
+}
+
+.grid.active .grid-info {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.grid.places.active .grid-info {
+    background-color: #fff;
+}
+
+.about-leadership .grid.active .grid-info-list,
+.about-leadership .grid:hover .grid-info-list {
+    display: none;
+}
+
+.about-leadership .grid-alt p{
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
+}
+
+.about-leadership .mobile-grid .grid-alt p{
+  column-count: 1;
+  -webkit-column-count: 1; /* Chrome, Safari, Opera */
+  -moz-column-count: 1; /* Firefox */
+}
+
+.grid.places.active .grid-info-list {
+    display: block;
+}
+
+
+.grid-alt .right-col input{
+  border: 1px solid #fff;
+}
+
+.grid-alt .right-col input[type=text]{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #dad9d7;
+}
+
+
+.grid-image img {width: 100%;}
+
+.tablet-grid .grid {
+    border-right: 1px solid #ebedee;
+    float: left;
+    width: 50%;
+}
+
+.tablet-grid .grid-description-content.places {
+    padding: 40px;
+}
+
+.mobile-grid .grid {
+    border-right: none;
+    /*float: none;*/
+    width: 100%;
+}
+
+.mobile-grid .grid-thumbnail.places,
+.mobile-grid .grid-map.places {
+    float: none;
+    width: 100%;
+}
+
+/*  */
+
+/* Custom, iPhone Retina */
+  @media only screen and (min-width : 320px) {
+    .desktop-grid, .tablet-grid{ display: none;}
+    .mobile-grid { display: block; }
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width : 480px) {
+    .desktop-grid, .tablet-grid{ display: none;}
+    .mobile-grid { display: block; }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    .desktop-grid, .mobile-grid{ display: none;}
+    .tablet-grid { display: block; }
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    .mobile-grid,.tablet-grid { display: none; }
+    .desktop-grid { display: block;}
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+    .mobile-grid, .tablet-grid { display: none; }
+    .desktop-grid { display: block;}
+  }
+
+/* fixes images being full width on mobile/tablet for places images in grids */
+.tablet-grid .grid-thumbnail.places {width: 100% !important;}
+.tablet-grid .grid-map.places, .mobile-grid .grid-map.places {display: none;}
+.tablet-grid .grid-thumbnail img, .mobile-grid .grid-thumbnail img {width: 100% !important;}
+
+.row.filter{
+  background-color: #fff;
+  width: 100%;
+}
+
+#main .content .filter-controls h3{
+  text-transform: uppercase;
+  font-size: 18px !important;
+  margin: 40px 0px 10px;
+  font-family: "proxima_nova_rgbold";
+  text-align: left;
+}
+
+#main .content .row.post-filter{
+  margin-bottom: 15px;
+}
+
+.filter-controls{
+  border-bottom: 3px solid #f1f0ef;
+  height: 350px;
+  padding-left: 40px;
+}
+
+.filter-controls .grid-info-tags{
+  width: 100%;
+}
+
+.filter-controls input[type=checkbox]{
+  display: none;
+}
+
+.filter-controls input[type=checkbox] + label {
+	background-color: #FFF;
+	border: 1px solid #000;
+	/* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); */
+	padding: 10px;
+	/* border-radius: 5px; */
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+
+	margin-bottom: 0px;
+	/* margin-top: 5px; */
+	cursor: pointer;
+}
+
+.filter-controls input[type=checkbox] + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.filter-controls input[type=checkbox]:checked + label {
+	background-color: transparent;
+	/* border: 1px solid #92A1AC; */
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+	/* color: red; */
+}
+
+.filter-controls input[type=checkbox]:checked + label:after {
+	content: '\25cf';
+	position: absolute;
+	top: -5px;
+	left: 0px;
+	color: #000;
+	width: 100%;
+	text-align: center;
+	font-size: 1.4em;
+	padding: 1px 0 0 0;
+	vertical-align: text-top;
+	/* vertical-align: top; */
+}
+
+.post-filter .grid-info-tags {
+  height: auto; padding: 0;
+
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 0px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 0px; /* Firefox */
+  column-gap: 0px;
+}
+
+.filter-header {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+
+.filter-header img {
+  overflow: hidden;
+  position: relative;
+  margin-left: -200%;
+  left: 100%;
+  display: initial !important;
+  max-width: none;
+}
+
+.filter-header img.responsive {display: initial;}

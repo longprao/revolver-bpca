@@ -1,0 +1,516 @@
+/* @override 
+	http://www.thevantoshgroup.com/bpca/wp-content/themes/revolver/css/last.css */
+
+/* fixes bug in nygov header when you try to turn off the search setting */
+
+.nygov-universal_searcher {visibility: hidden;}
+
+/* BELOW ARE SITE SPECIFIC STYLES WHICH OVERRIDE ANY PREVIOUS STYLES */
+
+.header-content.gold {color: #000;}
+
+/* CONTENT HEADINGS */
+h1, h2, h3, h4 { font-family: "proxima_nova_rgbold"; }
+#main h2 { font-family: "proxima_nova_ltsemibold"; font-size: 18px; text-align: center; padding: 15px 0; border: solid #ebedee; border-width: 1px 0; background: #fff; margin: 0; text-transform: uppercase; }
+#main h4 { font-family: "proxima_nova_ltsemibold"; text-transform: uppercase; margin: 20px 0 5px 0; padding: 0 0 0 0; }
+
+
+#main .content h1 {text-align: left; font-size: 25px; line-height: 28px; font-family:  'proxima_nova_rgregular'; margin-top: 0;}
+#main .content h3 {text-transform: uppercase; font-size: 14px; text-align: right; font-family: 'proxima_nova_rgregular';}
+#main .content h4 {text-transform: uppercase; font-size: 16px;}
+#main .content h5 {font-size: 14px; line-height: 20px; text-align: right; font-family: 'proxima_nova_rgregular';}
+#main .content h6 {font-family: 'proxima_nova_rgbold'; text-transform: uppercase; font-size: 36px; line-height: 38px;}
+#main .content p  {font-size: 16px; line-height: 24px;}
+
+
+#main .content a, #main .grids a {font-family: 'proxima_nova_ltsemibold';}
+#main .about-leadership .grids a, #main .news .grids a, #main .residential .grids a{ color: #fff; }
+#main .content a:hover, #main .grids a:hover {color: #197bc2 !important;}
+
+#main .content input[type=submit], #main .content button,
+#main .grids input[type=submit], #main .grids button,
+#main .content .btn-bpca, #main .grids .btn-bpca{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 15px 10px 15px;
+  line-height: 0;
+}
+
+#main .content input[type=submit].black, #main .content button.black,
+#main .grids input[type=submit].black, #main .grids button.black,
+#main .content .btn-bpca.black, #main .grids .btn-bpca.black,
+#main .content .btn-bpca.blue, #main .grids .btn-bpca.blue, #main .teaser-leadership .btn-bpca{
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+#main .content input[type=submit]:hover.light, #main .content button:hover.light,
+#main .grids input[type=submit]:hover.light, #main .grids button:hover.light,
+#main .content input[type=submit]:hover, #main .content button:hover,
+#main .grids input[type=submit]:hover, #main .grids button:hover,
+#main .content .btn-bpca:hover, #main .grids .btn-bpca:hover{
+  color: #197bc2 !important;
+  border: 1px solid #197bc2 !important;
+}
+
+/* TEASER GENERAL SETTINGS */
+#main .content .teaser { font-family: "proxima_nova_ltsemibold"; font-size: 24px; text-transform: uppercase; margin: 0; }
+#main .content .teaser a { font-size: 16px;}
+#main .content .teaser {padding: 40px; color: #000; background: #fff; height: 350px; overflow: hidden; position: relative;}
+#main .content .teaser .btn-bpca{ position: absolute; bottom: 40px; right: 40px; }
+
+
+/* TEASER BACKGROUND COLORS */
+#main .content .teaser.black {background: #000;}
+#main .content .teaser.blue, .header-content.blue  {background: #19a6e2;}
+#main .content .teaser.gold, .header-content.gold {background: #fcd036}
+#main .content .teaser.navy {background: #1b2a5e;}
+#main .content .teaser.black, #main .content .teaser.blue,#main .content .teaser.navy {color: #fff;}
+
+
+/* TEASER EXCEPTIONS TO CONTENT RULES */
+#main .content .teaser li.title { margin: 0 0 9px 0; padding: 0; text-transform: uppercase; }
+#main .content .teaser-events li.title a{ font-size: 18px; font-family: 'proxima_nova_rgbold'; }
+#main .content .teaser-twitter h3, .thinkTwitFollow{ display: none !important; }
+#main .content .teaser-twitter a.bpca-twitter{ font-size: 14px; }
+#main .content .teaser.teaser-twitter { font-size: 14px; font-family: "proxima_nova_ltlight" }
+#main .content .teaser-twitter *{ font-size: 14px !important; }
+#main .content .teaser-leadership{ background-color: #19a6e2; }
+#main .content .teaser-leadership h6 {color: #fff;}
+#main .content .teaser.teaser-leadership li { font-size: 14px;line-height: 23px; font-family:  'proxima_nova_rgregular'; }
+#main .content .teaser p {font-size: 24px; line-height: 28px;}
+#main .content .teaser-slider{ clear: none !important; }
+#main .content .teaser.navy a {color:white !important; border: 1px solid #fff !important;}
+#main .content .teaser.navy a:hover {color: #197bc2 !important; border: 1px solid #197bc2 !important;}
+#main .content .teaser.blue a {color:white !important; border: 1px solid #fff !important;}
+#main .content .teaser.blue a:hover {color: #197bc2 !important; border: 1px solid #197bc2 !important;}
+
+
+/* TEMPORARY SOCIAL "SLIDER" */
+#main .content .teaser-slider .social-block-slider{ margin-top: 60px; }
+
+/* For the events teaser, we want the same event markup to fit 3 in a box: */
+.teaser-events .grid-info{ height: initial; position: relative; clear: left; }
+.teaser-events .grid-info-list{ width: calc(100% - 120px); }
+.teaser-events .grid-info:nth-child(n+1) ul{ padding-top: 20px; }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 481px) and (max-width : 768px) {
+  .content .teaser.col-sm-6:nth-child(3) {
+      display:none;
+  }
+}
+
+/* 
+Comment this line out, not sure why it was added - Mike
+.content .download-link-area{display: none;}
+*/
+
+/* BLOG STYLE */
+.news-blog .row {background: #fff;}
+#main .news-blog h1{ margin-top: 30px}
+#main .news-blog h1 a,
+#main .news-blog .grid-info-tags li.category-header{ font-size: 25px !important; line-height: 28px; }
+#main .content .news-blog p{ font-size: 16px; line-height: 24px; font-family: "proxima_nova_rgregular"; text-transform: none; max-height: 49px; overflow: hidden;}
+#main .content .news-blog img{ display: block; }
+#main .content .news-blog .grid-info-tags{ margin-right: 40px; }
+#main .content .news-blog .teaser{ height: 350px; }
+#main .content .news-blog .row{border-bottom: 2px solid #f1f0ef}
+#main .content .news-blog .teaser .btn-bpca{ bottom: 40px; right: auto; border: 2px solid #a4a5a6;}
+
+#footer.wrapper h3{
+    font-size: 16px !important;
+
+    font-family: proxima_nova_ltsemibold !important;
+    text-align: center !important;
+}
+
+/* I HATE using !important but I'm doing it here for expediency's sake */
+
+input[type="submit"],
+a.btn-bpca:link,
+a.btn-bpca:visited {
+	color: black !important;
+	background: transparent !important;
+	padding: 10px 15px !important;
+	font: 14px/14px proxima_nova_ltsemibold !important;
+	border: 1px solid black !important;
+	text-transform: uppercase !important;
+}
+
+input[type="submit"]:hover,
+a.btn-bpca:hover {
+	color: #197BC2 !important;
+	background: transparent !important;
+	padding: 10px 15px !important;
+	font: 14px/14px proxima_nova_ltsemibold !important;
+	border: 1px solid #197BC2 !important;
+}
+
+a.btn-bpca.white:link,
+a.btn-bpca.white:visited {
+	color: white !important;
+	background: transparent !important;
+	padding: 10px 15px !important;
+	font: 14px/14px proxima_nova_ltsemibold !important;
+	border: 1px solid white !important;
+}
+
+a.btn-bpca.white:hover {
+	color: #197BC2 !important;
+	border: 1px solid #197BC2 !important;
+}
+
+h4 {
+	font: 16px proxima_nova_ltsemibold !important;
+	line-height: 24px !important;
+}
+
+.board-committees h4 {
+	margin-top: 0 !important;
+	margin-bottom: 12px !important;
+}
+
+.board-committees label {
+	font: 16px proxima_nova_rgregular !important;
+	line-height: 20px !important;
+}
+
+.board-committees .download-items,
+.board-committees .forward-to-friends {
+	font: 16px proxima_nova_ltsemibold !important;
+	line-height: 24px !important;
+	display: block;
+}
+
+h4.extra-space,
+.board-committees h4.extra-space {
+	margin-top: 35px !important;
+}
+
+.download-link-area {
+	margin-top: -10px !important;
+}
+
+.row.blog {
+	height: auto !important;
+	padding-bottom: 50px;
+}
+
+.col-md-8.blog-post {
+	padding: 0 !important;
+	height: auto !important;
+}
+
+.col-md-8.blog-post p {
+	font: 17px proxima_nova_rgregular !important;
+	text-transform: none !important;
+	margin-bottom: 50px;
+}
+
+.col-md-8.blog-post .category-header {
+	font-size: 17px;
+}
+
+.col-md-8.blog-post h1 {
+	padding-top: 2px;
+}
+
+.col-md-8.blog-post h1 a {
+	font: 18px proxima_nova_rgbold !important;
+}
+
+.col-md-8.blog-post div {
+	position: relative;
+}
+
+.col-md-8.blog-post .grid-info-tags {
+	padding-top: 0;
+}
+
+.col-md-8.blog-post .grid-info div {
+	margin-left: 150px;
+	margin-top: 28px;
+	position: relative;
+}
+
+.col-md-8.blog-post .grid-info div .grid-aside-content {
+	margin: 0;
+}
+
+.col-md-8.blog-post .grid-info div .grid-aside-content ul {
+	padding-left: 0;
+	margin-bottom: 50px;
+}
+
+.col-md-8.blog-post .grid-info div .grid-aside-content ul li {
+	margin-bottom: 5px;
+}
+
+.col-md-8.blog-post .grid-info div .grid-aside-content ul li a {
+	font: 17px proxima_nova_rgregular !important;
+	text-transform: none !important;
+}
+
+/* Seriously what the bleep is going on here? */
+.col-md-8.blog-post .grid-info div .btn-bpca {
+	display: inline-block !important;
+	position: relative !important;
+	top: auto !important;
+	bottom: auto !important;
+	right: auto !important;
+	left: auto !important;
+}
+
+.description-tags {
+	margin-bottom: 30px;
+}
+
+.description-tags p {
+	font: 16px/21px proxima_nova_ltlight !important;
+}
+
+#RFP-BID-tags li.disabled {
+	color: #a4a5a6;
+}
+
+#main div.about.about-leadership ul.grids div.desktop-grid li.grid div.grid-content div.grid-info:hover ul.grid-info-list {
+	display: none;
+}
+
+.news-events .grid-description-content h4 {
+	margin: -25px 0 0 !important;
+}
+
+.news-events .grid-description-content .btn-bpca {
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.places-pn .left-col,
+.residential .left-col {
+	margin-top: -30px;
+}
+
+.places-pn .left-col,
+.news-events .left-col {
+	padding-right: 40px !important;
+}
+
+.places-pn .grid-aside-content,
+.news-events .grid-aside-content {
+	padding-left: 40px;
+}
+
+
+/* Christian's Styles */
+.breadcrumb {
+
+	padding: 20px 0 0 0;
+}
+
+.go-button {display:none;}
+
+.grid-aside-content i {text-align:center;}
+
+.fa-laptop {margin-right: -3px;}
+.fa-leaf {margin-right: -4px;}
+.slider_p {
+	text-transform:none !important;
+	font-family: 'proxima_nova_rgregular', sans-serif !important;
+	font-size:16px !important;
+}
+.forward-to-friends {display:block;}
+
+.result_padding {padding-bottom:20px; padding-bottom: 20px; padding-right: 30px; padding-left: 30px;}
+
+.white_bg {background:#fff;}
+
+.news {margin-top:60px; padding-bottom:20px;}
+
+
+/* Gravity Forms Style */
+
+#gform_submit_button_1 {
+    font-size: 18px !important;
+    padding: 8px 20px 6px 20px !important;
+}
+
+.gform_wrapper span.gform_description {
+    
+  font-weight: bold !important;
+  font-size: 16px;
+  color: #8c1c1c;
+  font-style: italic;
+    
+}
+
+#input_1_6 {width:94%;}
+
+.gfield_contains_required .ginput_container:before{
+    content:" *";
+    color: #8c1c1c;
+}
+
+#gform_wrapper_1 .gform_body .gform_fields .gfield .gfield_checkbox li input[type=checkbox] {border:1px solid red}
+ 
+#gform_fields_1 #field_1_14 .g_field_label {font: 16px proxima_nova_ltsemibold !important;}
+
+
+::-webkit-input-placeholder {
+   
+   color: #a4a5a6;
+}
+:-moz-placeholder {
+    
+   color: #a4a5a6;
+}
+:-ms-input-placeholder {
+   
+   color: #a4a5a6;
+}
+#field_1_14 {
+  margin-top: 15px !important;
+}
+
+.hideuntilsubmit {margin-top:-191px !important;}
+.gform_wrapper h3.gform_title {
+  text-transform: uppercase;
+  font-size: 18px !important;;
+  font-family: 'proxima_nova_rgregular', sans-serif !important;;
+  text-align: left !important;
+}
+
+#gform_confirmation_message_1{
+    padding-bottom:34px;
+}
+/* End Gravity Forms Style */
+
+/* MailChimp Style */
+
+
+/* End Mailchimp Style */
+
+/* Media Queries */
+
+@media screen and (max-width:1200px){
+
+	.ms-inner-controls-cont{left:25%;}	
+	
+}
+
+@media screen and (max-width:991px){
+
+    .content .teaser.col-sm-6:nth-child(3) {display:none;}
+	
+}
+
+@media screen and (max-width:767px){
+
+	
+	
+}
+
+@media screen and (max-width:550px){
+
+	.ms-inner-controls-cont{left:0%;}	
+    .content .teaser.col-sm-6:nth-child(3) {display:block;}
+	
+}
+
+@media screen and (max-width:350px){
+   .mc4wp-form .list-info-tags {
+    padding-top:0px !important;
+    margin-top:-9px !important;
+    
+    }
+    #extra_padding{padding-top:30px !important;}
+    
+}
+
+
+
+
+#main .content .unclickable a:hover, #main .grids .unclickable a:hover {
+  color: #000 !important;
+}
+
+
+/* 
+Placeholder Text in Grid Descriptions 
+Because of how these 'sudo' elements are handled they can't be combined into a single rule :P
+*/
+.places .grid-aside-content input::-webkit-input-placeholder {
+   color: black;
+}
+
+.places .grid-aside-content input:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+.places .grid-aside-content input::-moz-placeholder {  /* Firefox 19+ */
+   color: black;
+}
+
+.places .grid-aside-content input:-ms-input-placeholder {  
+   color: black;
+}
+
+.news .grid-aside-content input::-webkit-input-placeholder {
+   color: white;
+}
+
+.news .grid-aside-content input:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+.news .grid-aside-content input::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+.news .grid-aside-content input:-ms-input-placeholder {  
+   color: white;
+}
+
+.residential .grid-aside-content input::-webkit-input-placeholder {
+   color: white;
+}
+
+.residential .grid-aside-content input:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+.residential .grid-aside-content input::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+.residential .grid-aside-content input:-ms-input-placeholder {  
+   color: white;
+}
+
+
+/* On Focus */
+.grid-aside-content input:focus::-webkit-input-placeholder {
+   color: transparent !important;
+}
+
+.grid-aside-content input:focus:-moz-placeholder { /* Firefox 18- */
+   color: transparent !important;  
+}
+
+.grid-aside-content input:focus::-moz-placeholder {  /* Firefox 19+ */
+   color: transparent !important;
+}
+
+.grid-aside-content input:focus:-ms-input-placeholder {  
+   color: transparent !important;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	/* IE10+ specific styles go here */  
+	.filter-header img {
+		left: auto !important;
+		margin-left: -15px !important;
+	}
+}

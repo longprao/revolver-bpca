@@ -1,0 +1,183 @@
+.calendar-container {
+	background-color: #fff;
+
+}
+
+.calendar {
+    text-align: center;
+		width: 100%;
+}
+
+.calendar header {
+    position: relative;
+		padding: 0;
+}
+
+.calendar h2 {
+    text-transform: uppercase;
+}
+
+.calendar thead {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.calendar tbody {
+    color: #7c8a95;
+}
+
+
+
+
+.calendar tbody td.active {
+    /* border: 2px solid #c0392b; */
+}
+
+.calendar td {
+    border: 2px solid transparent;
+    text-align: center;
+    width: 64px;
+    padding: 2px;
+}
+
+
+
+.event {
+    cursor: pointer;
+    position: relative;
+}
+
+
+.calendar tbody td:hover:after, .current-day:after {
+    background: #c0392b;
+    display: block;
+    content: '';
+    height: 2px;
+    left: 50%;
+    margin: -2px 0 0 -6px;
+    position: relative;
+    width: 12px;
+}
+
+
+.btn-prev,
+.btn-next {
+	color: #cbd1d2;
+	height: 32px;
+	font-size: 22px;
+	line-height: 28px;
+	margin: -16px;
+	position: absolute;
+	top: 50%;
+	width: 32px;
+}
+
+
+
+.btn-prev {
+    left: 30px;
+}
+
+.btn-next {
+    right: 35px;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.close {
+    color: #A4AAAB;
+    margin-top: -15px;
+    margin-right: 10px;
+    float: right;
+}
+
+.day-event {
+    background-color: #F2F2F2 ;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 50px;
+    display:none;
+
+}
+
+.day-event p{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.day-event span{
+    font-size: 12px;
+}
+
+.day-event button {
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #c0392b;
+    border: 0;
+    border-bottom: 2px solid #b53224;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #b53224;
+    box-shadow: inset 0 -2px #b53224;
+}
+
+.check-btn {
+    width: 100%;
+}
+.calender-container input[type=checkbox] {display:none;}
+
+.calender-container span {
+    background-color:#373740;
+    font-weight:700;
+    color:#FFF;
+    font-size:.85em;
+    letter-spacing:2px;
+    text-decoration:none;
+    font-family:'PT Sans', sans-serif;
+    text-align:center;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    cursor:pointer;
+    display:block;
+    margin: 0 auto;
+    -webkit-transition:background-color 150ms ease-in;
+    -moz-transition:background-color 150ms ease-in;
+    -ms-transition:background-color 150ms ease-in;
+    -o-transition:background-color 150ms ease-in;
+    transition:background-color 150ms ease-in;
+}
+
+.calender-container span:hover {
+    background-color:#c0392b;
+}
+
+.calender-container input[type=checkbox]:checked + span {
+    background-color:#9C2E23;
+    text-decoration:none;
+    background:#9C2E23 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX9JREFUeNpi+P//PwMNsS4QbwBiLnQ5WlqqAsRP/0PARiBmoYfFkkB8+z8qWALEjLS0mB+IL/3HDibSymJQXB7/jx/UgNSCvU4lwAbEG4DYkwi1WUxUspQZiOcRaSkIWOAKMk0Sg3jaf+IBOIVjMyQWiH8DsR+RljaTYOkBWJ5GNwRk2R+ooh9A7ETA0jwSLL0ATfEYqRpkyVc0xR+A2AyHpdFA/I9IS0F5WhRbAWIEtQQbeAXE6lhC5jeRlj4GYgVsRaYK1HBCmmWgmuyxhAwu8BpaXjNgs/gYkYbcAGIXPCGDDkCOM8eVPkCEFhE+JhX8BGJnfAkTxgC57BOVLAXlihBC2RA9Vf+k0FJQKk8nJv+jCwQi5WNyQAWxpR02wRQS8icy6CKlmMUlUUGipfOQK3lKLAbhdhIKfWZS6258kiAfzCZg6V4gZiOn0UBIAcgn63BYehK50Ke2xQxQH+3FUoqJUtJMIlYhLxAfxVJu09xiWENuMxCrUaNhCBBgAOAVfjALa5TLAAAAAElFTkSuQmCC) no-repeat 7% center;
+    background-size:15px 13px;
+}
+
+.calender-container input[type=checkbox]:checked:hover + span {
+    background-color:#9C2E23;
+    color:rgba(255,255,255,0.5);
+    text-decoration:none;
+    background:#9C2E23 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS5JREFUeNq8110OgjAMAGBGvIY3VESjt9jPg95PT+LccBIZ7dYOWJPGB+g+Ymg3hLW2QeLkcu/y2pSFdvl0eQevehjI3uXbfkMh96TShFq/xhG6J4faAtxEtSBOQTm4QWpnOBWl4CZT69fuYpiCpnBDrB1xLhrjgoFO8F1oGcFslUv4bV32zFoxmOHJta0XMn65dC0UaiddA8UGiN4axeC1cUkdmWviEls/NwL1FqjPNtNvoimPdC3yRCUTiTXbt0R/oSnw2iiK10BBvBY6w2uiE3xJr8oFtcrvxy/fVcyeVdGx98yotcOxN/znHeMUIhdMOG8c4reagssF43VEoT5O4ZJwvNUUFJtcEE5BMXyGpnanf5yDxjiI+hSJj7YunEBvhbuTCh9tD+jiR4ABAJ0SrJgNr1UAAAAAAElFTkSuQmCC) no-repeat 7% center;
+    background-size:15px 15px;
+}
+
+.print-btn {
+    padding: 1px 14px 5px 14px;
+}
+h2.month{padding: 5px 0 !important;}

@@ -1,0 +1,30 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media screen and (max-width: 1200px) {
+  .page-home #main {
+    margin: -20px 0 !important; } }
+@media screen and (max-width: 991px) {
+  .places-pn .left-col, .news-events .left-col {
+    padding-right: 0 !important; }
+
+  .about-leadership .grid-image {
+    opacity: 0; }
+  .about-leadership .active .grid-image {
+    opacity: 1; } }
+@media screen and (max-width: 767px) {
+  .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list {
+    display: block !important; } }
+@media screen and (max-width: 550px) {
+  .page-id-38 #main .header {
+    padding: 0 !important; }
+    .page-id-38 #main .header .content {
+      padding: 20px !important; } }
+.page-id-38 #main .header .content h4 {
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  font-family: "proxima_nova_rgbold" !important; }
+
+/*# sourceMappingURL=long.css.map */

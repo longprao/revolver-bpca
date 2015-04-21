@@ -1,0 +1,239 @@
+/* @override 
+	http://www.thevantoshgroup.com/bpca/wp-content/themes/revolver/tablet.css?cache=234 */
+
+@media (max-width: 1200px) {
+
+/* gio + styles START  */
+
+
+.page-id-58 .calendar-container {
+   
+    float: left!important;
+}
+
+/* 
+#GRIDS top border */
+.grids { 
+border-top: 1px solid #EBEDEE;
+}
+
+
+/* 
+#timeline description text */
+.timeline-page .col {
+    height: auto!important;
+}
+
+/* 
+#removing grey gap btw header and body content */
+#main {
+    padding: 0px!important;
+    margin: -10px 0!important;
+}
+
+
+/* 
+#places dropdown creation text */
+.places-pn .grid-aside-content, .news-events .grid-aside-content {
+    padding-left: 0px!important;
+    margin-top: 20px!important;
+}
+
+.grid-aside-content i {
+    text-align: left!important;
+}
+
+
+
+/* footer */
+#footer .col-md-4:last-of-type {
+   width:100%!important;
+}
+
+/* footer */
+#footer .col-md-4 {
+   height: auto;
+}
+
+/* footer */
+#footer ul {
+  
+    list-style-type: none;
+padding: 0;
+}
+
+
+
+
+
+
+
+/* home-teasers */
+.content.map {
+    height: 350px;
+}
+
+
+/* home-teasers */
+.homeTeasers .row {
+width: 50%!important;
+float: left!important;
+}
+/* home-teasers */
+.homeTeasers .col-md-4 {
+    width:100%!important;
+}
+
+/* home-teasers */
+.teaserMap {
+    height: 350px!important;
+float: left!important;
+width: 50%!important;
+    }
+
+.exploreTeaser {
+width: 50%!important;
+height: 350px!important;
+float: left!important;
+}
+
+.exploreTeaser .content.image img {
+    width: auto;
+    height: 100%;
+}
+    
+    
+/* home-teasers */
+.teaserMap .col-md-4 {
+    padding-right: 0px!important;
+padding-left: 0px!important;
+    }
+    
+/* home-teasers */
+.homeTeasers .col-md-8 {
+     padding-right: 0px!important;
+padding-left: 0px!important;
+
+}
+ 
+ /* gio + styles END  */
+ 
+
+	header .identity { float: left; width: 100%; padding: 20px; }
+
+	header #menu { 
+		float: left;
+		margin-top: -15px;
+	}
+	
+	header #menu .menu {
+		padding-left: 0;
+	}
+	
+	header #menu .menu li {
+			
+		margin-left:13px;}
+	
+	a.mmenu { display: none; }
+
+	header .mmenu { background: url("images/menu-24-24.png") no-repeat; width: 24px; height: 24px; float: right; margin: 20px; margin-top: -50px; }
+
+	#main { padding: 0; margin: 40px 0; }
+
+	#main .content.header { height: 350px; overflow: hidden; position: relative; text-align: center; }
+	
+	.row.table { display: block; }
+	.row.table .col { display: block; }
+
+	.row.header .col:first-child {
+		display: none;
+	}
+	
+	.row.header .col {
+		height: auto;
+		width: 100%;
+	}
+	
+	.row.header .col img {
+		width: 100%;
+		height: auto;
+	}
+
+	img.bpca-diagrams {
+		width:  100%;
+		height:  auto;
+	}
+
+	.row .col { width: 50%; float: left; height: 350px; overflow: hidden; }
+	.row .col img { width: auto; height: 100%; }
+
+	.breadcrumb { padding: 10px 0; }
+	.breadcrumb p { padding: 0 0 0 0; margin: 0 0 0 0; }
+
+	.content.map img { top: 0; left: 0; }
+
+	.grid-tablet { display: block; }
+	.grid-desktop, .grid-mobile { display: none; }
+
+	.leadership-list.full-list li { width: 50%; max-width: 100%; }
+	.leadership-list.full-list li .thumb { height: 350px; position: relative; overflow: hidden; }
+	.leadership-list.full-list li .thumb img { width: auto; height: 100%; position: absolute; top: 0; left: 0; }
+
+	.bio-container.row .bio-column:nth-child(1) { padding: 20px 20px 20px 20px; }
+	.bio-container.row .bio-column:nth-child(2) { padding: 20px 20px 20px 20px; }
+
+	.museum-list.full-list li { width: 50%; height: 350px; }
+
+	.museum-container.row .museum-column:nth-child(1) { padding: 20px 20px 20px 20px; }
+	.museum-container.row .museum-column:nth-child(2) { padding: 20px 20px 20px 20px; }
+
+	.symbol { margin-top: 20px; }
+
+	.museum-content.active { width: 100%; }
+	
+	.timeline-page div.col-md-8.col {
+		width: 100% ;
+	}
+	
+	.timeline-page div.col-md-8.col img {
+		width: 100%;
+		height: auto;
+	}
+
+	.timeline-page div.col-md-4.col {
+		width: 100% ;
+	}
+	
+	.checker,
+	.sub-checker {
+		height: 24px !important;
+		width: 24px !important;
+	}
+	
+	.downloadform input[type=checkbox]:checked + .checkcheck {
+	  border-radius: 7px 7px 7px 7px !important;
+	  -moz-border-radius: 7px 7px 7px 7px !important;
+	  -webkit-border-radius: 7px 7px 7px 7px !important;
+	  height: 10px !important;
+	  width: 10px !important;
+	  margin: -6px 0px 5px 6px !important;
+	}
+	
+	.downloadform label {
+		margin-top: 5px !important;
+	}
+	
+	.fa-share-square-o,
+	.fa-envelope-o,
+	.fa-twitter,
+	.fa-facebook,
+	.fa-leaf,
+	.fa-map-marker {
+		font-size: 25px !important;
+		margin-bottom: 10px;
+	}
+	
+	.download-link-area .fa {
+		margin-right: 10px !important;
+	}
+}
