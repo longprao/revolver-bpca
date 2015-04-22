@@ -11,7 +11,7 @@
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' />
 
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/jquery.mmenu.all.css" />
+<!--    <link type="text/css" rel="stylesheet" href="--><?php //bloginfo( 'template_url' ); ?><!--/css/jquery.mmenu.all.css" />-->
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/flexslider.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>?cache=890" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/luke.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/long.css" />
 
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.mmenu.min.all.js" type="text/javascript"></script>
+<!--    <script src="--><?php //bloginfo( 'template_url' ); ?><!--/js/jquery.mmenu.min.all.js" type="text/javascript"></script>-->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.flexslider-min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		// This is NOT how I'd normally do this but in the interest of time...
@@ -55,9 +55,15 @@
 		jQuery(function($) {
 			$('p:empty').remove();
 
-			$('nav#mobile-menu').mmenu({
-				position: 'right'
-			});
+//			$('nav#mobile-menu').mmenu({
+//				position: 'right'
+//			});
+
+            $('.top-action a.mmenu').click(function (e) {
+                e.preventDefault();
+
+                $('#menu').toggleClass('active');
+            })
 		});
 	</script>
 </head>
@@ -108,15 +114,13 @@
                 </div>
 
                 <div class="top-action">
-                    <nav id="mobile-menu">
-                        <?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'primary' ) ); ?>
-                    </nav>
+
+                    <a class="mmenu"><span></span></a>
 
                     <nav id="menu">
                         <?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'primary' ) ); ?>
                     </nav>
 
-                    <a href="#mobile-menu" class="mmenu"><span></span></a>
                 </div>
 
                 <div class="clear"></div>

@@ -18,9 +18,14 @@
 		$('.menu-item-has-children>a').on( "click", function(e) {
 			e.preventDefault();
 			$(".sub-menu").removeClass('show');
-			$(".current-menu-parent").removeClass('current-menu-parent');
-			$(this).parent('li').addClass('current-menu-parent');
-			$(this).next(".sub-menu").addClass('show');
+
+            if ($(this).parent().hasClass('current-menu-open')) {
+                $(".current-menu-open").removeClass('current-menu-open');
+            } else {
+                $(this).next(".sub-menu").addClass('show');
+                $(".current-menu-open").removeClass('current-menu-open');
+                $(this).parent('li').addClass('current-menu-open');
+            }
 		});
 	};
 

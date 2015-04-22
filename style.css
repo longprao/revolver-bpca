@@ -183,8 +183,8 @@ font-weight: 700;
 
 }
 header #menu .menu li ul { display: none; }
-header #menu .menu > li:hover > a, header #menu .menu > li.current-menu-item > a, header #menu .menu > li.current-menu-parent > a { border-bottom: 3px solid #19a6e2; }
-header #menu .menu > li:nth-child(even):hover > a, header #menu .menu > li.current-menu-item:nth-child(even) > a, header #menu .menu > li.current-menu-parent:nth-child(even) > a { border-bottom: 3px solid #FCD036; }
+header #menu .menu > li:hover > a, header #menu .menu > li.current-menu-item > a, header #menu .menu > li.current-menu-open > a { border-bottom: 3px solid #19a6e2; }
+header #menu .menu > li:nth-child(even):hover > a, header #menu .menu > li.current-menu-item:nth-child(even) > a, header #menu .menu > li.current-menu-open:nth-child(even) > a { border-bottom: 3px solid #FCD036; }
 header #menu .menu li:hover ul { display: block; position: absolute; margin: 0 0 0 0; padding: 10px 0 0 0; list-style: none; }
 header #menu .menu ul li { margin: 0 15px 0 0; }
 header #menu .menu ul li a { text-transform: none; font-size: 14px; font-family: "proxima_nova_ltsemibold", Arial, Helvetica, sans-serif; 

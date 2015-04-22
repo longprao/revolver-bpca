@@ -5,10 +5,17 @@
 
 .building-filter .post-filter .grid-info-tags { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
 
+.news.news-blog { margin-top: 0; }
+
+.filter-controls { margin-bottom: 10px; }
+
+a.mmenu { cursor: pointer; }
+
 @media screen and (min-width: 1201px) { .timeline-page img { width: 100%; max-height: 350px; } }
 @media screen and (min-width: 992px) { .news-events .grid-description-content.places { margin-top: -8px; }
   .news-events .desktop-grid .grid-alt .left-col { white-space: normal; }
-  .news-events .desktop-grid .grid-alt .left-col h4 { margin-top: 0 !important; } }
+  .news-events .desktop-grid .grid-alt .left-col h4 { margin-top: 0 !important; }
+  .filter-events-page .left-panel, .filter-events-page .right-panel { padding: 0; } }
 @media screen and (max-width: 1200px) { .page-home #main { margin: -20px 0 !important; }
   .breadcrumb { padding: 0; } }
 @media screen and (max-width: 991px) { .places-pn .left-col, .news-events .left-col { padding-right: 0 !important; }
@@ -17,13 +24,19 @@
   .page-blog .filter-header { padding: 0; }
   .page-blog .filter-header img { width: 100%; }
   .page-blog .page-id-62 .post-filter .grid-info-tags { width: 320px; }
-  .news.news-blog { margin-top: 0; }
   #main .content .teaser a { font-size: 18px !important; font-family: proxima_nova_rgbold !important; }
   #main .content .teaser-twitter * { font-size: 18px !important; }
   .downloadform input[type=checkbox]:checked + .checkcheck { margin: -10px 0px 5px 6px !important; }
   .board-committees .download-items, .board-committees .forward-to-friends, .aside-share-button a { font-size: 18px !important; }
-  .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 18px !important; font-family: proxima_nova_ltsemibold !important; } }
+  .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 18px !important; font-family: proxima_nova_ltsemibold !important; }
+  .filter-controls.filter-events-page { padding-left: 40px; }
+  .filter-controls.filter-events-page .right-panel { padding-top: 20px; }
+  .col-md-8.blog-post { padding-right: 40px !important; }
+  .timeline-page .col-md-4 { min-height: 380px; } }
 @media screen and (max-width: 767px) { .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important; } }
+@media screen and (min-width: 551px) and (max-width: 991px) { .board-committees > div:first-child .content-wrapper { padding-top: 40px; }
+  .board-committees > div:last-child .content-wrapper { padding-bottom: 40px; }
+  .board-committees > div .content-wrapper { padding-top: 20px; padding-bottom: 20px; } }
 @media screen and (max-width: 550px) { .page-id-38 #main .header { padding: 0 !important; }
   .page-id-38 #main .header .content { padding: 20px !important; }
   #main .content .teaser.blog-post { padding-left: 0 !important; }
@@ -38,7 +51,19 @@
   .home #main .content .teaser.gold h6 { margin-bottom: 20px; }
   .home #main .content .teaser .btn-bpca { right: 40px !important; bottom: 40px !important; }
   .home #main .content.leadership .leadership-list a { font-size: 16px !important; }
-  .page-who-we-are .content > p { margin: 0; } }
+  .page-who-we-are .content > p { margin: 0; }
+  .page-id-62 .post-filter .grid-info-tags { width: 100%; }
+  header #menu { display: none; clear: both; }
+  header #menu.active { display: block; }
+  header #menu .menu { float: none; }
+  header #menu .menu li { display: block; float: none; margin: 0 0 5px; }
+  header #menu .menu li a { display: inline-block; }
+  header #menu .menu li ul.sub-menu.show { position: static; }
+  .filter-controls.filter-events-page { padding-left: 40px; height: auto; margin-bottom: 0; }
+  .filter-controls.filter-events-page .left-panel, .filter-controls.filter-events-page .right-panel, .filter-controls.filter-events-page .calendar, .filter-controls.filter-events-page .post-filter { padding: 0; float: none; }
+  .filter-controls.filter-events-page .post-filter, .filter-controls.filter-events-page .calendar-container { width: 100%; }
+  .news-events { clear: both; }
+  .board-committees > div { padding: 0; } }
 .page-id-38 #main .header .content h4 { font-size: 24px !important; font-weight: 500 !important; font-family: "proxima_nova_rgbold" !important; }
 
 /*# sourceMappingURL=long.css.map */

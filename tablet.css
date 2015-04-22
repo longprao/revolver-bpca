@@ -28,7 +28,7 @@ border-top: 1px solid #EBEDEE;
 #removing grey gap btw header and body content */
 #main {
     padding: 0px!important;
-    margin: -10px 0!important;
+    margin: 0!important;
 }
 
 
@@ -228,7 +228,8 @@ padding-left: 0px!important;
 	.fa-twitter,
 	.fa-facebook,
 	.fa-leaf,
-	.fa-map-marker {
+	.fa-map-marker,
+    .fa-laptop {
 		font-size: 25px !important;
 		margin-bottom: 10px;
 	}

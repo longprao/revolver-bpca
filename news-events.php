@@ -61,37 +61,41 @@ $loop = tribe_get_events($filter);
 
 			<div class="filter events-filter row">
 				<div class="col-md-8 filter-header"><?= post_image(get_the_id()); ?></div>
-				<div class="col-md-4 filter-controls">
-					<div class="row">
-						<h3>FILTER BY FOCUS AREA</h3>
-					</div>
-					<div class="row post-filter">
-						<?= get_all_event_categories_html() ?>
-					</div>
-					<!--<button class="go-button">GO</button>-->
-					<div class="row">
-						<div class="calendar-container">
-							<div class="calendar">
-								<header>
-									<h2 class="month"></h2>
-									<a class="btn-prev fa fa-angle-left" href="#"></a>
-									<a class="btn-next fa fa-angle-right" href="#"></a>
-								</header>
-								<table>
-									<thead class="event-days">
-										<tr></tr>
-									</thead>
-									<tbody class="event-calendar">
-										<tr class="1"></tr>
-										<tr class="2"></tr>
-										<tr class="3"></tr>
-										<tr class="4"></tr>
-										<tr class="5"></tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
+				<div class="col-md-4 filter-controls filter-events-page">
+
+                    <div class="row">
+                        <div class="left-panel col-md-12 col-sm-6">
+                            <h3>FILTER BY FOCUS AREA</h3>
+
+                            <div class="post-filter">
+                                <?= get_all_event_categories_html() ?>
+                            </div>
+                        </div>
+
+                        <div class="right-panel col-md-12 col-sm-6">
+                            <div class="calendar-container">
+                                <div class="calendar">
+                                    <header>
+                                        <h2 class="month"></h2>
+                                        <a class="btn-prev fa fa-angle-left" href="#"></a>
+                                        <a class="btn-next fa fa-angle-right" href="#"></a>
+                                    </header>
+                                    <table>
+                                        <thead class="event-days">
+                                        <tr></tr>
+                                        </thead>
+                                        <tbody class="event-calendar">
+                                        <tr class="1"></tr>
+                                        <tr class="2"></tr>
+                                        <tr class="3"></tr>
+                                        <tr class="4"></tr>
+                                        <tr class="5"></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</div>
 			<div class="news news-events">
