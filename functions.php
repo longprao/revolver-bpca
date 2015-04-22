@@ -213,13 +213,13 @@ function gallery_share_shortcode( $atts ){
 
 add_shortcode( 'bpca_share' , 'gallery_share_shortcode');
 
-add_filter("gform_validation_message", "change_message", 10, 2);
+
+/*add_filter("gform_validation_message", "change_message", 10, 2);
 function change_message($message, $form){
     return "To Download RFP Forms, please enter the required information, marked red below";
-}
+} */
 
+/* Added By Hire Jordan Smith - 4/22/2015 */
 
-
-
-
-?>
+// Anchor all Gravity Forms on submission
+add_filter( 'gform_confirmation_anchor', '__return_true' ); 
