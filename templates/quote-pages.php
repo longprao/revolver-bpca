@@ -107,12 +107,13 @@ if (array_key_exists('down-files', $_POST)) {
                     ?>
                         </ul>
                       </div>
+
+                        <div class="prev-slide"><i class="fa fa-angle-left"></i></div>
+                        <div class="next-slide"><i class="fa fa-angle-right"></i></div>
                     </div>
 
                     <div class="photo-caption-container">
                       <div class="slides-counter"><span class="current-slide">1</span> of <span class="total-slides"></span></div>
-                      <div class="prev-slide"><i class="fa fa-angle-left"></i></div>
-                      <div class="next-slide"><i class="fa fa-angle-right"></i></div>
                         <div class="photo-caption-text">
                             <?php echo "<strong>" . $thiscaption . "</strong>";?>
                              <?php echo "<br />" . $thisdescr;?>

@@ -7,7 +7,7 @@
 
 .news.news-blog { margin-top: 0; }
 
-.filter-controls { margin-bottom: 10px; }
+.filter-controls { margin-bottom: 10px; border-bottom: 1px solid #f1f0ef; }
 
 a.mmenu { cursor: pointer; }
 
@@ -15,9 +15,17 @@ a.mmenu { cursor: pointer; }
 @media screen and (min-width: 992px) { .news-events .grid-description-content.places { margin-top: -8px; }
   .news-events .desktop-grid .grid-alt .left-col { white-space: normal; }
   .news-events .desktop-grid .grid-alt .left-col h4 { margin-top: 0 !important; }
-  .filter-events-page .left-panel, .filter-events-page .right-panel { padding: 0; } }
+  .filter-events-page .left-panel, .filter-events-page .right-panel { padding: 0; }
+  #main > .wrapper > .content { margin-top: 20px; } }
 @media screen and (max-width: 1200px) { .page-home #main { margin: -20px 0 !important; }
-  .breadcrumb { padding: 0; } }
+  .breadcrumb { padding: 0; }
+  .gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label { padding-left: 10px; padding-top: 5px; }
+  .timeline-page .col-md-4 { min-height: 310px; }
+  .timeline-page-container, .photo-container { position: relative; }
+  .timeline-page-container .next-slide, .timeline-page-container .prev-slide, .photo-container .next-slide, .photo-container .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: black; opacity: 0.6; color: white; z-index: 10; }
+  .timeline-page-container .next-slide, .photo-container .next-slide { right: 0; }
+  .timeline-page-container .prev-slide, .photo-container .prev-slide { right: auto; left: 0; }
+  .timeline-page-container .next-slide, .timeline-page-container .prev-slide { bottom: 60%; } }
 @media screen and (max-width: 991px) { .places-pn .left-col, .news-events .left-col { padding-right: 0 !important; }
   .about-leadership .grid-image { opacity: 0; }
   .about-leadership .active .grid-image { opacity: 1; }
@@ -32,7 +40,8 @@ a.mmenu { cursor: pointer; }
   .filter-controls.filter-events-page { padding-left: 40px; }
   .filter-controls.filter-events-page .right-panel { padding-top: 20px; }
   .col-md-8.blog-post { padding-right: 40px !important; }
-  .timeline-page .col-md-4 { min-height: 380px; } }
+  #main .pagination { font-size: 22px; }
+  #main .pagination input { width: 40px; text-align: center; } }
 @media screen and (max-width: 767px) { .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important; } }
 @media screen and (min-width: 551px) and (max-width: 991px) { .board-committees > div:first-child .content-wrapper { padding-top: 40px; }
   .board-committees > div:last-child .content-wrapper { padding-bottom: 40px; }
@@ -46,7 +55,7 @@ a.mmenu { cursor: pointer; }
   .col-md-8.blog-post p { margin-bottom: 20px; }
   .residential-buildings .grid-info-tags, .news-events .grid-info-tags { padding-top: 20px; }
   #main .content .teaser a { font-size: 22px !important; }
-  #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 160px; font-size: 18px !important; }
+  #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 140px; font-size: 18px !important; }
   #main .content .teaser .btn-bpca { line-height: 22px !important; }
   .home #main .content .teaser.gold h6 { margin-bottom: 20px; }
   .home #main .content .teaser .btn-bpca { right: 40px !important; bottom: 40px !important; }
@@ -63,7 +72,10 @@ a.mmenu { cursor: pointer; }
   .filter-controls.filter-events-page .left-panel, .filter-controls.filter-events-page .right-panel, .filter-controls.filter-events-page .calendar, .filter-controls.filter-events-page .post-filter { padding: 0; float: none; }
   .filter-controls.filter-events-page .post-filter, .filter-controls.filter-events-page .calendar-container { width: 100%; }
   .news-events { clear: both; }
-  .board-committees > div { padding: 0; } }
+  .board-committees > div { padding: 0; }
+  .timeline-page-container .next-slide, .timeline-page-container .prev-slide { bottom: 80%; }
+  #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important; }
+  #main .content .news-blog .grid-info-tags { margin-right: 20px; } }
 .page-id-38 #main .header .content h4 { font-size: 24px !important; font-weight: 500 !important; font-family: "proxima_nova_rgbold" !important; }
 
 /*# sourceMappingURL=long.css.map */

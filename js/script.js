@@ -1,7 +1,25 @@
 
-
 (function( $ ) {
 	'use strict';
+
+    $(document).bind("mobileinit", function() {
+        $.mobile.ajaxEnabled = false;
+        $.mobile.pushStateEnabled = false;
+        $.mobile.ignoreContentEnabled = true;
+    });
+
+    $(document).on('pageinit', function(event){
+        $('.timeline-page-container').on('swipeleft', function (e) {
+            e.preventDefault();
+            $('.timeline-page-container .next-slide').click();
+        })
+
+        $('.timeline-page-container').on('swiperight', function (e) {
+            e.preventDefault();
+            $('.timeline-page-container .prev-slide').click();
+        })
+    });
+
 
 	bpca_script.init = function() {
 		bpca_script.menu();

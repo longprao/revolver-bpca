@@ -13,7 +13,7 @@ $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ance
 .building-filter .post-filter .grid-info-tags { @include column-count(1);}
 .news.news-blog { margin-top: 0;}
 
-.filter-controls { margin-bottom: 10px;}
+.filter-controls { margin-bottom: 10px; border-bottom: 1px solid #f1f0ef;}
 
 a.mmenu { cursor: pointer;}
 
@@ -32,11 +32,26 @@ a.mmenu { cursor: pointer;}
   .filter-events-page {
     .left-panel, .right-panel { padding: 0;}
   }
+
+  #main > .wrapper > .content { margin-top: 20px;}
 }
 
 @include media($smallDesktop) {
   .page-home #main { margin: -20px 0 !important;}
   .breadcrumb { padding: 0;}
+
+  .gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label { padding-left: 10px; padding-top: 5px;}
+
+  .timeline-page .col-md-4 { min-height: 310px;}
+  .timeline-page-container, .photo-container { position: relative;
+    .next-slide, .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: black; opacity: 0.6;
+      color: white; z-index: 10}
+    .next-slide { right: 0;}
+    .prev-slide { right: auto; left: 0;}
+  }
+  .timeline-page-container {
+    .next-slide, .prev-slide { bottom: 60%;}
+  }
 }
 
 @include media($tablet) {
@@ -69,7 +84,9 @@ a.mmenu { cursor: pointer;}
 
   .col-md-8.blog-post { padding-right: 40px !important;}
 
-  .timeline-page .col-md-4 { min-height: 380px;}
+  #main .pagination { font-size: 22px;
+    input { width: 40px; text-align: center;}
+  }
 }
 
 @include media($smallTablet) {
@@ -106,7 +123,7 @@ a.mmenu { cursor: pointer;}
   }
 
   #main .content .teaser a { font-size: 22px !important;}
-  #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 160px; font-size: 18px !important;}
+  #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 140px; font-size: 18px !important;}
   #main .content .teaser .btn-bpca { line-height: 22px !important;}
 
   .home #main .content .teaser.gold {
@@ -141,6 +158,13 @@ a.mmenu { cursor: pointer;}
   .board-committees {
     > div { padding: 0;}
   }
+
+  .timeline-page-container {
+    .next-slide, .prev-slide { bottom: 80%;}
+  }
+
+  #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
+  #main .content .news-blog .grid-info-tags { margin-right: 20px;}
 }
 
 .page-id-38 #main .header {

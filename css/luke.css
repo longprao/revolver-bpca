@@ -406,10 +406,6 @@
   color: #fff;
 }
 
-.timeline-page-container .col-md-4{
-  padding-bottom: 60px !important;
-}
-
 @media (max-width: 1200px){
   .timeline-page-container .year{
     display: inline;

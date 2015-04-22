@@ -13,6 +13,8 @@
 
 <div class="clear"></div>
 
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
 <div class="timeline-page-container">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="timeline-page row timeline-page-<?php the_ID(); ?>">
