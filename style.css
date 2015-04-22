@@ -437,3 +437,22 @@ footer .menu li a { display: block; color: #fff; font-size: 13px; }
 .content.slider #home_slider ul li:first-child { display: block; }
 
 .nopad {padding: 0 !important;}
+
+/* Styles Added By Hire Jordan Smith */
+
+#footer .gform_wrapper .top_label .gfield_label { display: none; }
+#footer .gform_confirmation_message img { width: 100%; height: auto; }
+#footer .gfield_description.validation_message { display: block;}
+#footer .gfield_contains_required .ginput_container:before { display: none; }
+#footer .gform_wrapper div.validation_error { display: none;}
+#footer .gform_confirmation_wrapper { padding-top: 15px;}
+#footer .gform_wrapper li.gfield.gfield_error, 
+#footer .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning { background: none; border: none;}
+#footer .gform_wrapper .gform_footer { padding: 0; margin: 1em 0 0;}
+#footer .gform_wrapper li.gfield_error input[type=text], 
+#footer .gform_wrapper li.gfield_error input[type=url], 
+#footer .gform_wrapper li.gfield_error input[type=email], 
+#footer .gform_wrapper li.gfield_error input[type=tel], 
+#footer .gform_wrapper li.gfield_error input[type=number], 
+#footer .gform_wrapper li.gfield_error input[type=password], 
+#footer .gform_wrapper li.gfield_error textarea { border-bottom: 1px solid #000;}
