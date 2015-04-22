@@ -230,7 +230,7 @@ $output .= <<< HTML
 					{$post['content']}
 				</div>
 				<div class="right-col places pull-right">
-					<div class="grid-aside-content">
+					<div class="grid-aside-content aside-share-button">
 						{$post_description}
 						<ul>
 							<li class="snippet">{$post['snippet']}</li>
@@ -241,13 +241,13 @@ $output .= <<< HTML
 							</li>
 
 							<li>
-								<a href="http://twitter.com/share?text={$post['title']}">
+								<a href="http://twitter.com/share?text={$post['title']}" target="_blank">
 									<i class="fa fa-twitter"></i>Share on Twitter
 								</a>
 							</li>
 
 							<li>
-								<a href="https://www.facebook.com/sharer/sharer.php?u=">
+								<a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
 									<i class="fa fa-facebook"></i>Share on Facebook
 								</a>
 							</li>

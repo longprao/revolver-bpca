@@ -6,8 +6,28 @@ $red: #790000;
 
 $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ancestor, &.current-menu-parent';
 
+.grid-info-tags li { font-weight: bold;
+  &.category-header { font-size: 22px;}
+}
+
+.building-filter .post-filter .grid-info-tags { @include column-count(1);}
+
+@include media($largeDesktop) {
+  .timeline-page img { width: 100%; max-height: 350px;}
+}
+
+@include media($desktop) {
+  .news-events {
+    .grid-description-content.places { margin-top: -8px;}
+    .desktop-grid .grid-alt .left-col { white-space: normal;
+      h4 { margin-top: 0 !important;}
+    }
+  }
+}
+
 @include media($smallDesktop) {
   .page-home #main { margin: -20px 0 !important;}
+  .breadcrumb { padding: 0;}
 }
 
 @include media($tablet) {
@@ -18,6 +38,22 @@ $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ance
       .grid-image { opacity: 1;}
     }
   }
+
+  .page-blog {
+    .filter-header { padding: 0;
+      img { width: 100%;}
+    }
+    .page-id-62 .post-filter .grid-info-tags { width: 320px;}
+  }
+  .news.news-blog { margin-top: 0;}
+
+  #main .content .teaser a { font-size: 18px !important; font-family: proxima_nova_rgbold !important;}
+  #main .content .teaser-twitter * { font-size: 18px !important;}
+
+  .downloadform input[type=checkbox]:checked + .checkcheck { margin: -10px 0px 5px 6px !important;}
+  .board-committees .download-items, .board-committees .forward-to-friends, .aside-share-button a { font-size: 18px !important;}
+
+  .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 18px !important; font-family: proxima_nova_ltsemibold !important;}
 }
 
 @include media($smallTablet) {
@@ -28,6 +64,33 @@ $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ance
   .page-id-38 #main .header { padding: 0 !important;
     .content { padding: 20px !important;}
   }
+
+  #main .content .teaser.blog-post { padding-left: 0 !important;
+    .btn-bpca { right: 0 !important;}
+    .grid-info { border-bottom: none;
+      > div { margin-left: 140px;}
+    }
+  }
+
+  .col-md-8.blog-post p { margin-bottom: 20px;}
+
+  .residential-buildings, .news-events {
+    .grid-info-tags { padding-top: 20px;}
+  }
+
+  #main .content .teaser a { font-size: 22px !important;}
+  #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 160px; font-size: 18px !important;}
+  #main .content .teaser .btn-bpca { line-height: 22px !important;}
+
+  .home #main .content .teaser.gold {
+    h6 { margin-bottom: 20px;}
+  }
+  .home #main .content .teaser {
+    .btn-bpca { right: 40px !important; bottom: 40px !important;}
+  }
+  .home #main .content.leadership .leadership-list a { font-size: 16px !important;}
+
+  .page-who-we-are .content > p { margin: 0;}
 }
 
 .page-id-38 #main .header {

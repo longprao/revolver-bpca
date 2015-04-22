@@ -67,22 +67,12 @@ function revolver_leader_metabox_func() {
 		<td></td>
 	</tr>
 	<tr>
-		<td>
-			<label for="quote">Quote</label>
-			<textarea class="widefat" name="quote" id="quote"><?php echo $quote; ?></textarea><br /><br />
-		</td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
 		<td width="49%">
 			<label for="boi_column_1">Bio Column 1</label>
 			<textarea class="widefat" name="boi_column_1" id="boi_column_1" style="height: 100px;"><?php echo $boi_column_1; ?></textarea><br /><br />
 		</td>
 		<td width="2%"></td>
 		<td width="49%">
-			<label for="boi_column_2">Bio Column 2</label>
-			<textarea class="widefat" name="boi_column_2" id="boi_column_2" style="height: 100px;"><?php echo $boi_column_2; ?></textarea><br /><br />
 		</td>
 	</tr>
 </table>

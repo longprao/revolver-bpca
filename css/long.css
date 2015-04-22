@@ -1,30 +1,44 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-@media screen and (max-width: 1200px) {
-  .page-home #main {
-    margin: -20px 0 !important; } }
-@media screen and (max-width: 991px) {
-  .places-pn .left-col, .news-events .left-col {
-    padding-right: 0 !important; }
+.grid-info-tags li { font-weight: bold; }
+.grid-info-tags li.category-header { font-size: 22px; }
 
-  .about-leadership .grid-image {
-    opacity: 0; }
-  .about-leadership .active .grid-image {
-    opacity: 1; } }
-@media screen and (max-width: 767px) {
-  .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list {
-    display: block !important; } }
-@media screen and (max-width: 550px) {
-  .page-id-38 #main .header {
-    padding: 0 !important; }
-    .page-id-38 #main .header .content {
-      padding: 20px !important; } }
-.page-id-38 #main .header .content h4 {
-  font-size: 24px !important;
-  font-weight: 500 !important;
-  font-family: "proxima_nova_rgbold" !important; }
+.building-filter .post-filter .grid-info-tags { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+
+@media screen and (min-width: 1201px) { .timeline-page img { width: 100%; max-height: 350px; } }
+@media screen and (min-width: 992px) { .news-events .grid-description-content.places { margin-top: -8px; }
+  .news-events .desktop-grid .grid-alt .left-col { white-space: normal; }
+  .news-events .desktop-grid .grid-alt .left-col h4 { margin-top: 0 !important; } }
+@media screen and (max-width: 1200px) { .page-home #main { margin: -20px 0 !important; }
+  .breadcrumb { padding: 0; } }
+@media screen and (max-width: 991px) { .places-pn .left-col, .news-events .left-col { padding-right: 0 !important; }
+  .about-leadership .grid-image { opacity: 0; }
+  .about-leadership .active .grid-image { opacity: 1; }
+  .page-blog .filter-header { padding: 0; }
+  .page-blog .filter-header img { width: 100%; }
+  .page-blog .page-id-62 .post-filter .grid-info-tags { width: 320px; }
+  .news.news-blog { margin-top: 0; }
+  #main .content .teaser a { font-size: 18px !important; font-family: proxima_nova_rgbold !important; }
+  #main .content .teaser-twitter * { font-size: 18px !important; }
+  .downloadform input[type=checkbox]:checked + .checkcheck { margin: -10px 0px 5px 6px !important; }
+  .board-committees .download-items, .board-committees .forward-to-friends, .aside-share-button a { font-size: 18px !important; }
+  .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 18px !important; font-family: proxima_nova_ltsemibold !important; } }
+@media screen and (max-width: 767px) { .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important; } }
+@media screen and (max-width: 550px) { .page-id-38 #main .header { padding: 0 !important; }
+  .page-id-38 #main .header .content { padding: 20px !important; }
+  #main .content .teaser.blog-post { padding-left: 0 !important; }
+  #main .content .teaser.blog-post .btn-bpca { right: 0 !important; }
+  #main .content .teaser.blog-post .grid-info { border-bottom: none; }
+  #main .content .teaser.blog-post .grid-info > div { margin-left: 140px; }
+  .col-md-8.blog-post p { margin-bottom: 20px; }
+  .residential-buildings .grid-info-tags, .news-events .grid-info-tags { padding-top: 20px; }
+  #main .content .teaser a { font-size: 22px !important; }
+  #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 160px; font-size: 18px !important; }
+  #main .content .teaser .btn-bpca { line-height: 22px !important; }
+  .home #main .content .teaser.gold h6 { margin-bottom: 20px; }
+  .home #main .content .teaser .btn-bpca { right: 40px !important; bottom: 40px !important; }
+  .home #main .content.leadership .leadership-list a { font-size: 16px !important; }
+  .page-who-we-are .content > p { margin: 0; } }
+.page-id-38 #main .header .content h4 { font-size: 24px !important; font-weight: 500 !important; font-family: "proxima_nova_rgbold" !important; }
 
 /*# sourceMappingURL=long.css.map */
