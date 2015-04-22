@@ -17,7 +17,8 @@
 						<div class="content newsletter">
 							<h3>Newsletter:</h3>
 
-							<?php echo do_shortcode( '[constantcontactapi formid="1"]' ); ?>
+							<?php //echo do_shortcode( '[constantcontactapi formid="1"]' ); ?>
+							<?php gravity_form( 2, false, false, true, array(), true, 999, true ); ?>
 
 							<div class="clear"></div>
 						</div>
