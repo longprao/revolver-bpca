@@ -5,6 +5,7 @@
 $red: #790000;
 
 $proxima_nova_ltsemibold: proxima_nova_ltsemibold, $helvetica;
+$proxima_nova_rgbold: proxima_nova_rgbold, $helvetica;
 
 $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ancestor, &.current-menu-parent';
 
@@ -25,9 +26,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .building-filter .post-filter .grid-info-tags { @include column-count(1);}
 .news.news-blog { margin-top: 0;}
 
-.filter-controls { margin-bottom: 10px; border-bottom: 1px solid #f1f0ef;}
+.filter-controls { border-bottom: 1px solid #f1f0ef;}
 
-.download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px;}
+.download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px; text-align: center;}
 .checker + label { padding-left: 46px;}
 
 #main .content input[type=submit], #main .content button, #main .grids input[type=submit], #main .grids button, #main .content .btn-bpca, #main .grids .btn-bpca { display: inline-block;}
@@ -41,6 +42,7 @@ a.mmenu { cursor: pointer;}
 }
 
 #main .content .teaser a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important;}
+#main .content .teaser h1 a { font-size: 24px !important; font-family: $proxima_nova_rgbold !important;}
 
 #main .pagination { padding-bottom: 40px;
   input { color: black;}
@@ -48,8 +50,17 @@ a.mmenu { cursor: pointer;}
 
 #main .content .teaser.teaser-twitter .tweettext { text-transform: none;}
 
+#main .content .timeline-page .download-link-area a {
+  &:hover { color: #197BC2 !important;}
+}
+
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
+
+  .timeline-page {
+    .checker + label { padding-left: 54px;}
+    .download-items .fa, .forward-to-friends .fa { text-align: left;}
+  }
 }
 
 @include media($desktop) {
@@ -65,6 +76,8 @@ a.mmenu { cursor: pointer;}
   }
 
   #main > .wrapper > .content { margin-top: 20px;}
+
+  #main .filter { height: 350px;}
 }
 
 @include media($smallDesktop) {
@@ -87,9 +100,13 @@ a.mmenu { cursor: pointer;}
   .timeline-page-container {
     .next-slide, .prev-slide { bottom: 70%;}
   }
+
+  .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px;}
 }
 
 @include media($tablet) {
+  .filter-controls { margin-bottom: 10px;}
+
   .places-pn .left-col, .news-events .left-col { padding-right: 0 !important;}
   .about-leadership {
     .grid-image { opacity: 0;}
@@ -105,10 +122,11 @@ a.mmenu { cursor: pointer;}
     .page-id-62 .post-filter .grid-info-tags { width: 320px;}
   }
 
-  #main .content .teaser a { font-size: 18px !important;}
+  #main .content .teaser a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
+  #main .content .teaser h1 a { font-size: 22px !important;}
   #main .content .teaser-twitter * { font-size: 18px !important;}
 
-  .downloadform input[type=checkbox]:checked + .checkcheck { margin: -10px 0px 5px 6px !important;}
+  .downloadform input[type=checkbox]:checked + .checkcheck { margin: -9px 0px 5px 8px !important;}
   .board-committees .download-items, .board-committees .forward-to-friends, .aside-share-button a { font-size: 18px !important;}
 
   .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important; font-weight: normal;}
@@ -131,8 +149,6 @@ a.mmenu { cursor: pointer;}
   .download-link-area a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
   .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px;}
 
-  .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px;}
-
   .col-md-8.blog-post p, #main .content p { font-size: 18px !important;}
   #main .content h4 { font-size: 20px !important; font-family: $proxima_nova_ltsemibold !important;}
 
@@ -140,6 +156,10 @@ a.mmenu { cursor: pointer;}
     h3 { margin-top: 0 !important;}
   }
   .page-id-83 .post-filter .grid-info-tags { height: auto; margin-bottom: 0;}
+
+  .page-alert-subscription .filter-controls { padding: 0 !important;
+    li { margin-bottom: 0;}
+  }
 
   .news.news-blog { border-top: 2px solid #f1f0ef;}
   .page-id-62 #main .content .row.post-filter { margin-bottom: 0; float: none;}
@@ -149,6 +169,12 @@ a.mmenu { cursor: pointer;}
 
   #main .content h6 { margin-bottom: 20px;}
   #main .content .teaser.teaser-leadership li { font-size: 16px;}
+
+  #main .content .teaser {
+    &.black, &.teaser-social, &.gold {
+      p { font-size: 22px !important;}
+    }
+  }
 }
 
 @include media($smallTablet) {
@@ -174,9 +200,11 @@ a.mmenu { cursor: pointer;}
   }
 
   #main .content .teaser.blog-post { padding-left: 0 !important;
+    h1 { padding-left: 120px; min-height: 85px;}
+
     .btn-bpca { left: 20px !important; right: auto !important; position: absolute !important; bottom: 15px !important;}
     .grid-info { border-bottom: none;
-      > div { margin-left: 0; padding-left: 140px; padding-bottom: 20px;}
+      > div { margin-left: 0; padding-bottom: 20px; padding-left: 20px;}
     }
   }
 
@@ -196,7 +224,9 @@ a.mmenu { cursor: pointer;}
   .home #main .content .teaser {
     .btn-bpca { right: 40px !important; bottom: 40px !important;}
   }
-  .home #main .content.leadership .leadership-list a { font-size: 16px !important; margin-right: 10px;}
+
+  .home #main .content.leadership .leadership-list a { font-size: 14px !important; margin-right: 10px;}
+  #main .content .teaser.teaser-leadership li { font-size: 14px;}
 
   .page-who-we-are .content > p { margin: 0;}
 
@@ -235,11 +265,24 @@ a.mmenu { cursor: pointer;}
   .col-md-8.blog-post .grid-info div { margin-top: 0;}
   .row.blog { padding-bottom: 0;}
 
-  .news-blog .gird-info { border-bottom: none;}
+  .news.news-blog .grid-info { border: none;}
 
   #main .content.header img { margin-left: 0; left: 50%; @include transform(translateX(-50%));}
 
   .filter-controls { padding: 20px 0 !important;}
 
   #main .pagination { padding-bottom: 20px; background: white; position: relative; top: -1px;}
+
+  .slides-counter { bottom: 18px; right: 20px;}
+  .photo-caption-text, .archive-share-buttons { margin: 20px;}
+  .archive-share-buttons { margin-bottom: 0;}
+
+  #main .news-blog h1 { margin-top: 20px; }
+  .grid-info-tags { padding-top: 20px; }
+
+  #main .content .teaser.blue h6 { font-size: 30px;}
+
+  #footer {
+    .resources, .newsletter { font-size: 18px;}
+  }
 }

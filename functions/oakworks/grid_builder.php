@@ -181,7 +181,7 @@ function build_grid($posts=array(), $cols=1, $events=false){
 	foreach ($posts_array as $post) {
 		$ended_on_col_boundary = false;
 
-        $permalink = urlencode(get_the_permalink($post['id']));
+        $permalink = urlencode("//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" . '?selected_id=' . $post['id']);
 
 		$post_description = '';
 		

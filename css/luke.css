@@ -259,7 +259,6 @@
     line-height: 15px;
     margin-left: 25px;
     font-size: 16px !important;
-    max-width: 50%;
 }
 
 .share-text-black{
@@ -329,7 +328,7 @@
   font-size: 20px;
   position: absolute;
   bottom: 32px;
-  right: 117px;
+  right: 40px;
 }
 
 .prev-slide{

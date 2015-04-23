@@ -39,10 +39,6 @@ border-top: 1px solid #EBEDEE;
     margin-top: 20px!important;
 }
 
-.grid-aside-content i {
-    text-align: left!important;
-}
-
 
 
 /* footer */
@@ -210,13 +206,11 @@ padding-left: 0px!important;
 		width: 24px !important;
 	}
 	
-	.downloadform input[type=checkbox]:checked + .checkcheck {
-	  border-radius: 7px 7px 7px 7px !important;
-	  -moz-border-radius: 7px 7px 7px 7px !important;
-	  -webkit-border-radius: 7px 7px 7px 7px !important;
-	  height: 10px !important;
-	  width: 10px !important;
-	  margin: -6px 0px 5px 6px !important;
+	.downloadform input[type=checkbox]:checked + .checkcheck, .gfield_checkbox input[type=checkbox]:checked + .checkcheck {
+	  border-radius: 100% !important;
+	  height: 7px !important;
+	  width: 7px !important;
+	  margin: -5px 0 5px 8px !important;
 	}
 	
 	.downloadform label {
