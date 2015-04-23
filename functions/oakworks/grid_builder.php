@@ -181,6 +181,8 @@ function build_grid($posts=array(), $cols=1, $events=false){
 	foreach ($posts_array as $post) {
 		$ended_on_col_boundary = false;
 
+        $permalink = urlencode(get_the_permalink($post['id']));
+
 		$post_description = '';
 		
 		if ( isset( $post['description'] ) && '' != $post['description'] )
@@ -235,19 +237,19 @@ $output .= <<< HTML
 						<ul>
 							<li class="snippet">{$post['snippet']}</li>
 							<li>
-								<a href="mailto:?subject={$post['title']}">
+								<a href="mailto:?subject={$post['title']}&body={$permalink}">
 									<i class="fa fa-envelope-o"></i>Forward to Friends
 								</a>
 							</li>
 
 							<li>
-								<a href="http://twitter.com/share?text={$post['title']}" target="_blank">
+								<a href="http://twitter.com/share?text={$post['title']}&url={$permalink}"" target="_blank">
 									<i class="fa fa-twitter"></i>Share on Twitter
 								</a>
 							</li>
 
 							<li>
-								<a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
+								<a href="https://www.facebook.com/sharer/sharer.php?u={$permalink}" target="_blank">
 									<i class="fa fa-facebook"></i>Share on Facebook
 								</a>
 							</li>

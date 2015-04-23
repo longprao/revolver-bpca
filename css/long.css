@@ -58,7 +58,8 @@ a.mmenu { cursor: pointer; }
   #main .pagination { font-size: 22px; }
   #main .pagination input { width: 40px; text-align: center; }
   .board-committees .downloadform li { margin-bottom: 20px; }
-  .checker + label, .download-link-area a { font-size: 18px !important; font-family: proxima_nova_ltsemibold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important; }
+  .checker + label { font-size: 18px !important; }
+  .download-link-area a { font-size: 18px !important; font-family: proxima_nova_ltsemibold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important; }
   .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px; }
   .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px; }
   .col-md-8.blog-post p, #main .content p { font-size: 18px !important; }
@@ -69,7 +70,7 @@ a.mmenu { cursor: pointer; }
 @media screen and (max-width: 767px) { .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important; } }
 @media screen and (min-width: 551px) and (max-width: 991px) { .board-committees > div:first-child .content-wrapper { padding-top: 40px; }
   .board-committees > div:last-child .content-wrapper { padding-bottom: 40px; }
-  .board-committees > div .content-wrapper { padding-top: 20px; padding-bottom: 20px; } }
+  .board-committees > div .content-wrapper { padding-bottom: 20px; } }
 @media screen and (max-width: 550px) { header { padding-left: 20px; padding-right: 20px; }
   .page-id-38 #main .header { padding: 0 !important; }
   .page-id-38 #main .header .content { padding: 20px !important; }

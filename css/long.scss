@@ -123,7 +123,8 @@ a.mmenu { cursor: pointer;}
     .downloadform li { margin-bottom: 20px;}
   }
 
-  .checker + label, .download-link-area a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
+  .checker + label { font-size: 18px !important;}
+  .download-link-area a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
   .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px;}
 
   .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px;}
@@ -147,7 +148,7 @@ a.mmenu { cursor: pointer;}
       &:first-child .content-wrapper { padding-top: 40px;}
       &:last-child .content-wrapper { padding-bottom: 40px;}
 
-      .content-wrapper { padding-top: 20px; padding-bottom: 20px; }
+      .content-wrapper { padding-bottom: 20px; }
     }
   }
 }

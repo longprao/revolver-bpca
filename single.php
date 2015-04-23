@@ -44,12 +44,12 @@
 							<div class="grid-aside-content">
 								<ul>
 									<li>
-										<a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
+										<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink()) ?>" target="_blank">
 											<i class="fa fa-facebook"></i>Share on Facebook
 										</a>
 									</li>
 									<li>
-										<a href="http://twitter.com/share?text=<?php echo urlencode( get_the_title() ); ?>" target="_blank">
+										<a href="http://twitter.com/share?text=<?php echo urlencode( get_the_title() ); ?>&url=<?php echo urlencode(get_the_permalink()) ?>" target="_blank">
 											<i class="fa fa-twitter"></i>Share on Twitter
 										</a>
 									</li>
