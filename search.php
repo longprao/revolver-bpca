@@ -87,7 +87,7 @@ global $wp_query;
 							?>
 							<li>
 								<form>
-									<input type="text" name="paged" value="<?php echo absint( $current_page ); ?>" id="paged" onfocus="this.value = ''" onblur="this.value = '<?php echo absint( $current_page ); ?>'" />
+									<input type="text" name="paged" placeholder="<?php echo absint( $current_page ); ?>" id="paged"/>
 									of <?php echo absint( $total_pages ); ?>
 								</form>
 							</li>

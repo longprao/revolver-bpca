@@ -13,6 +13,11 @@
 
 <div class="clear"></div>
 
+<script>
+    jQuery(document).on('pagebeforecreate', function( e ) {
+        jQuery( "input, textarea, select", e.target ).attr( "data-role", "none" );
+    });
+</script>
 <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 
 <div class="timeline-page-container">

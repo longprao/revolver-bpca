@@ -69,7 +69,7 @@ $wp_query   = $loop;
 					<div class="row post-filter">
 						<?= get_all_event_categories_html() ?>
 					</div>
-					<a class="btn-bpca go-button" href="#">Go</a>
+<!--					<a class="btn-bpca go-button" href="#">Go</a>-->
 				</div>
 			</div>
 			<div class="news news-blog">
@@ -124,7 +124,7 @@ $wp_query   = $loop;
 							?>
 							<li>
 								<form>
-									<input type="text" name="paged" value="<?php echo absint( $current_page ); ?>" id="paged" onfocus="this.value = ''" onblur="this.value = '<?php echo absint( $current_page ); ?>'" />
+									<input type="text" name="paged" placeholder="<?php echo absint( $current_page ); ?>" id="paged" />
 									of <?php echo absint( $total_pages ); ?>
 								</form>
 							</li>

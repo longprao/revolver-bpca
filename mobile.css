@@ -40,7 +40,7 @@ header .identity {
 /* 
 header  */
 header .identity .logo a {
-   width: 185px!important;
+   width: 200px!important;
 }
  
 
@@ -330,7 +330,7 @@ padding-left: 0px!important;
 	header .mmenu { background: url("images/menu-24-24.png") no-repeat; width: 24px; height: 24px; float: right; margin: 20px; margin-top: -50px; }
 
 	header .identity .logo a {
-	    font-size: 18px;
+	    font-size: 20px;
 	}
 
 	h2.who-we-are-overview,
