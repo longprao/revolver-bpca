@@ -11,8 +11,6 @@ a:focus, a:active, button, input[type="reset"]::-moz-focus-inner, input[type="bu
 
 .filter-controls { border-bottom: 1px solid #f1f0ef; }
 
-.download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px; text-align: center; }
-
 .checker + label { padding-left: 46px; }
 
 #main .content input[type=submit], #main .content button, #main .grids input[type=submit], #main .grids button, #main .content .btn-bpca, #main .grids .btn-bpca { display: inline-block; }
@@ -34,7 +32,8 @@ a.mmenu { cursor: pointer; }
 
 @media screen and (min-width: 1201px) { .timeline-page img { width: 100%; max-height: 350px; }
   .timeline-page .checker + label { padding-left: 54px; }
-  .timeline-page .download-items .fa, .timeline-page .forward-to-friends .fa { text-align: left; } }
+  .timeline-page .download-items .fa, .timeline-page .forward-to-friends .fa { text-align: left; }
+  .download-items .fa, .forward-to-friends .fa { margin-right: 10px; } }
 @media screen and (min-width: 992px) { .news-events .grid-description-content.places { margin-top: -8px; }
   .news-events .desktop-grid .grid-alt .left-col { white-space: normal; }
   .news-events .desktop-grid .grid-alt .left-col h4 { margin-top: 0 !important; }
@@ -51,7 +50,8 @@ a.mmenu { cursor: pointer; }
   .timeline-page-container .next-slide, .photo-container .next-slide { right: 0; }
   .timeline-page-container .prev-slide, .photo-container .prev-slide { right: auto; left: 0; }
   .timeline-page-container .next-slide, .timeline-page-container .prev-slide { bottom: 70%; }
-  .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px; } }
+  .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px; }
+  .download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px; text-align: center; } }
 @media screen and (max-width: 991px) { .filter-controls { margin-bottom: 10px; }
   .places-pn .left-col, .news-events .left-col { padding-right: 0 !important; }
   .about-leadership .grid-image { opacity: 0; }

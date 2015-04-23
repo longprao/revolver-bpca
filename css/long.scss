@@ -27,8 +27,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .news.news-blog { margin-top: 0;}
 
 .filter-controls { border-bottom: 1px solid #f1f0ef;}
-
-.download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px; text-align: center;}
 .checker + label { padding-left: 46px;}
 
 #main .content input[type=submit], #main .content button, #main .grids input[type=submit], #main .grids button, #main .content .btn-bpca, #main .grids .btn-bpca { display: inline-block;}
@@ -61,6 +59,8 @@ a.mmenu { cursor: pointer;}
     .checker + label { padding-left: 54px;}
     .download-items .fa, .forward-to-friends .fa { text-align: left;}
   }
+
+  .download-items .fa, .forward-to-friends .fa { margin-right: 10px;}
 }
 
 @include media($desktop) {
@@ -102,6 +102,8 @@ a.mmenu { cursor: pointer;}
   }
 
   .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px;}
+
+  .download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px; text-align: center;}
 }
 
 @include media($tablet) {
