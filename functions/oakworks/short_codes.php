@@ -184,7 +184,7 @@ $output .= <<< HTML
           <div class="col-sm-6 col-md-4 teaser {$teaser['class']}">
               <h6>{$teaser['title']}</h6>
               <p>{$teaser['subtitle']}</p>
-              <a class="btn-bpca {$teaser['class']}" href="{$teaser['read_more_link']}">Read more</a>
+              <a class="btn-bpca {$teaser['class']}" href="{$teaser['read_more_link']}?selected_id=334">Read more</a>
               <div class="clear">
             </div>
           </div>

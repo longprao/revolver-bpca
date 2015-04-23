@@ -42,7 +42,11 @@ a.mmenu { cursor: pointer;}
 
 #main .content .teaser a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important;}
 
-#main .pagination input { color: black;}
+#main .pagination { padding-bottom: 40px;
+  input { color: black;}
+}
+
+#main .content .teaser.teaser-twitter .tweettext { text-transform: none;}
 
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
@@ -107,10 +111,10 @@ a.mmenu { cursor: pointer;}
   .downloadform input[type=checkbox]:checked + .checkcheck { margin: -10px 0px 5px 6px !important;}
   .board-committees .download-items, .board-committees .forward-to-friends, .aside-share-button a { font-size: 18px !important;}
 
-  .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
+  .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important; font-weight: normal;}
 
   .filter-controls.filter-events-page { padding: 40px !important; height: auto; margin-bottom: 0;
-    .right-panel { padding-top: 20px;}
+    .left-panel, .right-panel { padding: 0;}
   }
 
   .col-md-8.blog-post { padding-right: 40px !important;}
@@ -135,7 +139,16 @@ a.mmenu { cursor: pointer;}
   .filter-controls { height: auto; padding: 40px !important;
     h3 { margin-top: 0 !important;}
   }
-  .page-id-83 .post-filter .grid-info-tags { height: auto;}
+  .page-id-83 .post-filter .grid-info-tags { height: auto; margin-bottom: 0;}
+
+  .news.news-blog { border-top: 2px solid #f1f0ef;}
+  .page-id-62 #main .content .row.post-filter { margin-bottom: 0; float: none;}
+  .page-id-62 .filter-controls { margin-bottom: 0;}
+
+  .building-filter .filter-controls { border-bottom: none; margin-bottom: 0;}
+
+  #main .content h6 { margin-bottom: 20px;}
+  #main .content .teaser.teaser-leadership li { font-size: 16px;}
 }
 
 @include media($smallTablet) {
@@ -175,7 +188,7 @@ a.mmenu { cursor: pointer;}
 
   #main .content .teaser h1 a { font-size: 22px !important;}
   #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 140px; font-size: 18px !important;}
-  #main .content .teaser .btn-bpca { line-height: 22px !important;}
+  #main .content .teaser .btn-bpca { line-height: 22px !important; right: 20px !important;}
 
   .home #main .content .teaser.gold {
     h6 { margin-bottom: 20px;}
@@ -183,7 +196,7 @@ a.mmenu { cursor: pointer;}
   .home #main .content .teaser {
     .btn-bpca { right: 40px !important; bottom: 40px !important;}
   }
-  .home #main .content.leadership .leadership-list a { font-size: 16px !important;}
+  .home #main .content.leadership .leadership-list a { font-size: 16px !important; margin-right: 10px;}
 
   .page-who-we-are .content > p { margin: 0;}
 
@@ -227,4 +240,6 @@ a.mmenu { cursor: pointer;}
   #main .content.header img { margin-left: 0; left: 50%; @include transform(translateX(-50%));}
 
   .filter-controls { padding: 20px 0 !important;}
+
+  #main .pagination { padding-bottom: 20px; background: white; position: relative; top: -1px;}
 }
