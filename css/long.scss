@@ -82,6 +82,8 @@ a.mmenu { cursor: pointer;}
   &:hover { color: #69696C !important;}
 }
 
+.timeline-page-container .content-wrapper { padding-top: 33px;}
+
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
 
@@ -132,9 +134,6 @@ a.mmenu { cursor: pointer;}
     .next-slide { right: 0;}
     .prev-slide { right: auto; left: 0;}
   }
-  .timeline-page-container {
-    .next-slide, .prev-slide { bottom: 70%;}
-  }
 
   .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -5px 0px 5px 9px;}
 
@@ -166,6 +165,7 @@ a.mmenu { cursor: pointer;}
   }
 
   #main .content .teaser a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
+  #main .content .teaser.teaser-events a { font-size: 20px !important;}
   #main .content .teaser h1 a { font-size: 22px !important;}
   #main .content .teaser-twitter * { font-size: 18px !important;}
 
@@ -222,6 +222,10 @@ a.mmenu { cursor: pointer;}
   .filter-header { padding: 0;
     img.img-responsive { width: 100%; height: auto !important;}
   }
+
+  #main h2 { font-size: 20px;}
+
+  .page-who-we-are #main .board-committees h4 { font-size: 18px !important;}
 }
 
 @include media($smallTablet) {
@@ -275,8 +279,9 @@ a.mmenu { cursor: pointer;}
     .btn-bpca { right: 40px !important; bottom: 40px !important;}
   }
 
-  .home #main .content.leadership .leadership-list a { font-size: 14px !important; margin-right: 10px;}
-  #main .content .teaser.teaser-leadership li { font-size: 14px;}
+  .home #main .content.leadership .leadership-list a { font-size: 16px !important;}
+  #main .content .teaser.teaser-leadership li { font-size: 14px; margin-bottom: 5px;}
+  #main .content .teaser-leadership h6 { margin-bottom: 10px;}
 
   .page-who-we-are .content > p { margin: 0;}
 
@@ -305,10 +310,6 @@ a.mmenu { cursor: pointer;}
     > div { padding: 0;}
   }
 
-  .timeline-page-container {
-    .next-slide, .prev-slide { bottom: 86%;}
-  }
-
   #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
   #main .content .news-blog .grid-info-tags { margin-right: 20px;}
 
@@ -335,4 +336,10 @@ a.mmenu { cursor: pointer;}
   #footer {
     .resources, .newsletter { font-size: 18px;}
   }
+
+  .board-committees .content-wrapper { padding: 15px 0 !important;}
+
+  .page-who-we-are #main .board-committees h4 { margin-top: 30px !important; }
+
+  #main .content .teaser.black h6 { font-size: 32px;}
 }

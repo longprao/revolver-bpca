@@ -20,7 +20,7 @@ h1, h2, h3, h4 { font-family: "proxima_nova_rgbold"; }
 #main .content h4 {text-transform: uppercase; font-size: 16px;}
 #main .content h5 {font-size: 14px; line-height: 20px; text-align: right; font-family: 'proxima_nova_rgregular';}
 #main .content h6 {font-family: 'proxima_nova_rgbold'; text-transform: uppercase; font-size: 36px; line-height: 38px;}
-#main .content p  {font-size: 16px; line-height: 24px;}
+#main .content p  {font-size: 18px; line-height: 24px;}
 
 
 #main .content a, #main .grids a {font-family: 'proxima_nova_ltsemibold';}

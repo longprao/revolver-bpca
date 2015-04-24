@@ -23,7 +23,11 @@
 <div class="timeline-page-container">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="timeline-page row timeline-page-<?php the_ID(); ?>">
-			<div class="col-md-8 col"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'full' ); }  ?></div>
+			<div class="col-md-8 col">
+                <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'full' ); }  ?>
+                <div class="prev-slide"><i class="fa fa-angle-left"></i></div>
+                <div class="next-slide"><i class="fa fa-angle-right"></i></div>
+            </div>
 
 			<div class="col-md-4 col">
 				<div class="content-wrapper">
@@ -34,8 +38,6 @@
 			</div>
 		</div>
 	<?php endwhile; endif; ?>
-	<div class="prev-slide"><i class="fa fa-angle-left"></i></div>
-    <div class="next-slide"><i class="fa fa-angle-right"></i></div>
 </div>
 
 <?php wp_reset_query(); ?>
