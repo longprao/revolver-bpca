@@ -36,6 +36,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   &.category-header { font-size: 22px;}
 }
 
+.page-template-quote-pages .board-committees .content-wrapper { padding-bottom: 0 !important;}
+.page-template-quote-pages .header-content h1 { font-weight: normal;}
+
+#field_1_14 > .gfield_label { font-weight: 600 !important;}
+
 .building-filter .post-filter .grid-info-tags { @include column-count(1);}
 .news.news-blog { margin-top: 0;}
 
@@ -84,6 +89,17 @@ a.mmenu { cursor: pointer;}
 
 .timeline-page-container .content-wrapper { padding-top: 33px;}
 
+#footer .gform_wrapper .top_label input.medium { max-width: 150px;}
+
+#main .content .teaser.teaser-social {
+  p { text-align: center !important; width: 90% !important;}
+}
+
+#main {
+  .timeline-page-container .content-wrapper p, .about-leadership p, .header-content.blue h1, .news-events p,
+  .residential-buildings .places, .residential-schools .places { font-weight: 100;}
+}
+
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
 
@@ -103,6 +119,8 @@ a.mmenu { cursor: pointer;}
     }
   }
 
+  .page-template-public-get-around .downloadform { font-size: 16px;}
+
   .filter-events-page {
     .left-panel, .right-panel { padding: 0;}
   }
@@ -115,11 +133,21 @@ a.mmenu { cursor: pointer;}
     .prev-slide { right: 150px;}
     .next-slide { right: 110px;}
   }
+
+  #main .content .teaser-events li.title a { font-size: 20px !important;}
+  #main .content .download-link-area, .timeline-page .checker + label { font-size: 16px;}
+
+  .archive-tab-content .photo-caption-container {
+    .fa-share-square-o, .fa-envelope-o, .fa-twitter, .fa-facebook, .fa-leaf, .fa-map-marker, .fa-laptop { font-size: 16px !important;}
+    .share-text-black { top: 0; margin-bottom: 0; font-size: 16px;}
+  }
 }
 
 @include media($smallDesktop) {
   .page-home #main { margin: -20px 0 !important;}
   .breadcrumb { padding: 0;}
+
+  #gform_wrapper_2 { max-width: initial;}
 
   .gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label { padding-left: 15px; padding-top: 5px;
     font-family: $proxima_nova_ltsemibold;
@@ -128,7 +156,7 @@ a.mmenu { cursor: pointer;}
   .timeline-page .col-md-4 { min-height: 310px;
     .content-wrapper { padding-bottom: 0;}
   }
-  .timeline-page-container, .photo-container { position: relative;
+  .timeline-page-container { position: relative;
     .next-slide, .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: black; opacity: 0.6;
       color: white; z-index: 10}
     .next-slide { right: 0;}
@@ -147,6 +175,8 @@ a.mmenu { cursor: pointer;}
 }
 
 @include media($tablet) {
+  .col-md-8.blog-post p, #main .content p { font-size: 18px !important; overflow: hidden;}
+
   .filter-controls { margin-bottom: 10px;}
 
   .places-pn .left-col, .news-events .left-col { padding-right: 0 !important;}
@@ -192,7 +222,7 @@ a.mmenu { cursor: pointer;}
   .download-link-area a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
   .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px;}
 
-  .col-md-8.blog-post p, #main .content p { font-size: 18px !important;}
+  .col-md-8.blog-post p, #main .content p { overflow: hidden;}
   #main .content h4 { font-size: 20px !important; font-family: $proxima_nova_ltsemibold !important;}
 
   .filter-controls { height: auto; padding: 40px !important;
@@ -214,7 +244,7 @@ a.mmenu { cursor: pointer;}
   #main .content .teaser.teaser-leadership li { font-size: 16px;}
 
   #main .content .teaser {
-    &.black, &.teaser-social, &.gold {
+    &.black, &.teaser-social, &.gold, &.navy, &.blue {
       p { font-size: 22px !important;}
     }
   }
@@ -226,6 +256,22 @@ a.mmenu { cursor: pointer;}
   #main h2 { font-size: 20px;}
 
   .page-who-we-are #main .board-committees h4 { font-size: 18px !important;}
+
+
+  .photo-container { position: relative;
+    .next-slide, .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: black; opacity: 0.6;
+      color: white; z-index: 10}
+    .next-slide { right: 0;}
+    .prev-slide { right: auto; left: 0;}
+  }
+
+  #main .content .forward-to-friends { margin-bottom: 0 !important;}
+
+  #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
+
+  .page-board-committees, .page-template-quote-pages {
+    #main .content h4 { margin-top: 20px !important;}
+  }
 }
 
 @include media($smallTablet) {
@@ -241,6 +287,8 @@ a.mmenu { cursor: pointer;}
       .content-wrapper { padding-bottom: 20px; }
     }
   }
+
+  .page-template-quote-pages .board-committees .content-wrapper { padding-top: 20px !important;}
 }
 
 @include media($mobile) {
@@ -270,7 +318,7 @@ a.mmenu { cursor: pointer;}
 
   #main .content .teaser h1 a { font-size: 22px !important;}
   #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 140px; font-size: 18px !important;}
-  #main .content .teaser .btn-bpca { line-height: 22px !important; right: 20px !important;}
+  #main .content .teaser .btn-bpca { line-height: 22px !important;}
 
   .home #main .content .teaser.gold {
     h6 { margin-bottom: 20px;}
@@ -309,8 +357,6 @@ a.mmenu { cursor: pointer;}
   .board-committees {
     > div { padding: 0;}
   }
-
-  #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
   #main .content .news-blog .grid-info-tags { margin-right: 20px;}
 
   .col-md-8.blog-post .grid-info div { margin-top: 0;}
@@ -342,4 +388,15 @@ a.mmenu { cursor: pointer;}
   .page-who-we-are #main .board-committees h4 { margin-top: 30px !important; }
 
   #main .content .teaser.black h6 { font-size: 32px;}
+
+  #main .content .news.news-blog .teaser { height: auto; padding-left: 0 !important; padding-top: 0 !important;
+    .grid-info { position: relative; padding-bottom: 80px;}
+    .grid-info-tags { padding-top: 0;}
+    img, p { display: none;}
+    .btn-bpca { bottom: 20px;}
+  }
+
+  .page-links #main .content-wrapper h4 { margin-top: 40px !important;
+    &:first-child { margin-top: 0 !important;}
+  }
 }
