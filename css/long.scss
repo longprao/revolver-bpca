@@ -9,6 +9,19 @@ $proxima_nova_rgbold: proxima_nova_rgbold, $helvetica;
 
 $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ancestor, &.current-menu-parent';
 
+.visible-tablet { display: none;
+  @include media($tablet) { display: inline-block;}
+}
+.visible-phone { display: none;
+  @include media($mobile) { display: inline-block;}
+}
+.hidden-tablet {
+  @include media($tablet) { display: none !important;}
+}
+.hidden-phone {
+  @include media($mobile) { display: none !important;}
+}
+
 a:focus, a:active,
 button,
 input[type="reset"]::-moz-focus-inner,
@@ -41,6 +54,9 @@ a.mmenu { cursor: pointer;}
 
 #main .content .teaser a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important;}
 #main .content .teaser h1 a { font-size: 24px !important; font-family: $proxima_nova_rgbold !important;}
+#main .content .teaser .title a { font-family: $proxima_nova_rgbold !important;}
+
+#main .content .teaser.teaser-twitter .tweettext a { font-weight: normal;}
 
 #main .pagination { padding-bottom: 40px;
   input { color: black;}
@@ -52,11 +68,25 @@ a.mmenu { cursor: pointer;}
   &:hover { color: #197BC2 !important;}
 }
 
+.col-md-8.blog-post .category-header { font-size: 22px;}
+
+.photo-caption-container .social-icon { margin-right: 10px;}
+
+.small-footer { display: none;}
+
+.residential.residential-buildings .grid-info-tags li.category-header { font-size: 19px;}
+
+#RFP-BID-tags li.disabled { display: none;}
+
+#main .content a[href^="mailto:"] { text-decoration: underline !important;
+  &:hover { color: #69696C !important;}
+}
+
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
 
   .timeline-page {
-    .checker + label { padding-left: 54px;}
+    .checker + label { padding-left: 44px;}
     .download-items .fa, .forward-to-friends .fa { text-align: left;}
   }
 
@@ -78,6 +108,11 @@ a.mmenu { cursor: pointer;}
   #main > .wrapper > .content { margin-top: 20px;}
 
   #main .filter { height: 350px;}
+
+  .archive-tab-content {
+    .prev-slide { right: 150px;}
+    .next-slide { right: 110px;}
+  }
 }
 
 @include media($smallDesktop) {
@@ -101,9 +136,15 @@ a.mmenu { cursor: pointer;}
     .next-slide, .prev-slide { bottom: 70%;}
   }
 
-  .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -4px 0px 5px 9px;}
+  .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -5px 0px 5px 9px;}
 
   .download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px; text-align: center;}
+
+  .small-footer { display: block;}
+  .large-footer { display: none;}
+  .content.newsletter { padding-top: 20px; padding-bottom: 60px;}
+
+  .archive-tab-content .share-text-black { font-size: 18px; position: relative; top: 5px; margin-bottom: 20px;}
 }
 
 @include media($tablet) {
@@ -128,7 +169,7 @@ a.mmenu { cursor: pointer;}
   #main .content .teaser h1 a { font-size: 22px !important;}
   #main .content .teaser-twitter * { font-size: 18px !important;}
 
-  .downloadform input[type=checkbox]:checked + .checkcheck { margin: -9px 0px 5px 8px !important;}
+  .downloadform input[type=checkbox]:checked + .checkcheck { margin: -8px 0px 5px 7px !important;}
   .board-committees .download-items, .board-committees .forward-to-friends, .aside-share-button a { font-size: 18px !important;}
 
   .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important; font-weight: normal;}
@@ -177,6 +218,10 @@ a.mmenu { cursor: pointer;}
       p { font-size: 22px !important;}
     }
   }
+
+  .filter-header { padding: 0;
+    img.img-responsive { width: 100%; height: auto !important;}
+  }
 }
 
 @include media($smallTablet) {
@@ -208,6 +253,9 @@ a.mmenu { cursor: pointer;}
     .grid-info { border-bottom: none;
       > div { margin-left: 0; padding-bottom: 20px; padding-left: 20px;}
     }
+  }
+  .col-md-8.blog-post {
+    .grid-info div .grid-aside-content, p { margin-left: 0 !important; width: 100%;}
   }
 
   .col-md-8.blog-post p { margin-bottom: 20px;}

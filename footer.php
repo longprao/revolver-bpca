@@ -1,5 +1,5 @@
 			<div id="footer" class="wrapper">
-				<div class="row three-column">
+				<div class="row three-column large-footer">
 					<div class="col-md-4 col">
 						<div class="content resources">
 							<h3>Resources:</h3>
@@ -28,6 +28,38 @@
 						<ul>
 							<?php dynamic_sidebar( 'footer-right-widget-area' ); ?>
 						</ul>
+					</div>
+				</div>
+
+				<div class="row three-column small-footer">
+					<div class="col-md-4 col">
+						<div class="content resources">
+							<h3>Resources:</h3>
+							<?php wp_nav_menu( array(
+								'menu' => 'resources',
+								// do not fall back to first non-empty menu
+								'theme_location' => '__no_such_location',
+								// do not fall back to wp_page_menu()
+								'fallback_cb' => false,
+							) ); ?>
+						</div>
+					</div>
+
+                    <div class="col-md-4 col">
+                        <ul>
+                            <?php dynamic_sidebar( 'footer-right-widget-area' ); ?>
+                        </ul>
+                    </div>
+
+					<div class="col-md-4 col">
+						<div class="content newsletter">
+							<h3>Newsletter:</h3>
+
+							<?php //echo do_shortcode( '[constantcontactapi formid="1"]' ); ?>
+							<?php gravity_form( 2, false, false, true, array(), true, 999, true ); ?>
+
+							<div class="clear"></div>
+						</div>
 					</div>
 				</div>
 			</div>
