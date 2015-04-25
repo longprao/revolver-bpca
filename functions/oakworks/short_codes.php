@@ -292,14 +292,11 @@ $output .= <<< HTML
       </form>
     </ul>
 <div id='page_navigation'></div>
-<br/>
-
 HTML;
 
-if($a['actions'] == true){
+if($a['actions'] === true){
     //show action buttons
     $output .= <<< HTML
-
     <div class="download-link-area unclickable">
       <a class="download-items"><i class="fa fa-share-square-o"></i>Download</a>
       <a class="forward-to-friends"><i class="fa fa-envelope-o"></i>Forward to Friends</a>

@@ -169,7 +169,7 @@ h4 {
 
 .board-committees h4 {
 	margin-top: 0 !important;
-	margin-bottom: 12px !important;
+	margin-bottom: 7px !important;
 }
 
 .board-committees label {
@@ -264,7 +264,7 @@ h4.extra-space,
 }
 
 .description-tags {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .description-tags p {

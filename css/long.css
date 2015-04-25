@@ -88,10 +88,18 @@ a.mmenu { cursor: pointer; }
 
 #main .timeline-page-container .content-wrapper p, #main .about-leadership p, #main .header-content.blue h1, #main .news-events p, #main .residential-buildings .places, #main .residential-schools .places { font-weight: 100; }
 
+.gform_wrapper .gsection .gfield_label, .gform_wrapper h2.gsection_title, .gform_wrapper h3.gform_title { font-weight: 600; }
+
+.grid-alt .right-col { position: relative; top: -4px; }
+
+.downloadform { padding-top: 5px; }
+
+.page-template-quote-pages .downloadform ul { margin-bottom: 20px; }
+
 @media screen and (min-width: 1201px) { .timeline-page img { width: 100%; max-height: 350px; }
   .timeline-page .checker + label { padding-left: 44px; }
   .timeline-page .download-items .fa, .timeline-page .forward-to-friends .fa { text-align: left; }
-  .download-items .fa, .forward-to-friends .fa { margin-right: 10px; } }
+  .download-items .fa, .forward-to-friends .fa, .aside-share-button .fa { margin-right: 10px; } }
 @media screen and (min-width: 992px) { .news-events .grid-description-content.places { margin-top: -8px; }
   .news-events .desktop-grid .grid-alt .left-col { white-space: normal; }
   .news-events .desktop-grid .grid-alt .left-col h4 { margin-top: 0 !important; }
@@ -124,6 +132,7 @@ a.mmenu { cursor: pointer; }
   .archive-tab-content .share-text-black { font-size: 18px; position: relative; top: 5px; margin-bottom: 20px; }
   .page-template-quote-pages .timeline-page-container .content-wrapper { padding: 40px; } }
 @media screen and (max-width: 991px) { .col-md-8.blog-post p, #main .content p { font-size: 18px !important; overflow: hidden; }
+  .grid-alt .right-col { top: 0; margin-top: 20px; }
   .page-id-58 .calendar-container { width: 100%; }
   .page-template-quote-pages .board-committees .col-md-4 .content-wrapper { padding-bottom: 40px; padding-top: 20px; }
   .page-template-quote-pages .board-committees .col-md-4:first-child .content-wrapper { padding-bottom: 0; }
@@ -150,7 +159,6 @@ a.mmenu { cursor: pointer; }
   .board-committees .downloadform li { margin-bottom: 20px; }
   .checker + label { font-size: 18px !important; }
   .download-link-area a { font-size: 18px !important; font-family: proxima_nova_ltsemibold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important; }
-  .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px; display: block; }
   .col-md-8.blog-post p, #main .content p { overflow: hidden; }
   #main .content h4 { font-size: 20px !important; font-family: proxima_nova_ltsemibold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important; }
   .filter-controls { height: auto; padding: 40px !important; }
@@ -173,10 +181,11 @@ a.mmenu { cursor: pointer; }
   .photo-container .next-slide, .photo-container .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: black; opacity: 0.6; color: white; z-index: 10; }
   .photo-container .next-slide { right: 0; }
   .photo-container .prev-slide { right: auto; left: 0; }
-  #main .content .forward-to-friends { margin-bottom: 0 !important; }
   #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important; }
   .page-board-committees #main .content h4, .page-template-quote-pages #main .content h4 { margin-top: 20px !important; }
-  .page-template-quote-pages #main .timeline-page-container .content-wrapper h4 { margin-top: 0 !important; } }
+  .page-template-quote-pages #main .timeline-page-container .content-wrapper h4 { margin-top: 0 !important; }
+  .mobile-grid .grid-alt .right-col ul, .tablet-grid .grid-alt .right-col ul, .mobile-grid .grid-alt .left-col ul, .tablet-grid .grid-alt .left-col ul { margin-top: 20px; }
+  .tablet-grid .grid-alt .right-col ul:first-child { margin-top: 0; } }
 @media screen and (min-width: 551px) and (max-width: 991px) { .page-template-quote-pages .content-wrapper { padding: 40px 25px; }
   .filter-controls.filter-events-page .row { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -moz-box-align: center; box-align: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center; -ms-flex-align: center; padding-top: 10px; } }
 @media screen and (max-width: 767px) { .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important; }

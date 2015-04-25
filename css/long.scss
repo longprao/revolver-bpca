@@ -120,6 +120,14 @@ a.mmenu { cursor: pointer;}
   .residential-buildings .places, .residential-schools .places { font-weight: 100;}
 }
 
+.gform_wrapper .gsection .gfield_label, .gform_wrapper h2.gsection_title, .gform_wrapper h3.gform_title { font-weight: 600;}
+
+.grid-alt .right-col { position: relative; top: -4px;}
+
+.downloadform { padding-top: 5px;}
+
+.page-template-quote-pages .downloadform ul { margin-bottom: 20px;}
+
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
 
@@ -128,7 +136,7 @@ a.mmenu { cursor: pointer;}
     .download-items .fa, .forward-to-friends .fa { text-align: left;}
   }
 
-  .download-items .fa, .forward-to-friends .fa { margin-right: 10px;}
+  .download-items .fa, .forward-to-friends .fa, .aside-share-button .fa { margin-right: 10px;}
 }
 
 @include media($desktop) {
@@ -201,6 +209,8 @@ a.mmenu { cursor: pointer;}
 @include media($tablet) {
   .col-md-8.blog-post p, #main .content p { font-size: 18px !important; overflow: hidden;}
 
+  .grid-alt .right-col { top: 0; margin-top: 20px;}
+
   .page-id-58 .calendar-container { width: 100%;}
 
   .page-template-quote-pages .board-committees .col-md-4 {
@@ -252,7 +262,6 @@ a.mmenu { cursor: pointer;}
 
   .checker + label { font-size: 18px !important;}
   .download-link-area a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
-  .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px; display: block;}
 
   .col-md-8.blog-post p, #main .content p { overflow: hidden;}
   #main .content h4 { font-size: 20px !important; font-family: $proxima_nova_ltsemibold !important;}
@@ -297,8 +306,6 @@ a.mmenu { cursor: pointer;}
     .prev-slide { right: auto; left: 0;}
   }
 
-  #main .content .forward-to-friends { margin-bottom: 0 !important;}
-
   #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
 
   .page-board-committees, .page-template-quote-pages {
@@ -306,6 +313,11 @@ a.mmenu { cursor: pointer;}
   }
 
   .page-template-quote-pages #main .timeline-page-container .content-wrapper h4 { margin-top: 0 !important;}
+
+  .mobile-grid .grid-alt .right-col ul, .tablet-grid .grid-alt .right-col ul, .mobile-grid .grid-alt .left-col ul, .tablet-grid .grid-alt .left-col ul { margin-top: 20px;}
+  .tablet-grid .grid-alt .right-col ul {
+    &:first-child { margin-top: 0;}
+  }
 }
 
 @include media($tabletOnly) {
