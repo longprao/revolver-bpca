@@ -279,7 +279,6 @@ $output .= <<< HTML
         <div class="checker"><input type="checkbox" id="{$class}" class="downloadable-items" name="downlink[]" value="{$guid}" />
         <div class="checkcheck"></div></div>
         <label for='{$class}'>{$title}</label>
-          
       </li>
 HTML;
 
@@ -303,11 +302,10 @@ if($a['actions'] == true){
 
     <div class="download-link-area unclickable">
       <a class="download-items"><i class="fa fa-share-square-o"></i>Download</a>
-      <a class="forward-to-friends"><i class="fa fa-envelope-o"></i>Forward to Friends</a><br />
+      <a class="forward-to-friends"><i class="fa fa-envelope-o"></i>Forward to Friends</a>
     </div>
     <div class="invisi-click">
     </div>
-
 HTML;
 }
 

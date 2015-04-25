@@ -243,7 +243,26 @@ $output .= <<< HTML
 									<i class="fa fa-envelope-o"></i>Forward to Friends
 								</a>
 							</li>
+HTML;
 
+        if( $events ) {
+            $output .= <<< HTML
+
+							<li>
+								<a href="#" target="_blank">
+									<i class="fa fa-calendar"></i>Add to iCal
+								</a>
+							</li>
+
+							<li>
+								<a href="#" target="_blank">
+									<i class="fa fa-google"></i>Add to Google Calendar
+								</a>
+							</li>
+HTML;
+        }//end if
+
+        $output .= <<< HTML
 							<li>
 								<a href="http://twitter.com/share?text={$post['title']}&url={$permalink}"" target="_blank">
 									<i class="fa fa-twitter"></i>Share on Twitter
@@ -262,8 +281,7 @@ $output .= <<< HTML
 
 							<li>
 								<a href="{$post['park_web']}" target="_blank">
-									<i class="fa fa-leaf"></i>
-									Read More at BPC Parks
+									<i class="fa fa-leaf"></i>Read More at BPC Parks
 								</a>
 							</li>
 HTML;
@@ -274,8 +292,7 @@ $output .= <<< HTML
 
 							<li>
 								<a href="{$post['web']}" target="_blank">
-									<i class="fa fa-laptop"></i>
-									Visit the Site
+									<i class="fa fa-laptop"></i>Visit the Site
 								</a>
 							</li>
 HTML;

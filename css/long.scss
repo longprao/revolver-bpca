@@ -32,12 +32,26 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   outline: none !important;
 }
 
+#footer, .places {
+  input {
+    @include placeholder { color: black;}
+  }
+}
+
+.news .grid-alt {
+  input {
+    @include placeholder { color: white;}
+  }
+}
+
+.downloadform label { font-weight: normal;}
+
 .grid-info-tags li { font-weight: bold;
   &.category-header { font-size: 22px;}
 }
-
-.page-template-quote-pages .board-committees .content-wrapper { padding-bottom: 0 !important;}
 .page-template-quote-pages .header-content h1 { font-weight: normal;}
+
+#main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
 
 #field_1_14 > .gfield_label { font-weight: 600 !important;}
 
@@ -46,6 +60,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 .filter-controls { border-bottom: 1px solid #f1f0ef;}
 .checker + label { padding-left: 46px;}
+
+#mc4wp_email { width: 210px;}
 
 #main .content input[type=submit], #main .content button, #main .grids input[type=submit], #main .grids button, #main .content .btn-bpca, #main .grids .btn-bpca { display: inline-block;}
 
@@ -87,7 +103,11 @@ a.mmenu { cursor: pointer;}
   &:hover { color: #69696C !important;}
 }
 
-.timeline-page-container .content-wrapper { padding-top: 33px;}
+#main .content .grid-aside-content a[href^="mailto:"] { text-decoration: none !important;
+  &:hover { color: #197bc2 !important;}
+}
+
+.page-template-quote-pages .timeline-page-container .content-wrapper { padding: 33px 40px;}
 
 #footer .gform_wrapper .top_label input.medium { max-width: 150px;}
 
@@ -141,6 +161,8 @@ a.mmenu { cursor: pointer;}
     .fa-share-square-o, .fa-envelope-o, .fa-twitter, .fa-facebook, .fa-leaf, .fa-map-marker, .fa-laptop { font-size: 16px !important;}
     .share-text-black { top: 0; margin-bottom: 0; font-size: 16px;}
   }
+
+  .page-template-quote-pages .content-wrapper { padding: 52px 45px 46px; }
 }
 
 @include media($smallDesktop) {
@@ -153,7 +175,7 @@ a.mmenu { cursor: pointer;}
     font-family: $proxima_nova_ltsemibold;
   }
 
-  .timeline-page .col-md-4 { min-height: 310px;
+  .timeline-page .col-md-4 { min-height: 330px;
     .content-wrapper { padding-bottom: 0;}
   }
   .timeline-page-container { position: relative;
@@ -172,10 +194,20 @@ a.mmenu { cursor: pointer;}
   .content.newsletter { padding-top: 20px; padding-bottom: 60px;}
 
   .archive-tab-content .share-text-black { font-size: 18px; position: relative; top: 5px; margin-bottom: 20px;}
+
+  .page-template-quote-pages .timeline-page-container .content-wrapper { padding: 40px;}
 }
 
 @include media($tablet) {
   .col-md-8.blog-post p, #main .content p { font-size: 18px !important; overflow: hidden;}
+
+  .page-id-58 .calendar-container { width: 100%;}
+
+  .page-template-quote-pages .board-committees .col-md-4 {
+    .content-wrapper { padding-bottom: 40px; padding-top: 20px; }
+    &:first-child .content-wrapper { padding-bottom: 0;}
+    &:last-child .content-wrapper { padding-top: 0;}
+  }
 
   .filter-controls { margin-bottom: 10px;}
 
@@ -204,7 +236,7 @@ a.mmenu { cursor: pointer;}
 
   .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important; font-weight: normal;}
 
-  .filter-controls.filter-events-page { padding: 40px !important; height: auto; margin-bottom: 0;
+  .filter-controls.filter-events-page { padding: 0 40px !important; height: auto; margin-bottom: 0;
     .left-panel, .right-panel { padding: 0;}
   }
 
@@ -220,7 +252,7 @@ a.mmenu { cursor: pointer;}
 
   .checker + label { font-size: 18px !important;}
   .download-link-area a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
-  .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px;}
+  .download-link-area a, .col-md-8.blog-post .grid-info div .grid-aside-content ul li { margin-bottom: 20px; display: block;}
 
   .col-md-8.blog-post p, #main .content p { overflow: hidden;}
   #main .content h4 { font-size: 20px !important; font-family: $proxima_nova_ltsemibold !important;}
@@ -272,27 +304,48 @@ a.mmenu { cursor: pointer;}
   .page-board-committees, .page-template-quote-pages {
     #main .content h4 { margin-top: 20px !important;}
   }
+
+  .page-template-quote-pages #main .timeline-page-container .content-wrapper h4 { margin-top: 0 !important;}
+}
+
+@include media($tabletOnly) {
+  .page-template-quote-pages .content-wrapper { padding: 40px 25px;}
+
+
+  .filter-controls.filter-events-page {
+    .row { @include display(flex); @include align-items(center); padding-top: 10px;}
+  }
 }
 
 @include media($smallTablet) {
   .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important;}
+
+  .filter-controls.filter-events-page {
+    .row { @include display(block); padding-top: 40px;}
+  }
 }
 
-@include media($tabletOnly) {
-  .board-committees {
-    > div {
-      &:first-child .content-wrapper { padding-top: 40px;}
-      &:last-child .content-wrapper { padding-bottom: 40px;}
-
-      .content-wrapper { padding-bottom: 20px; }
-    }
-  }
-
-  .page-template-quote-pages .board-committees .content-wrapper { padding-top: 20px !important;}
+@include media($notMobile) {
+  #main .content .teaser.teaser-events { padding-top: 20px !important;}
 }
 
 @include media($mobile) {
   header { padding-left: 20px; padding-right: 20px;}
+
+  .page-id-52 .content-wrapper .btn-bpca { margin-bottom: 30px;}
+
+  #main .content .teaser.teaser-events { padding-top: 0 !important;
+    .grid-info-tags, .grid-info-list { margin-bottom: 0;}
+    .grid-info-list { min-height: 110px; padding-bottom: 0 !important;}
+  }
+
+  .timeline-page .col-md-4 { min-height: initial;}
+
+  .page-template-quote-pages #main .board-committees {
+    h1, h2, h3, h4 {
+      &:first-child { margin-top: 0 !important;}
+    }
+  }
 
   .page-id-38 #main .header { padding: 0 !important;
     .content { padding: 20px !important;}
@@ -382,8 +435,6 @@ a.mmenu { cursor: pointer;}
   #footer {
     .resources, .newsletter { font-size: 18px;}
   }
-
-  .board-committees .content-wrapper { padding: 15px 0 !important;}
 
   .page-who-we-are #main .board-committees h4 { margin-top: 30px !important; }
 

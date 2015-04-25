@@ -48,7 +48,6 @@ HTML;
 }
 
 $output .= <<< HTML
-<a id="rm-black" class="btn-bpca" href="{$site_url}/news/events">SEE MORE EVENTS</a>
 </div>
 HTML;
 
