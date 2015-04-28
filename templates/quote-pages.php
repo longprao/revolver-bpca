@@ -53,7 +53,7 @@ if (array_key_exists('down-files', $_POST)) {
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
               <div class="row header">
                 <div class="col-md-4 col">
-                  <div class="content header-content <?= get_field('quote_box_color') ?>">
+                  <div class="content header-content header-content-fixed <?= get_field('quote_box_color') ?>">
                     <h1><?= get_field('quote') ?></h1>
                     <h3><?= get_field('quote_by') ?></h3>
                     <h5><?= get_field('quote_title_1') ?></h5>
@@ -121,9 +121,9 @@ if (array_key_exists('down-files', $_POST)) {
                         <div class="archive-share-buttons">
 
                           <a href="#" onclick="javascript:downloadfile('<?php echo $imagedata[0]->imglink;?>');"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />
-                          <a target="_blank" href="mailto:?subject=' + captiontitle + '&amp;body=<?php echo $thiscaption;?>%20-%20<?php echo $imagedata[0]->imglink;?>" class="share-email">
+                          <a target="_blank" href="mailto:?subject=<?php echo $thiscaption;?>&amp;body=<?php echo $imagedata[0]->imglink;?>" class="share-email">
          <div class="social-icon"><i class="fa fa-envelope-o"></i></div><div class="share-text-black">Forward to Friends</div></a><br />
-         <a target="_blank" href="http://twitter.com/share?text=' + captiontitle + '&url=<?php echo $imagedata[0]->imglink;?>">
+         <a target="_blank" href="http://twitter.com/share?text=<?php echo $thiscaption;?>&url=<?php echo $imagedata[0]->imglink;?>">
          <div class="social-icon"><i class="fa fa-twitter"></i></div><div class="share-text-black">Share on Twitter</div>
          </a><br />
          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='<?php echo $imagedata[0]->imglink;?>">
@@ -217,8 +217,7 @@ jQuery('.teaser-events').parent().before(jQuery('#gallery'));
 jQuery('.archive-slides li').click(function (){
     // retrieve the caption information
     setTimeout(function () {
-        var captiontitle = '<strong>' + jQuery('.archive-active-slide #caption-title').val() + '</strong>';
-        captiontitle += '<br />' + jQuery('.archive-active-slide #caption-descr').val();
+        var captiontitle = jQuery('.archive-active-slide #caption-title').val();
         jQuery('.photo-caption-text').html(captiontitle);
 
         // share buttons

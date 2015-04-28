@@ -119,6 +119,10 @@
 
                     <nav id="menu">
                         <?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'primary' ) ); ?>
+
+                        <form class="search-phone" action="<?php bloginfo('url') ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/search.png" alt="Search" width="22" height="22"> <input type="text" name="s" value="" class="input keyword" placeholder="Search">
+                        </form>
                     </nav>
 
                 </div>

@@ -3,6 +3,7 @@
 @import "neat/neat";
 
 $red: #790000;
+$blue: #197bc2;
 
 $proxima_nova_ltsemibold: proxima_nova_ltsemibold, $helvetica;
 $proxima_nova_rgbold: proxima_nova_rgbold, $helvetica;
@@ -61,7 +62,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .filter-controls { border-bottom: 1px solid #f1f0ef;}
 .checker + label { padding-left: 46px;}
 
-#mc4wp_email { width: 210px;}
+#mc4wp_email { width: 210px; background: none; text-align: center;
+  &:focus {
+    @include placeholder { color: transparent;}
+  }
+}
 
 #main .content input[type=submit], #main .content button, #main .grids input[type=submit], #main .grids button, #main .content .btn-bpca, #main .grids .btn-bpca { display: inline-block;}
 
@@ -98,14 +103,37 @@ a.mmenu { cursor: pointer;}
 .residential.residential-buildings .grid-info-tags li.category-header { font-size: 19px;}
 
 #RFP-BID-tags li.disabled { display: none;}
-
-#main .content a[href^="mailto:"] { text-decoration: underline !important;
-  &:hover { color: #69696C !important;}
+#RFP-BID-tags li {
+  &:first-child { margin-bottom: 40px;}
 }
 
-#main .content .grid-aside-content a[href^="mailto:"] { text-decoration: none !important;
-  &:hover { color: #197bc2 !important;}
+#main .content, #main .left-col {
+  a[href^="mailto:"] { text-decoration: underline !important;
+    &:hover { color: #69696C !important;}
+  }
 }
+
+#main .content {
+  .grid-aside-content, .archive-share-buttons {
+    a[href^="mailto:"] { text-decoration: none !important;
+      &:hover { color: #197bc2 !important;}
+    }
+  }
+}
+
+#main .grid-alt .left-col {
+  a[href^="mailto:"] { color: black !important;
+    &:hover { color: #69696C !important;}
+  }
+}
+
+#main .news .grid-alt .left-col {
+  a[href^="mailto:"] { color: white !important;
+    &:hover { color: #69696C !important;}
+  }
+}
+
+.calendar tbody { color: black;}
 
 .page-template-quote-pages .timeline-page-container .content-wrapper { padding: 33px 40px;}
 
@@ -128,6 +156,45 @@ a.mmenu { cursor: pointer;}
 
 .page-template-quote-pages .downloadform ul { margin-bottom: 20px;}
 
+.search-phone { display: none;}
+
+.search .news { padding: 20px 60px 60px; margin: 0;
+  .result_padding { padding-left: 0; padding-right: 0;}
+  .pagination { padding-bottom: 0;}
+}
+
+#page_navigation { font-size: 16px;}
+
+#filepages11 { font-size: 16px;}
+
+.header-content-fixed { padding: 35px 40px 0; position: relative;
+  h3, h4 { position: absolute; right: 40px; bottom: 55px; margin: 0; font-weight: normal;}
+  h5 { position: absolute; right: 40px; bottom: 30px; margin: 0; font-weight: normal;}
+}
+
+#footer .gform_wrapper form { position: relative;
+  .gfield_description.validation_message { position: absolute; width: 250px; padding: 10px; font-size: 12px; font-weight: normal;
+    text-transform: uppercase; color: white; background: $red; bottom: 20px; left: 50%; margin-left: -125px;
+    &:before { content: ''; position: absolute; bottom: 100%; left: 50%; margin-left: -10px; @include triangle(20px, $red, up);}
+  }
+}
+#footer .gform_wrapper li.gfield.gfield_error { width: 100%;}
+#footer .gform_wrapper li.gfield_error input { border-left: none; border-right: none; border-top: none;}
+#footer .gform_confirmation_message img { width: auto;}
+
+.ginput_container { position: relative;}
+.gfield_contains_required .ginput_container:before {
+  content: " *";
+  color: #8c1c1c;
+  position: absolute;
+  top: 15px;
+  left: -5px;
+}
+
+.page-id-64 .mc4wp-form .list-info-tags span {
+  padding: 4px 0px 3px 10px!important;
+}
+
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
 
@@ -137,6 +204,10 @@ a.mmenu { cursor: pointer;}
   }
 
   .download-items .fa, .forward-to-friends .fa, .aside-share-button .fa { margin-right: 10px;}
+
+  .desktop-grid .grid-alt .left-col { line-height: 27px; }
+  .residential-buildings .grid-alt .left-col { line-height: 24px; }
+  .page-template-museums-grid .grid-alt .left-col { line-height: 21px; padding-top: 5px; }
 }
 
 @include media($desktop) {
@@ -146,6 +217,10 @@ a.mmenu { cursor: pointer;}
       h4 { margin-top: 0 !important;}
     }
   }
+
+  #main .building-filter .filter-controls h3 { margin-top: 40px;}
+  .page-id-62 .filter-controls { padding-left: 40px;}
+  #main .get-around .content-wrapper { padding: 20px 0 0 25px;}
 
   .page-template-public-get-around .downloadform { font-size: 16px;}
 
@@ -158,8 +233,11 @@ a.mmenu { cursor: pointer;}
   #main .filter { height: 350px;}
 
   .archive-tab-content {
-    .prev-slide { right: 150px;}
-    .next-slide { right: 110px;}
+    .prev-slide, .next-slide { font-size: 30px; bottom: 33px;
+      &:hover { color: $blue;}
+    }
+    .prev-slide { right: 120px;}
+    .next-slide { right: 20px;}
   }
 
   #main .content .teaser-events li.title a { font-size: 20px !important;}
@@ -187,8 +265,8 @@ a.mmenu { cursor: pointer;}
     .content-wrapper { padding-bottom: 0;}
   }
   .timeline-page-container { position: relative;
-    .next-slide, .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: black; opacity: 0.6;
-      color: white; z-index: 10}
+    .next-slide, .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: white; opacity: 0.6;
+      color: black; z-index: 10}
     .next-slide { right: 0;}
     .prev-slide { right: auto; left: 0;}
   }
@@ -208,6 +286,10 @@ a.mmenu { cursor: pointer;}
 
 @include media($tablet) {
   .col-md-8.blog-post p, #main .content p { font-size: 18px !important; overflow: hidden;}
+
+  #filepages11 { font-size: 18px;}
+
+  #page_navigation { font-size: 18px;}
 
   .grid-alt .right-col { top: 0; margin-top: 20px;}
 
@@ -318,6 +400,12 @@ a.mmenu { cursor: pointer;}
   .tablet-grid .grid-alt .right-col ul {
     &:first-child { margin-top: 0;}
   }
+
+  header #menu .menu li.search { position: relative;
+    input.input.keyword { position: absolute !important; top: 100%; right: 0;}
+  }
+
+  .search .news { padding: 0 40px 40px;}
 }
 
 @include media($tabletOnly) {
@@ -339,6 +427,9 @@ a.mmenu { cursor: pointer;}
 
 @include media($notMobile) {
   #main .content .teaser.teaser-events { padding-top: 20px !important;}
+
+  .grid-info-list { padding: 40px 40px 0 !important;}
+  .grid-info-tags { padding-top: 40px;}
 }
 
 @include media($mobile) {
@@ -461,5 +552,15 @@ a.mmenu { cursor: pointer;}
 
   .page-links #main .content-wrapper h4 { margin-top: 40px !important;
     &:first-child { margin-top: 0 !important;}
+  }
+
+  header #menu .menu li.search { display: none;}
+  .search-phone { display: block;
+    input { background-color: white; height: 30px; width: 200px;}
+  }
+
+  .search {
+    .header { margin-bottom: 0 !important;}
+    .news { padding: 20px;}
   }
 }

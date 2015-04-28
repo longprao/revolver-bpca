@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
 
   $('.download-link-area:last').show();
 
-  $('.download-items').click(function(e){
+  $('.download-items').live("click",function(e){
 
     
     e.preventDefault();
@@ -52,7 +52,7 @@ jQuery(document).ready(function ($) {
     
   });
 
-  $('.forward-to-friends').click(function(e){
+  $('.forward-to-friends').live('click',function(e){
     e.preventDefault();
     if (  $(this).parent().hasClass('unclickable')  ) {
         // Sned a message tellign the user to select something

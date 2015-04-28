@@ -88,13 +88,15 @@ function build_grid($posts=array(), $cols=1, $events=false){
 
 			$start_date = date_create(apply_filters( 'EventStartDate', $post->EventStartDate ));
 			$end_date = date_create(apply_filters( 'EventEndDate', $post->EventEndDate ));
-
+			
 
 			$post = array(
 				'id'            => $post_id,
 				'title'         => apply_filters( 'post_title', $post->post_title ),
 				'category_head' => date_format($start_date,"m/d"),
 				'sub_head'      => date_format($start_date,"g:ia") . ' - ' . date_format($end_date,"g:ia"),
+				'start_date_cal'  => date_format($start_date,"Ymd\\THi00\\Z") ,
+				'end_date_cal'   => date_format($end_date,"Ymd\\THi00\\Z"),
 				'content'       => apply_filters( 'post_content', $post->post_content ),
 				'address'       => '',
 				'map_address'   => '',
@@ -102,6 +104,8 @@ function build_grid($posts=array(), $cols=1, $events=false){
 				'img'           => post_image($post_id),
 				'tags_html'     => '',
 				'web'           => get_post_meta( $post_id, '_EventURL', true ),
+				'content_cal'           => strip_tags(apply_filters( 'post_content', $post->post_content )),
+				'location_cal'           => sp_get_venue( $post_id ),
 				'snippet'				=> '',
 				'transport_img' => '',
 				'status' => '',
@@ -138,8 +142,9 @@ function build_grid($posts=array(), $cols=1, $events=false){
 				$status = '<h4>' . $status . '</h4>';
 			} // END if
 
+			
 			$post['content'] = $status . '<p>' . $prepend_content . '</p>' . $button . '<p>' . $post['content'] . '</p>';
-
+			
 			$posts_array[] = $post;
 		}
 	}else{
@@ -148,8 +153,8 @@ function build_grid($posts=array(), $cols=1, $events=false){
 				$posts->the_post();
 				$post_id = get_the_id();
 
-				// $start_date = date_create(apply_filters( 'EventStartDate', $post->EventStartDate ));
-				// $end_date = date_create(apply_filters( 'EventEndDate', $post->EventEndDate ));
+				// $start_date_cal = date_create(apply_filters( 'EventStartDate', $post->EventStartDate ));
+				// $end_date_cal = date_create(apply_filters( 'EventEndDate', $post->EventEndDate ));
 
 				$post = array(
 					'id'          			=> $post_id,
@@ -255,7 +260,7 @@ HTML;
 							</li>
 
 							<li>
-								<a href="#" target="_blank">
+								<a href="http://www.google.com/calendar/event?action=TEMPLATE&text={$post['title']}&dates={$post['start_date_cal']}/{$post['end_date_cal']}&details={$post['content_cal']}&location={$post['location_cal']}&trp=false" target="_blank">
 									<i class="fa fa-google"></i>Add to Google Calendar
 								</a>
 							</li>

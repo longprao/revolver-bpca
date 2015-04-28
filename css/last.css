@@ -385,6 +385,8 @@ h4.extra-space,
 #gform_confirmation_message_1{
     padding-bottom:34px;
 }
+.teaserMap img,.exploreTeaser .content.image img{display:block!important;height:100%;  }
+.exploreTeaser{overflow:hidden;}
 /* End Gravity Forms Style */
 
 /* MailChimp Style */
@@ -395,28 +397,59 @@ h4.extra-space,
 /* Media Queries */
 
 @media screen and (max-width:1200px){
-
-	.ms-inner-controls-cont{left:25%;}	
+	.content.content-wrapper.second_col{left: 15px;
+    position: relative;}
+	body .half_tablet{float: left;
+    width: 50%;}
 	
+	.ms-inner-controls-cont{left:25%;}	
+	.board-committees .col-md-4{width:100%!important;}
+	.page-template-quote-pages .board-committees .col-md-4 .content-wrapper {
+		    padding-bottom: 0;
+    padding-top: 0;
+	}
+	.filt_text{  margin-bottom: 20px!important; }
+	.board-committees .half_tablet:nth-child(2) .col-md-4:first-child .content.content-wrapper{ padding-left: 45px;}
 }
 
 @media screen and (max-width:991px){
-
+	.content.content-wrapper.second_col{left: 15px;
+    position: relative;}
+	.filt_text{  margin-bottom: 0px!important;  margin-left: 40px!important;}
+	.board-committees .col-md-4{width:100%!important;}
     .content .teaser.col-sm-6:nth-child(3) {display:none;}
 	
+	.half_tablet:nth-child(2) .col-md-4 {
+		margin-top: 20px !important;
+	}
+	body .half_tablet{float: left;
+    width: 50%;}
+	
+	.board-committees p{overflow:visible!important;}
+	.page-id-58 .post-filter{width:100%;}
+	.filter_popup{width: 322px;}
 }
 
 @media screen and (max-width:767px){
+	.content.content-wrapper.second_col{left: 15px;
+    position: relative;}
+	.filt_text{  margin-bottom: 0px!important;}
+.filt_text{   margin-left: 40px!important;}
 
-	
-	
+.board-committees .col-md-4{width:100%!important;}
+
+.board-committees .col-md-4{width:100%!important;}
+	body  .half_tablet{width:100%;}
+	 
 }
 
 @media screen and (max-width:550px){
-
+	.filt_text{   margin-left: 20px!important;margin-top: 30px!important;;}
 	.ms-inner-controls-cont{left:0%;}	
     .content .teaser.col-sm-6:nth-child(3) {display:block;}
-	
+	.board-committees{margin-bottom:30px!important;}
+	.filter_popup{right: 10%;
+    width: 80%!important;}
 }
 
 @media screen and (max-width:350px){

@@ -153,21 +153,27 @@ function build_teaser_row($atts){
 
       }else if($category == 'leadership'){
 
-        $args = array( 'post_type' => 'leadership', 'posts_per_page' => 6, 'orderby' => 'menu_order', 'order' => 'ASC' );
-        query_posts( $args );
+        // $args = array( 'post_type' => 'leadership', 'posts_per_page' => 6, 'orderby' => 'menu_order', 'order' => 'ASC' );
+        // query_posts( $args );
 
-        $output .= "<div class='content teaser teaser-leadership leadership'><h6>Leadership</h6>";
-        $output .= "<ul class='leadership-list'>";
-        $output .= "<li class='leadership-governnor'><a href='https://www.governor.ny.gov' target='_blank'>{$a['governor']}</a> - Governor</li>";
+        $output .= "<div class='content teaser teaser-leadership leadership'>";
+		ob_start();
+		dynamic_sidebar('leadership-widget');
+		$output .= ob_get_contents();
+		ob_end_clean();
+		// $output .= dynamic_sidebar( 'leadership-widget' );
+		// $output .= "<h6>Leadership</h6>";
+        // $output .= "<ul class='leadership-list'>";
+        // $output .= "<li class='leadership-governnor'><a href='https://www.governor.ny.gov' target='_blank'>{$a['governor']}</a> - Governor</li>";
 
-        if ( have_posts() ) : while ( have_posts() ) : the_post();
-          $post_id = get_the_id();
-          $leader_name = get_the_title();
-          $position = get_post_meta( $post_id, '_position_title', true );
+        // if ( have_posts() ) : while ( have_posts() ) : the_post();
+          // $post_id = get_the_id();
+          // $leader_name = get_the_title();
+          // $position = get_post_meta( $post_id, '_position_title', true );
 
-          $output .= "<li><a href='" . get_site_url() .  "/about/leadership?selected_id={$post_id}'>{$leader_name}</a> - {$position}</li>";
-        endwhile; endif;
-        $output .= "</ul>";
+          // $output .= "<li><a href='" . get_site_url() .  "/about/leadership?selected_id={$post_id}'>{$leader_name}</a> - {$position}</li>";
+        // endwhile; endif;
+        // $output .= "</ul>";
 
         wp_reset_query();
 

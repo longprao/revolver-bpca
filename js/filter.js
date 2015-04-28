@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
     var checked = get_checked();
     var queryParams = {tags: checked, date: filter_date};
     $('.building-loading').show();
-    location.href = '?' + decodeURI(jQuery.param(queryParams));
+    location.href = get_url()+'?' + decodeURI(jQuery.param(queryParams));
       
   });
 
@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
     var checked = get_checked();
     var queryParams = {tags: checked, date: filter_date};
     $('.building-loading').show();
-    location.href = '?' + decodeURI(jQuery.param(queryParams));
+    location.href = get_url()+'?' + decodeURI(jQuery.param(queryParams));
       
   });
 
@@ -99,7 +99,7 @@ jQuery(document).ready(function ($) {
 
   });
 
-  $('.checker').on('click', function(e) {
+  $('.checker').live('click', function(e) {
       if ( $(this).parent().hasClass('checked') ) {
             
             $(this).parent().removeClass('checked');
@@ -144,15 +144,30 @@ $('html, body').animate({
        // it exists
        $('.hidelayer').hide();
        $('.hideuntilsubmit').addClass('showlayer');
+	   jQuery('#gform_fields_1 input').val('');
+		jQuery('#gform_1 .gform_title').after(jQuery('.form_success_message'));
   }
 
   $(".accordion-child > .downloadform ul li").closest('.accordion').addClass('show');
 
-  
+	var message_error=jQuery('#input_1_6').parent().next().text();
+	console.log("1",message_error);
+	if(message_error=="Please put a valid Email"){
+		jQuery('.error_msg_form').append('<span class="error_email">Please enter a valid email address.</span>')
+	}
 
 
 
 
-
+ 
 
 });
+function get_url(){
+var protocol =document.location.protocol,
+   host =document.location.host,
+pathname=document.location.pathname;
+pathname_arr =pathname.split("page/");
+pathname = pathname_arr[0];
+url= protocol+host+pathname;
+return url;
+}

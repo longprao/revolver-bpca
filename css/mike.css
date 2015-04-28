@@ -46,15 +46,48 @@
     position: relative;
     float: left;
     cursor: pointer;
+	z-index;99999;
 }
-
+.post-filter{position:relative;}
+.filter_popup{background-color: rgba(255, 255, 255, 0.95);
+font-weight:normal;
+     font-size: 18px;
+    padding: 20px 0;
+    position: absolute;
+    width: 337px;
+    z-index: 9999;font-family: "proxima_nova_rgregular";display:none;}
+.filter_popup .fa.fa-times{ position: absolute; cursor:pointer;
+    right: 43px;
+    top: 3px;}
+.filter_popup_text{}
+.error_email{margin-left:5px;color:#8c1c1c;}
+.error_msg_form{color:#8c1c1c;}
+.page_link {
+    display: inline-block;
+}
+.form_success_message{*color:green;}
+#filepages11{margin-top:10px;}
+.board-committees-public-info.board-committees .col-md-4:first-child{width:14%;}
+.board-committees-public-info.board-committees .col-md-4:nth-child(2){width:29%;}
+.board-committees-public-info.board-committees .half_tablet:nth-child(2) .col-md-4:first-child{width:57%; }
+.board-committees-public-info.board-committees .half_tablet:nth-child(2) .col-md-4:first-child .content.content-wrapper{ padding-left: 30px;}
+.next_link{display:inline-block;}
+.half_tablet{width:100%;}
+.page_link{ display: block;
+    left: -10000px;
+    position: absolute;}
 .checker + label {
   padding-left: 40px;
   position: relative;
   margin-left: -30px;
 }
-
-
+.filt_text{ margin-bottom: -30px;
+    margin-left: 60px;
+    margin-top: 60px;}
+.content.content-wrapper.first_col {
+    left: 15px;
+    position: relative;
+}
 .download-link-area {
     cursor: pointer;
 }
@@ -160,7 +193,7 @@ header #menu .menu li:hover+a {
 }
 
 .accordion.two {
-  margin-left: 20px;
+  *margin-left: 20px;
 }
 
 .accordion.two h4{
@@ -186,6 +219,20 @@ header #menu .menu li:hover+a {
     -webkit-appearance: checkbox;
     cursor: pointer;
     margin: 0px;
+}
+
+.accor_list{display:none;}
+.accor_title{
+	font-weight:500;	
+	cursor:pointer;
+	text-transform: uppercase;
+	 font-family: "proxima_nova_ltsemibold"; 
+}
+.accor_title span.activeted{border-bottom: 2px solid #fcd036;padding-bottom: 4px;}
+.accor_title .fa {
+    margin-left: -15px;
+    margin-top: 3px;
+    position: absolute;
 }
 
 .hideuntilsubmit {

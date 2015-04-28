@@ -429,10 +429,10 @@ get_header(); ?>
          <a href="https://www.facebook.com/sharer/sharer.php?u='<?php echo $imagedata[0]->img;?>">
          <div class="social-icon"><i class="fa fa-facebook"></i></div><div class="share-text-black">Share on Facebook</div>
          </a><br />
-         <a href="http://twitter.com/share?text=' + captiontitle + '&url=<?php echo $imagedata[0]->img;?>">
+         <a href="http://twitter.com/share?text=<?php echo strip_tags($thiscaption);?>&url=<?php echo $imagedata[0]->img;?>">
          <div class="social-icon"><i class="fa fa-twitter"></i></div><div class="share-text-black">Share on Twitter</div>
          </a><br />
-         <a href="mailto:?subject=' + captiontitle + '&amp;body=<?php echo $thiscaption;?>%20-%20<?php echo $imagedata[0]->img;?>" class="share-email">
+         <a href="mailto:?subject=<?php echo strip_tags($thiscaption);?>&amp;body=<?php echo $imagedata[0]->img;?>" class="share-email">
          <div class="social-icon"><i class="fa fa-envelope-o"></i></div><div class="share-text-black">Forward to Friends</div></a><br />
          <a href="#" onclick="javascript:window.open('<?php echo $imagedata[0]->img;?>');">
          <div class="social-icon"><i class="fa fa-print"></i></div><div class="share-text-black">Print</div>
@@ -754,14 +754,14 @@ function setPagination(pagenumber) {
         - links to specific pages 
         - link to next page 
     */  
-    var navigation_html = '<a class="previous_link" href="javascript:previous(' + pagenumber + ');">PREV</a>&nbsp;&nbsp;&nbsp;';
+    var navigation_html = '<a class="previous_link" href="javascript:previous(' + pagenumber + ');"><i class="fa fa-angle-left"></i></a>&nbsp;&nbsp;&nbsp;';
     
     var current_link = 0;  
     while(number_of_pages > current_link){  
         navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +',' + pagenumber + ')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>&nbsp;&nbsp;&nbsp;';  
         current_link++;  
     }
-    navigation_html += '<a class="next_link" href="javascript:next(' + pagenumber + ');">NEXT</a>';  
+    navigation_html += '<a class="next_link" href="javascript:next(' + pagenumber + ');"><i class="fa fa-angle-right"></i></a>';
   
     $('#filepages' + pagenumber).html(navigation_html);  
   

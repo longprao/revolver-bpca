@@ -11,7 +11,7 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<div class="row header">
 				<div class="col-md-4 col pull-right">
-					<div class="content header-content <?= get_field('quote_box_color') ?>">
+					<div class="content header-content header-content-fixed <?= get_field('quote_box_color') ?>">
 						<h1><?= get_field('quote') ?></h1>
 						<h3><?= get_field('quote_by') ?></h3>
 						<h5><?= get_field('quote_title_1') ?></h5>
