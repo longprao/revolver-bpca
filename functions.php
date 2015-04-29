@@ -96,6 +96,25 @@ function revolver_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Leadership Widget', 'revolver' ),
+		'id' => 'leadership-widget',
+		'description' => __( 'Leadership Widget', 'revolver' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h6>',
+		'after_title' => '</h6>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Single Blog Items', 'revolver' ),
+		'id' => 'single-blog-widget',
+		'description' => __( 'Single Blog Items', 'revolver' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
 }
 
 
@@ -213,13 +232,24 @@ function gallery_share_shortcode( $atts ){
 
 add_shortcode( 'bpca_share' , 'gallery_share_shortcode');
 
-
-/*add_filter("gform_validation_message", "change_message", 10, 2);
+add_filter("gform_validation_message_1", "change_message", 10, 2);
 function change_message($message, $form){
-    return "To Download RFP Forms, please enter the required information, marked red below";
-} */
+    return "<p class='error_msg_form'>To Download RFP Forms, please enter the required information, marked red below.</p>";
+}
 
 /* Added By Hire Jordan Smith - 4/22/2015 */
 
 // Anchor all Gravity Forms on submission
-add_filter( 'gform_confirmation_anchor', '__return_true' ); 
+add_filter( 'gform_confirmation_anchor', '__return_true' );   
+
+
+
+add_filter( 'gform_field_validation_1_6', 'custom_validation', 10, 4 );
+function custom_validation( $result, $value, $form, $field ) {
+
+	if ( ! $result['is_valid'] && trim( $value)!==''){
+        // $result['is_valid'] = false;
+        $result['message'] = 'Please put a valid Email';
+    }
+    return $result;
+}

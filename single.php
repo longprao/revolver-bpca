@@ -12,10 +12,7 @@
 			<div class="row header">
 				<div class="col-md-4 col pull-right">
 					<div class="content header-content header-content-fixed <?= get_field('quote_box_color') ?>">
-						<h1><?= get_field('quote') ?></h1>
-						<h3><?= get_field('quote_by') ?></h3>
-						<h5><?= get_field('quote_title_1') ?></h5>
-						<h5><?= get_field('quote_title_2') ?></h5>
+                        <?php dynamic_sidebar( 'single-blog-widget' ); ?>
 					</div>
 				</div>
 				<div class="col-md-8 col">
@@ -44,7 +41,7 @@
 							<div class="grid-aside-content">
 								<ul>
 									<li>
-										<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink()) ?>" target="_blank">
+										<a class="fb-share" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink()) ?>" target="_blank">
 											<i class="fa fa-facebook"></i>Share on Facebook
 										</a>
 									</li>

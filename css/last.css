@@ -75,7 +75,7 @@ h1, h2, h3, h4 { font-family: "proxima_nova_rgbold"; }
 #main .content .teaser-twitter h3, .thinkTwitFollow{ display: none !important; }
 #main .content .teaser-twitter a.bpca-twitter{ font-size: 14px; }
 #main .content .teaser.teaser-twitter { font-size: 14px; font-family: "proxima_nova_ltlight" }
-#main .content .teaser-twitter *{ font-size: 14px !important; }
+#main .content .teaser-twitter *{ font-size: 16px !important; }
 #main .content .teaser-leadership{ background-color: #19a6e2; }
 #main .content .teaser-leadership h6 {color: #fff;}
 #main .content .teaser.teaser-leadership li { font-size: 14px;line-height: 23px; font-family:  'proxima_nova_rgregular'; }
@@ -165,11 +165,6 @@ a.btn-bpca.white:hover {
 h4 {
 	font: 16px proxima_nova_ltsemibold !important;
 	line-height: 24px !important;
-}
-
-.board-committees h4 {
-	margin-top: 0 !important;
-	margin-bottom: 7px !important;
 }
 
 .board-committees label {
@@ -374,7 +369,6 @@ h4.extra-space,
   margin-top: 15px !important;
 }
 
-.hideuntilsubmit {margin-top:-191px !important;}
 .gform_wrapper h3.gform_title {
   text-transform: uppercase;
   font-size: 18px !important;;
@@ -385,7 +379,7 @@ h4.extra-space,
 #gform_confirmation_message_1{
     padding-bottom:34px;
 }
-.teaserMap img,.exploreTeaser .content.image img{display:block!important;height:100%;  }
+.teaserMap img,.exploreTeaser .content.image img{display:block!important; height:350px;  }
 .exploreTeaser{overflow:hidden;}
 /* End Gravity Forms Style */
 

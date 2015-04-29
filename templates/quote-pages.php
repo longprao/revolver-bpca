@@ -120,15 +120,17 @@ if (array_key_exists('down-files', $_POST)) {
                         </div>
                         <div class="archive-share-buttons">
 
-                          <a href="#" onclick="javascript:downloadfile('<?php echo $imagedata[0]->imglink;?>');"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />
+                          <a href="<?php echo $imagedata[0]->imglink;?>" download="<?php echo basename($imagedata[0]->imglink);?>"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />
                           <a target="_blank" href="mailto:?subject=<?php echo $thiscaption;?>&amp;body=<?php echo $imagedata[0]->imglink;?>" class="share-email">
          <div class="social-icon"><i class="fa fa-envelope-o"></i></div><div class="share-text-black">Forward to Friends</div></a><br />
          <a target="_blank" href="http://twitter.com/share?text=<?php echo $thiscaption;?>&url=<?php echo $imagedata[0]->imglink;?>">
          <div class="social-icon"><i class="fa fa-twitter"></i></div><div class="share-text-black">Share on Twitter</div>
          </a><br />
-         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='<?php echo $imagedata[0]->imglink;?>">
-         <div class="social-icon"><i class="fa fa-facebook"></i></div><div class="share-text-black">Share on Facebook</div>
-         </a><br />
+                            <a target="_blank"
+                               href="https://www.facebook.com/sharer/sharer.php?u='<?php echo $imagedata[0]->imglink; ?>">
+                                <div class="social-icon"><i class="fa fa-facebook"></i></div>
+                                <div class="share-text-black">Share on Facebook</div>
+                            </a><br/>
          
                         </div>
                         <iframe id="downframe" style="display:none"></iframe>
@@ -222,7 +224,10 @@ jQuery('.archive-slides li').click(function (){
 
         // share buttons
         var imgsrc = jQuery('.archive-active-slide img').attr('src');
-        var sharebtns = '<a href="#" onclick="javascript:downloadfile(\'' + imgsrc + '\');"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />';
+        var filename = imgsrc.substring(imgsrc.lastIndexOf('/')+1);
+
+//        var sharebtns = '<a href="#" onclick="javascript:downloadfile(\'' + imgsrc + '\');"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />';
+        var sharebtns = '<a href="' + imgsrc + '" download="' + filename + '"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />';
         sharebtns += '<a target="_blank" href="mailto:?subject=' + captiontitle + '&amp;body=' + captiontitle + '%20-%20' + imgsrc + '" class="share-email">';
         sharebtns += '<div class="social-icon"><i class="fa fa-envelope-o"></i></div><div class="share-text-black">Forward to Friends</div></a><br />';
         sharebtns += '<a target="_blank" href="http://twitter.com/share?text=' + captiontitle + '&url=' + imgsrc + '">';

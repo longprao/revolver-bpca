@@ -5,7 +5,6 @@
  */
 
 // wordpress footer hook. do not remove or bearshark will find you
-get_header();
 
 function get_all_event_categories_html(){
 	$terms = get_terms("tribe_events_cat");
@@ -52,6 +51,23 @@ if($filter_tags){
 
 $loop = tribe_get_events($filter);
 
+
+$filter_all = $filter['tax_query']  = array(
+		array(
+			'taxonomy' => 'tribe_events_cat',
+			'field'    => 'slug',
+			'terms'    => array()
+		)
+	);
+
+$loop_all = tribe_get_events($filter_all);
+$html_desktop = build_grid($loop, 3, true);
+if(trim($html_desktop)=="<li class='grid-alt places'></li>"){
+	header('Location: http://www.thevantoshgroup.com/bpca/news/events/?no_found=1');
+}
+
+get_header();
+
 ?>
 
 
@@ -68,6 +84,10 @@ $loop = tribe_get_events($filter);
                             <h3>FILTER BY FOCUS AREA</h3>
 
                             <div class="post-filter">
+								<div class="filter_popup">
+									<i class="fa fa-times"></i>
+									<p class="filter_popup_text">There are no results for the criteria <br>you selected.</p>
+								</div>
                                 <?= get_all_event_categories_html() ?>
                             </div>
                         </div>
@@ -101,19 +121,46 @@ $loop = tribe_get_events($filter);
 			<div class="news news-events">
 				<ul class="grids">
 					<div class="mobile-grid">
-						<?= build_grid($loop, 1, true)?>
+						<?php 
+							$html =build_grid($loop, 1, true);
+							// if(trim($html)=="<li class='grid-alt places'></li>"){
+								// $html = build_grid($loop_all, 1, true);
+								// $empty = 1;
+							// } 
+							echo $html;
+						?>
 					</div>
 					<div class="tablet-grid">
-						<?= build_grid($loop, 2, true)?>
+						<?php 
+							$html = build_grid($loop, 2, true);
+							// if(trim($html)=="<li class='grid-alt places'></li>"){
+								// $html = build_grid($loop_all, 2, true);
+								// $empty = 1;
+							// } 
+							echo $html;
+						?>
 					</div>
 					<div class="desktop-grid">
-						<?= build_grid($loop, 3, true)?>
+						<?php 
+							echo $html_desktop;
+						?>	
 					</div>
 				</ul>
 			</div>
 	</main>
 </div><!-- #primary -->
 
-
+<script>
+	jQuery(document).ready(function(){
+		<?php $empty =(isset($_GET['no_found']) && !empty($_GET['no_found']))? $_GET['no_found'] :''?>
+		var empty = <?php echo "'".$empty."'";?>;
+		if(empty){
+			jQuery('.filter_popup').show();
+		}
+		jQuery('.filter_popup i').bind('click',function(){
+			jQuery(this).parent().fadeOut(function(){jQuery(this).remove();})
+		})
+	})
+</script>
 <?php // wordpress footer hook. do not remove or bearshark will find you ?>
 <?php get_footer(); ?>

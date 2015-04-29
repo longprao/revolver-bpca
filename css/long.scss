@@ -23,15 +23,19 @@ $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ance
   @include media($mobile) { display: none !important;}
 }
 
-a:focus, a:active,
+a:focus, a:active, a:visited,
 button,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner,
 select::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
+  outline-style: none !important;
   outline: none !important;
+  border: none;
 }
+
+.ui-loader { display: none;}
 
 #footer, .places {
   input {
@@ -39,11 +43,19 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   }
 }
 
+input[name="saddr"] { background: none;}
+
 .news .grid-alt {
   input {
     @include placeholder { color: white;}
   }
 }
+
+.post-filter .grid-info-tags li span { font-weight: 600 !important;}
+
+.page-id-74 #gform_wrapper_1 { margin-top: -70px;}
+
+.page-id-38 .downloadform input[type=checkbox]:checked + .checkcheck { margin-top: -10px;}
 
 .downloadform label { font-weight: normal;}
 
@@ -88,7 +100,7 @@ a.mmenu { cursor: pointer;}
   input { color: black;}
 }
 
-#main .content .teaser.teaser-twitter .tweettext { text-transform: none;}
+#main .content .teaser.teaser-twitter .tweettext { text-transform: none; font-weight: 600;}
 
 #main .content .timeline-page .download-link-area a {
   &:hover { color: #197BC2 !important;}
@@ -165,7 +177,7 @@ a.mmenu { cursor: pointer;}
 
 #page_navigation { font-size: 16px;}
 
-#filepages11 { font-size: 16px;}
+#filepages11 { font-size: 16px; margin-top: 40px; padding-left: 2px;}
 
 .header-content-fixed { padding: 35px 40px 0; position: relative;
   h3, h4 { position: absolute; right: 40px; bottom: 55px; margin: 0; font-weight: normal;}
@@ -195,6 +207,10 @@ a.mmenu { cursor: pointer;}
   padding: 4px 0px 3px 10px!important;
 }
 
+#main .board-committees h4 { margin: 20px 0 10px;
+  &:first-child { margin-top: 0;}
+}
+
 @include media($largeDesktop) {
   .timeline-page img { width: 100%; max-height: 350px;}
 
@@ -205,9 +221,10 @@ a.mmenu { cursor: pointer;}
 
   .download-items .fa, .forward-to-friends .fa, .aside-share-button .fa { margin-right: 10px;}
 
-  .desktop-grid .grid-alt .left-col { line-height: 27px; }
+  .desktop-grid .grid-alt .left-col { line-height: 24px; }
   .residential-buildings .grid-alt .left-col { line-height: 24px; }
-  .page-template-museums-grid .grid-alt .left-col { line-height: 21px; padding-top: 5px; }
+  .page-template-museums-grid .grid-alt .left-col { line-height: 24px; padding-top: 5px; }
+  .page-template-museums-grid .grid-alt .right-col .description-tags p { line-height: 24px !important; }
 }
 
 @include media($desktop) {
@@ -236,8 +253,9 @@ a.mmenu { cursor: pointer;}
     .prev-slide, .next-slide { font-size: 30px; bottom: 33px;
       &:hover { color: $blue;}
     }
-    .prev-slide { right: 120px;}
+    .prev-slide { right: 130px;}
     .next-slide { right: 20px;}
+    .slides-counter { width: 80px; text-align: center;}
   }
 
   #main .content .teaser-events li.title a { font-size: 20px !important;}
@@ -248,7 +266,13 @@ a.mmenu { cursor: pointer;}
     .share-text-black { top: 0; margin-bottom: 0; font-size: 16px;}
   }
 
-  .page-template-quote-pages .content-wrapper { padding: 52px 45px 46px; }
+  .page-template-quote-pages .content-wrapper { padding: 40px 45px 46px; }
+
+  .page-id-3150 #main .content-wrapper h4 { margin-top: 40px !important;
+    &:first-child { margin-top: 0 !important;}
+  }
+
+  #main .content .teaser.teaser-social p { white-space: nowrap;}
 }
 
 @include media($smallDesktop) {
@@ -279,7 +303,7 @@ a.mmenu { cursor: pointer;}
   .large-footer { display: none;}
   .content.newsletter { padding-top: 20px; padding-bottom: 60px;}
 
-  .archive-tab-content .share-text-black { font-size: 18px; position: relative; top: 5px; margin-bottom: 20px;}
+  .archive-tab-content .share-text-black { font-size: 18px; position: relative; top: 5px; margin-bottom: 10px;}
 
   .page-template-quote-pages .timeline-page-container .content-wrapper { padding: 40px;}
 }
@@ -402,10 +426,32 @@ a.mmenu { cursor: pointer;}
   }
 
   header #menu .menu li.search { position: relative;
-    input.input.keyword { position: absolute !important; top: 100%; right: 0;}
+    input.input.keyword { position: absolute !important; top: 100%; right: 0; margin-top: 8px;}
   }
 
   .search .news { padding: 0 40px 40px;}
+
+  header #menu .menu li.search { display: none;}
+  .search-phone { display: block;
+    input { background-color: white; height: 30px; width: 100px; min-width: initial;}
+  }
+
+  header a.mmenu { display: block !important;}
+  .search-phone { margin: 0;}
+  header #menu { display: none; clear: both;
+    &.active { display: block;}
+
+    .menu { float: none;
+      li { display: block; float: none; margin: 0 0 5px;
+        a { display: inline-block; font-size: 20px;}
+      }
+      li ul.sub-menu.show { position: static;
+        a { font-size: 18px;}
+      }
+    }
+  }
+
+  .accor_title { margin-bottom: 20px;}
 }
 
 @include media($tabletOnly) {
@@ -415,6 +461,11 @@ a.mmenu { cursor: pointer;}
   .filter-controls.filter-events-page {
     .row { @include display(flex); @include align-items(center); padding-top: 10px;}
   }
+
+  .board-committees .half_tablet {
+    &:first-child { width: 40%;}
+    &:last-child { width: 60%;}
+  }
 }
 
 @include media($smallTablet) {
@@ -423,10 +474,20 @@ a.mmenu { cursor: pointer;}
   .filter-controls.filter-events-page {
     .row { @include display(block); padding-top: 40px;}
   }
+
+  .board-committees .half_tablet { width: 100% !important;}
+}
+
+#main .content .teaser.teaser-twitter { position: relative;
+  .bpca-twitter:last-child { position: absolute; left: 40px; bottom: 40px;}
 }
 
 @include media($notMobile) {
-  #main .content .teaser.teaser-events { padding-top: 20px !important;}
+  #main .content .teaser.teaser-events {
+    .grid-info { margin-bottom: -10px;}
+    .grid-info-tags { padding-top: 40px;}
+    .grid-info-list, .grid-info-tags { margin-bottom: 0 !important;}
+  }
 
   .grid-info-list { padding: 40px 40px 0 !important;}
   .grid-info-tags { padding-top: 40px;}
@@ -434,6 +495,10 @@ a.mmenu { cursor: pointer;}
 
 @include media($mobile) {
   header { padding-left: 20px; padding-right: 20px;}
+
+  #main .content .teaser.teaser-twitter {
+    .bpca-twitter:last-child { left: 20px; bottom: 20px;}
+  }
 
   .page-id-52 .content-wrapper .btn-bpca { margin-bottom: 30px;}
 
@@ -491,19 +556,6 @@ a.mmenu { cursor: pointer;}
 
   .page-id-62 .post-filter .grid-info-tags { width: 100%;}
 
-  header #menu { display: none; clear: both;
-    &.active { display: block;}
-
-    .menu { float: none;
-      li { display: block; float: none; margin: 0 0 5px;
-        a { display: inline-block; font-size: 20px;}
-      }
-      li ul.sub-menu.show { position: static;
-        a { font-size: 18px;}
-      }
-    }
-  }
-
   .filter-controls.filter-events-page { padding: 20px 0 !important;
     .left-panel, .right-panel, .calendar, .post-filter { padding: 0; float: none;}
     .post-filter, .calendar-container { width: 100%;}
@@ -554,13 +606,14 @@ a.mmenu { cursor: pointer;}
     &:first-child { margin-top: 0 !important;}
   }
 
-  header #menu .menu li.search { display: none;}
-  .search-phone { display: block;
-    input { background-color: white; height: 30px; width: 200px;}
-  }
-
   .search {
     .header { margin-bottom: 0 !important;}
     .news { padding: 20px;}
   }
+
+  #filepages11 { margin-top: 20px;}
+
+  .mobile-grid .grid { background: white;}
+
+  .filter_popup { padding: 20px; top: 0; left: 0; width: 100% !important;}
 }

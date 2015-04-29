@@ -237,9 +237,6 @@ header #menu .menu li:hover+a {
 
 .hideuntilsubmit {
   position: relative;
-  margin-top: -216px;
-  /* margin-left: -90%; */
-  margin-left: 50%;
 }
 
 .hidelayer {
@@ -263,11 +260,6 @@ header #menu .menu li:hover+a {
   margin-bottom: 30px;
 }
 
-.showlayer {
-  margin-top: 0px;
-  margin-left: inherit;
-}
-
 .gform_confirmation_wrapper {
   padding-top: 60px;
 }
@@ -284,7 +276,7 @@ header .identity .logo a span:nth-child(1) {
   font-weight: 600;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 768px) {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
 
   .gform_wrapper .gform_body .top_label li.gfield.gf_right_half { 
     float: left; 

@@ -18,7 +18,8 @@
 							<h3>Newsletter:</h3>
 
 							<?php //echo do_shortcode( '[constantcontactapi formid="1"]' ); ?>
-							<?php gravity_form( 2, false, false, true, array(), true, 999, true ); ?>
+							<?php //gravity_form( 2, false, false, true, array(), true, 999, true ); ?>
+                            <?php echo do_shortcode('[mc4wp_form id="5696"]'); ?>
 
 							<div class="clear"></div>
 						</div>
@@ -56,7 +57,7 @@
 							<h3>Newsletter:</h3>
 
 							<?php //echo do_shortcode( '[constantcontactapi formid="1"]' ); ?>
-							<?php gravity_form( 2, false, false, true, array(), true, 999, true ); ?>
+                            <?php echo do_shortcode('[mc4wp_form id="5749"]'); ?>
 
 							<div class="clear"></div>
 						</div>
@@ -69,7 +70,7 @@
 
 		<div class="symbol wrapper"></div>
 
-		<div class="copyright wrapper">Site created by Copyright &copy; <?php echo date('Y'); ?> /
+		<div class="copyright wrapper">Site created by Copyright © <?php echo date('Y'); ?> /
 <a href="http://www.revolverstudios.com" target="_blank"> <span style="font-family: 'proxima_nova_ltsemibold',Arial,Helvetica,sans-serif;" >  REVOLVER STUDIOS </span> </a>
 
 </div>
@@ -98,3 +99,5 @@
     <?php wp_footer(); ?>
 </body>
 </html>
+
+

@@ -254,12 +254,6 @@ HTML;
             $output .= <<< HTML
 
 							<li>
-								<a href="#" target="_blank">
-									<i class="fa fa-calendar"></i>Add to iCal
-								</a>
-							</li>
-
-							<li>
 								<a href="http://www.google.com/calendar/event?action=TEMPLATE&text={$post['title']}&dates={$post['start_date_cal']}/{$post['end_date_cal']}&details={$post['content_cal']}&location={$post['location_cal']}&trp=false" target="_blank">
 									<i class="fa fa-google"></i>Add to Google Calendar
 								</a>
@@ -275,7 +269,7 @@ HTML;
 							</li>
 
 							<li>
-								<a href="https://www.facebook.com/sharer/sharer.php?u={$permalink}" target="_blank">
+								<a class="fb-share" href="https://www.facebook.com/sharer/sharer.php?u={$permalink}" target="_blank">
 									<i class="fa fa-facebook"></i>Share on Facebook
 								</a>
 							</li>

@@ -81,7 +81,7 @@
   }  
 }
 
-@media (max-width: 700px){
+@media (max-width: 767px){
   .gform_wrapper .top_label li.gfield.gfield_error.gf_left_half, .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half, .gform_wrapper .top_label li.gfield.gf_left_half, .gform_wrapper .top_label li.gfield.gf_right_half {
     width: 100% !important;
   }  
@@ -151,15 +151,6 @@
   top: 13px;
 }
 
-.hideuntilsubmit{
-  margin-left: 40%;
-  margin-top: -200px !important;
-}
-
-.hideuntilsubmit.showlayer{
-   margin-left: 40%;
-    margin-top: -234px !important;
-}
 @media (max-width: 550px){
   .hideuntilsubmit{
     margin-left: 0px;

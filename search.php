@@ -7,17 +7,17 @@
 get_header();
 
 // array of selected categories
-$filter = array(
-	'post_type'      => array(
-		'post',
-		'page'
-	),
-	'orderby'        => 'post_date',
-	'order'          => 'DESC',
-	'posts_per_page' => 8,
-	'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,
-);
-
+// $filter = array(
+	// 'post_type'      => array(
+		// 'post',
+		// 'page'
+	// ),
+	// 'orderby'        => 'post_date',
+	// 'order'          => 'DESC',
+	// 'posts_per_page' => 8,
+	// 'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,
+// );
+  
 // try to parse the date from the query param
 $filter_tags  = (array_key_exists('tags', $_GET)) ? $_GET['tags'] : false;
 // var_dump('<pre>', $filter_tags);
@@ -47,25 +47,127 @@ global $wp_query;
 			</div> -->
 			<div class="news">
 				<?php
+				
 				if ( $wp_query->have_posts() ) {
 					while ( $wp_query->have_posts() ) {
 						$wp_query->the_post();
 
-						$start_date = get_the_date('m/d');
-						$post_categories = wp_get_post_categories(get_the_id());
+						// $start_date = get_the_date('m/d');
+						// $post_categories = wp_get_post_categories(get_the_id());
 
-						foreach( $post_categories as $cat ) {
-							$cat = get_category( $cat );
-							$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
-						}
+						// foreach( $post_categories as $cat ) {
+							// $cat = get_category( $cat );
+							// $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+						// }
 
-						$tags_html = build_tags_html( $cats, $start_date );
-						$cats = array();
-
+						// $tags_html = build_tags_html( $cats, $start_date );
+						// $cats = array();
+							$id=get_the_ID();
+							$post_type=get_post_type($id);
 						?>
 						<div class="row result result_padding">
-							<h1><a href="<?= the_permalink() ?>"><?= get_the_title() ?></a></h1>
+							<?php 
+							$url= get_the_permalink();
+							
+							
+							$sendto = "";
+							// echo $post_type;
+							switch ($post_type) {
+								case 'leadership':
+									$sendto = "/about/leadership/#bio-area-box-" . get_the_ID();
+									break;
+								case 'school':
+									$sendto = "/residential-life/schools/#bio-area-box-" . get_the_ID();
+									break;
+								case 'place':
+									$category = get_the_terms(get_the_ID(), 'pcategory');
+									//print_r($category);
+									//echo $category[0]->name;
+									$thiscat = "";
+									foreach ($category as $catslug) {
+										// only grab the primary category
+										$thiscat = $catslug->slug;
+										break;
+									}
+									$sendto = "/places/";
+									switch ($thiscat) {
+										case 'get-around':
+											$sendto .= "get-around";
+											break;
+										case 'museums-memorials':
+											$sendto .= "museums-memorials";
+											break;
+										case 'parks':
+											$sendto .= "parks";
+											break;
+										case 'public-art':
+											$sendto .= "public-art";
+											break;
+										case 'public-spaces':
+											$sendto .= "public-spaces";
+											break;
+									}
+									$sendto .= "#descr-area-box-" . get_the_ID();
+									break;
+								case 'resident':
+									$sendto = "/residential-life/";
+									$category = get_the_terms(get_the_ID(), 'resident_categories');
+									$thiscat = "";
+									foreach ($category as $catslug) {
+										// only grab the primary category
+										$thiscat = $catslug->slug;
+										break;
+									}
+									switch($thiscat) {
+										case 'buildings':
+										case 'apartments':
+										case 'apt-green':
+										case 'condos':
+										case 'condo-green':
+											$sendto .= "buildings";
+											break;
+										case 'schools':
+											$sendto .= "schools";
+											break;
+									}
+									$sendto .= "#descr-area-box-" . get_the_ID();
+									break;
+								case 'attachment':
+									$sendto = get_the_guid();
+									break;
+								case 'tribe_events':
+									$sendto = "/news/events#descr-area-box-" . get_the_ID();
+									break;
+								case 'timeline':
+									$sendto = "/about-2/who-we-are";
+									break;
+							}
+							
+							
+							
+							if ($sendto != "") {
+								$url=get_bloginfo('url').$sendto;
+							} else {
+								
+								$url=get_the_permalink();
+							}
+							
+							
+							// if($post_type=='place'){
+								// $categories = get_the_terms( $id, 'pcategory' );
+								// $category  = $categories->term_id;
+								// echo $category;
+								// var_dump($categories);
+								// $url=get_bloginfo('url').'/places';
+							// } else if($post_type!='page'){
+								// $url=get_bloginfo('url').'/'.$post_type;
+							// }
+							$exclude =array (get_bloginfo('url').'/about/',get_bloginfo('url').'/places/',get_bloginfo('url').'/news/',get_bloginfo('url').'/apply/',get_bloginfo('url').'/residential-life/');
+							if(!in_array($url,$exclude)):
+							?>
+							<h1><a href="<?php echo $url; ?>"><?= get_the_title() ?></a></h1>
 							<p><?= the_excerpt() ?></p>
+							<?php endif;?>
 						</div>
 						<?php
 					}
@@ -103,6 +205,13 @@ global $wp_query;
 						</ul>
 					</div>
 					<?php
+				} else{
+				?>
+					<div class="row result result_padding"></div>
+					<div class="row result result_padding">
+					Sorry, there are no results for your search.
+					</div>
+				<?php
 				}
 
 				?>

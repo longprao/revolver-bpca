@@ -425,7 +425,7 @@ get_header(); ?>
                         </div>
                         <div class="archive-share-buttons">
 
-                          <a  onclick="javascript:downloadfile('<?php echo $imagedata[0]->img;?>');"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />
+                            <a href="<?php echo $imagedata[0]->imglink;?>" download="<?php echo basename($imagedata[0]->imglink);?>"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />
          <a href="https://www.facebook.com/sharer/sharer.php?u='<?php echo $imagedata[0]->img;?>">
          <div class="social-icon"><i class="fa fa-facebook"></i></div><div class="share-text-black">Share on Facebook</div>
          </a><br />
@@ -510,8 +510,10 @@ $('.archive-slides li').click(function (){
         $('.photo-caption-text').html(captiontitle);
 
         // share buttons
-        var imgsrc = $('.archive-active-slide img').attr('src');
-        var sharebtns = '<a href="#" onclick="javascript:downloadfile(\'' + imgsrc + '\');"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />';
+        var imgsrc = jQuery('.archive-active-slide img').attr('src');
+        var filename = imgsrc.substring(imgsrc.lastIndexOf('/')+1);
+
+        var sharebtns = '<a href="' + imgsrc + '" download="' + filename + '"><div class="social-icon"><i class="fa fa-share-square-o"></i></div><div class="share-text-black">Download</div></a><br />';
         sharebtns += '<a href="https://www.facebook.com/sharer/sharer.php?u=' + imgsrc + '">';
         sharebtns += '<div class="social-icon"><i class="fa fa-facebook"></i></div><div class="share-text-black">Share on Facebook</div>';
         sharebtns += '</a><br />';
