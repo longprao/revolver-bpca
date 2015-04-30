@@ -134,7 +134,7 @@ function build_grid($posts=array(), $cols=1, $events=false){
 			
 			if ( $buy_tickets = get_post_meta( $post_id, '_ecp_custom_3', true ) )
 			{
-				$button = '<a href="' . esc_url( $buy_tickets ) . '" title="Buy Tickets" class="btn-bpca white">Buy Tickets</a>';
+				$button = '<a href="' . esc_url( $buy_tickets ) . '" title="Buy Tickets" class="btn-bpca white" target="_blank">Buy Tickets</a>';
 			} // END if
 
 			if ( $status = get_post_meta( $post_id, '_ecp_custom_2', true ) )

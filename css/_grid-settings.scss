@@ -5,6 +5,7 @@ $mobile: new-breakpoint(max-width 550px 4);
 $smallTablet: new-breakpoint(max-width 767px 8);
 $tablet: new-breakpoint(max-width 991px 8);
 $tabletOnly: new-breakpoint(min-width 551px max-width 991px 8);
+$bigTabletOnly: new-breakpoint(min-width 768px max-width 991px 8);
 $desktop: new-breakpoint(min-width 992px 12);
 $notMobile: new-breakpoint(min-width 551px 8);
 $smallDesktop: new-breakpoint(max-width 1200px 8);

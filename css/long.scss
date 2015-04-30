@@ -23,592 +23,83 @@ $currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ance
   @include media($mobile) { display: none !important;}
 }
 
-a:focus, a:active, a:visited,
-button,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-select::-moz-focus-inner,
-input[type="file"] > input[type="button"]::-moz-focus-inner {
-  outline-style: none !important;
-  outline: none !important;
-  border: none;
-}
+.flexslider { margin: 0;}
+.timeline-years li { padding: 20px;}
+.flex-direction-nav .flex-prev { left: 40px !important;}
+.flex-direction-nav .flex-next { right: 40px !important;}
 
-.ui-loader { display: none;}
+.page-id-50 img { max-width: 100%; height: auto;}
 
-#footer, .places {
-  input {
-    @include placeholder { color: black;}
-  }
-}
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label, #field_1_14 > .gfield_label { font-weight: normal !important;}
 
-input[name="saddr"] { background: none;}
-
-.news .grid-alt {
-  input {
-    @include placeholder { color: white;}
-  }
-}
-
-.post-filter .grid-info-tags li span { font-weight: 600 !important;}
-
-.page-id-74 #gform_wrapper_1 { margin-top: -70px;}
-
-.page-id-38 .downloadform input[type=checkbox]:checked + .checkcheck { margin-top: -10px;}
-
-.downloadform label { font-weight: normal;}
-
-.grid-info-tags li { font-weight: bold;
-  &.category-header { font-size: 22px;}
-}
-.page-template-quote-pages .header-content h1 { font-weight: normal;}
-
-#main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
-
-#field_1_14 > .gfield_label { font-weight: 600 !important;}
-
-.building-filter .post-filter .grid-info-tags { @include column-count(1);}
-.news.news-blog { margin-top: 0;}
-
-.filter-controls { border-bottom: 1px solid #f1f0ef;}
-.checker + label { padding-left: 46px;}
-
-#mc4wp_email { width: 210px; background: none; text-align: center;
-  &:focus {
-    @include placeholder { color: transparent;}
-  }
-}
-
-#main .content input[type=submit], #main .content button, #main .grids input[type=submit], #main .grids button, #main .content .btn-bpca, #main .grids .btn-bpca { display: inline-block;}
-
-a.mmenu { cursor: pointer;}
-
-.page-id-38 #main .header {
-  .content {
-    h4 { font-size: 24px !important; font-weight: 500 !important; font-family: "proxima_nova_rgbold" !important;}
-  }
-}
-
-#main .content .teaser a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important;}
-#main .content .teaser h1 a { font-size: 24px !important; font-family: $proxima_nova_rgbold !important;}
-#main .content .teaser .title a { font-family: $proxima_nova_rgbold !important;}
-
-#main .content .teaser.teaser-twitter .tweettext a { font-weight: normal;}
-
-#main .pagination { padding-bottom: 40px;
-  input { color: black;}
-}
-
-#main .content .teaser.teaser-twitter .tweettext { text-transform: none; font-weight: 600;}
-
-#main .content .timeline-page .download-link-area a {
-  &:hover { color: #197BC2 !important;}
-}
-
-.col-md-8.blog-post .category-header { font-size: 22px;}
-
-.photo-caption-container .social-icon { margin-right: 10px;}
-
-.small-footer { display: none;}
-
-.residential.residential-buildings .grid-info-tags li.category-header { font-size: 19px;}
-
-#RFP-BID-tags li.disabled { display: none;}
-#RFP-BID-tags li {
-  &:first-child { margin-bottom: 40px;}
-}
-
-#main .content, #main .left-col {
-  a[href^="mailto:"] { text-decoration: underline !important;
-    &:hover { color: #69696C !important;}
-  }
-}
-
-#main .content {
-  .grid-aside-content, .archive-share-buttons {
-    a[href^="mailto:"] { text-decoration: none !important;
-      &:hover { color: #197bc2 !important;}
-    }
-  }
-}
-
-#main .grid-alt .left-col {
-  a[href^="mailto:"] { color: black !important;
-    &:hover { color: #69696C !important;}
-  }
-}
-
-#main .news .grid-alt .left-col {
-  a[href^="mailto:"] { color: white !important;
-    &:hover { color: #69696C !important;}
-  }
-}
-
-.calendar tbody { color: black;}
-
-.page-template-quote-pages .timeline-page-container .content-wrapper { padding: 33px 40px;}
-
-#footer .gform_wrapper .top_label input.medium { max-width: 150px;}
-
-#main .content .teaser.teaser-social {
-  p { text-align: center !important; width: 90% !important;}
-}
-
-#main {
-  .timeline-page-container .content-wrapper p, .about-leadership p, .header-content.blue h1, .news-events p,
-  .residential-buildings .places, .residential-schools .places { font-weight: 100;}
-}
-
-.gform_wrapper .gsection .gfield_label, .gform_wrapper h2.gsection_title, .gform_wrapper h3.gform_title { font-weight: 600;}
-
-.grid-alt .right-col { position: relative; top: -4px;}
-
-.downloadform { padding-top: 5px;}
-
-.page-template-quote-pages .downloadform ul { margin-bottom: 20px;}
-
-.search-phone { display: none;}
-
-.search .news { padding: 20px 60px 60px; margin: 0;
-  .result_padding { padding-left: 0; padding-right: 0;}
-  .pagination { padding-bottom: 0;}
-}
-
-#page_navigation { font-size: 16px;}
-
-#filepages11 { font-size: 16px; margin-top: 40px; padding-left: 2px;}
-
-.header-content-fixed { padding: 35px 40px 0; position: relative;
-  h3, h4 { position: absolute; right: 40px; bottom: 55px; margin: 0; font-weight: normal;}
-  h5 { position: absolute; right: 40px; bottom: 30px; margin: 0; font-weight: normal;}
-}
-
-#footer .gform_wrapper form { position: relative;
-  .gfield_description.validation_message { position: absolute; width: 250px; padding: 10px; font-size: 12px; font-weight: normal;
-    text-transform: uppercase; color: white; background: $red; bottom: 20px; left: 50%; margin-left: -125px;
-    &:before { content: ''; position: absolute; bottom: 100%; left: 50%; margin-left: -10px; @include triangle(20px, $red, up);}
-  }
-}
-#footer .gform_wrapper li.gfield.gfield_error { width: 100%;}
-#footer .gform_wrapper li.gfield_error input { border-left: none; border-right: none; border-top: none;}
-#footer .gform_confirmation_message img { width: auto;}
-
-.ginput_container { position: relative;}
-.gfield_contains_required .ginput_container:before {
-  content: " *";
-  color: #8c1c1c;
-  position: absolute;
-  top: 15px;
-  left: -5px;
-}
-
-.page-id-64 .mc4wp-form .list-info-tags span {
-  padding: 4px 0px 3px 10px!important;
-}
-
-#main .board-committees h4 { margin: 20px 0 10px;
-  &:first-child { margin-top: 0;}
-}
-
-@include media($largeDesktop) {
-  .timeline-page img { width: 100%; max-height: 350px;}
-
-  .timeline-page {
-    .checker + label { padding-left: 44px;}
-    .download-items .fa, .forward-to-friends .fa { text-align: left;}
-  }
-
-  .download-items .fa, .forward-to-friends .fa, .aside-share-button .fa { margin-right: 10px;}
-
-  .desktop-grid .grid-alt .left-col { line-height: 24px; }
-  .residential-buildings .grid-alt .left-col { line-height: 24px; }
-  .page-template-museums-grid .grid-alt .left-col { line-height: 24px; padding-top: 5px; }
-  .page-template-museums-grid .grid-alt .right-col .description-tags p { line-height: 24px !important; }
-}
-
-@include media($desktop) {
-  .news-events {
-    .grid-description-content.places { margin-top: -8px;}
-    .desktop-grid .grid-alt .left-col { white-space: normal;
-      h4 { margin-top: 0 !important;}
-    }
-  }
-
-  #main .building-filter .filter-controls h3 { margin-top: 40px;}
-  .page-id-62 .filter-controls { padding-left: 40px;}
-  #main .get-around .content-wrapper { padding: 20px 0 0 25px;}
-
-  .page-template-public-get-around .downloadform { font-size: 16px;}
-
-  .filter-events-page {
-    .left-panel, .right-panel { padding: 0;}
-  }
-
-  #main > .wrapper > .content { margin-top: 20px;}
-
-  #main .filter { height: 350px;}
-
-  .archive-tab-content {
-    .prev-slide, .next-slide { font-size: 30px; bottom: 33px;
-      &:hover { color: $blue;}
-    }
-    .prev-slide { right: 130px;}
-    .next-slide { right: 20px;}
-    .slides-counter { width: 80px; text-align: center;}
-  }
-
-  #main .content .teaser-events li.title a { font-size: 20px !important;}
-  #main .content .download-link-area, .timeline-page .checker + label { font-size: 16px;}
-
-  .archive-tab-content .photo-caption-container {
-    .fa-share-square-o, .fa-envelope-o, .fa-twitter, .fa-facebook, .fa-leaf, .fa-map-marker, .fa-laptop { font-size: 16px !important;}
-    .share-text-black { top: 0; margin-bottom: 0; font-size: 16px;}
-  }
-
-  .page-template-quote-pages .content-wrapper { padding: 40px 45px 46px; }
-
-  .page-id-3150 #main .content-wrapper h4 { margin-top: 40px !important;
-    &:first-child { margin-top: 0 !important;}
-  }
-
-  #main .content .teaser.teaser-social p { white-space: nowrap;}
-}
+.gform_wrapper .gsection .gfield_label, .gform_wrapper h2.gsection_title, .gform_wrapper h3.gform_title { font-weight: 600 !important;}
 
 @include media($smallDesktop) {
-  .page-home #main { margin: -20px 0 !important;}
-  .breadcrumb { padding: 0;}
-
-  #gform_wrapper_2 { max-width: initial;}
-
-  .gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label { padding-left: 15px; padding-top: 5px;
-    font-family: $proxima_nova_ltsemibold;
+  .gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+    padding-left: 15px !important;
+    padding-top: 5px !important;
   }
 
-  .timeline-page .col-md-4 { min-height: 330px;
-    .content-wrapper { padding-bottom: 0;}
+  .page-links .content-wrapper { padding-top: 0; padding-bottom: 0;}
+  .page-links #main .content-wrapper h4, .page-links #main .content-wrapper h4:first-child { margin-top: 40px !important;}
+  .page-links #main .col-md-4:first-child {
+    .content-wrapper { padding-top: 40px;}
+    .content-wrapper h4:first-child { margin-top: 10px !important;}
   }
-  .timeline-page-container { position: relative;
-    .next-slide, .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: white; opacity: 0.6;
-      color: black; z-index: 10}
-    .next-slide { right: 0;}
-    .prev-slide { right: auto; left: 0;}
+  .page-links #main .col-md-4:nth-child(3) {
+    .content-wrapper { padding-bottom: 30px;}
   }
 
-  .gfield_checkbox input[type=checkbox]:checked + .checkcheck { margin: -5px 0px 5px 9px;}
-
-  .download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 30px; margin-right: 10px; text-align: center;}
-
-  .small-footer { display: block;}
-  .large-footer { display: none;}
-  .content.newsletter { padding-top: 20px; padding-bottom: 60px;}
-
-  .archive-tab-content .share-text-black { font-size: 18px; position: relative; top: 5px; margin-bottom: 10px;}
-
-  .page-template-quote-pages .timeline-page-container .content-wrapper { padding: 40px;}
+  .filt_text { margin-top: 40px;}
+  .half_tablet:first-child { padding-bottom: 20px;}
 }
 
 @include media($tablet) {
-  .col-md-8.blog-post p, #main .content p { font-size: 18px !important; overflow: hidden;}
+  .page-template-quote-pages .board-committees .col-md-4:nth-child(2) .content-wrapper { padding-top: 0; padding-bottom: 0;}
+  header #menu .menu li { margin-left: 0;}
+  .page-id-83 .post-filter .grid-info-tags { height: auto !important;}
+  .breadcrumb { padding: 0;}
 
-  #filepages11 { font-size: 18px;}
+  .downloadform input[type=checkbox]:checked + .checkcheck, .gfield_checkbox input[type=checkbox]:checked + .checkcheck {margin: -8px 0 5px 7px !important;}
 
-  #page_navigation { font-size: 18px;}
+  .page-template-news-events .grid-alt .right-col { margin-top: 0;}
+  .page-template-news-events .grid-alt .right-col ul { margin-top: 0;}
 
-  .grid-alt .right-col { top: 0; margin-top: 20px;}
+  .page-id-58 .calendar-container { float: none !important; width: 100% !important;}
 
-  .page-id-58 .calendar-container { width: 100%;}
+  .desktop-grid { display: none;}
 
-  .page-template-quote-pages .board-committees .col-md-4 {
-    .content-wrapper { padding-bottom: 40px; padding-top: 20px; }
-    &:first-child .content-wrapper { padding-bottom: 0;}
-    &:last-child .content-wrapper { padding-top: 0;}
-  }
-
-  .filter-controls { margin-bottom: 10px;}
-
-  .places-pn .left-col, .news-events .left-col { padding-right: 0 !important;}
-  .about-leadership {
-    .grid-image { opacity: 0;}
-    .active {
-      .grid-image { opacity: 1;}
-    }
-  }
-
-  .page-blog {
-    .filter-header { padding: 0;
-      img { width: 100%;}
-    }
-    .page-id-62 .post-filter .grid-info-tags { width: 320px;}
-  }
-
-  #main .content .teaser a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
-  #main .content .teaser.teaser-events a { font-size: 20px !important;}
-  #main .content .teaser h1 a { font-size: 22px !important;}
-  #main .content .teaser-twitter * { font-size: 18px !important;}
-
-  .downloadform input[type=checkbox]:checked + .checkcheck { margin: -8px 0px 5px 7px !important;}
-  .board-committees .download-items, .board-committees .forward-to-friends, .aside-share-button a { font-size: 18px !important;}
-
-  .home #main .content .teaser .btn-bpca, .home #main .content .teaser.teaser-twitter a { font-size: 16px !important; font-family: $proxima_nova_ltsemibold !important; font-weight: normal;}
-
-  .filter-controls.filter-events-page { padding: 0 40px !important; height: auto; margin-bottom: 0;
-    .left-panel, .right-panel { padding: 0;}
-  }
-
-  .col-md-8.blog-post { padding-right: 40px !important;}
-
-  #main .pagination { font-size: 22px;
-    input { width: 40px; text-align: center;}
-  }
-
-  .board-committees {
-    .downloadform li { margin-bottom: 20px;}
-  }
-
-  .checker + label { font-size: 18px !important;}
-  .download-link-area a { font-size: 18px !important; font-family: $proxima_nova_ltsemibold !important;}
-
-  .col-md-8.blog-post p, #main .content p { overflow: hidden;}
-  #main .content h4 { font-size: 20px !important; font-family: $proxima_nova_ltsemibold !important;}
-
-  .filter-controls { height: auto; padding: 40px !important;
-    h3 { margin-top: 0 !important;}
-  }
-  .page-id-83 .post-filter .grid-info-tags { height: auto; margin-bottom: 0;}
-
-  .page-alert-subscription .filter-controls { padding: 0 !important;
-    li { margin-bottom: 0;}
-  }
-
-  .news.news-blog { border-top: 2px solid #f1f0ef;}
-  .page-id-62 #main .content .row.post-filter { margin-bottom: 0; float: none;}
-  .page-id-62 .filter-controls { margin-bottom: 0;}
-
-  .building-filter .filter-controls { border-bottom: none; margin-bottom: 0;}
-
-  #main .content h6 { margin-bottom: 20px;}
-  #main .content .teaser.teaser-leadership li { font-size: 16px;}
-
-  #main .content .teaser {
-    &.black, &.teaser-social, &.gold, &.navy, &.blue {
-      p { font-size: 22px !important;}
-    }
-  }
-
-  .filter-header { padding: 0;
-    img.img-responsive { width: 100%; height: auto !important;}
-  }
-
-  #main h2 { font-size: 20px;}
-
-  .page-who-we-are #main .board-committees h4 { font-size: 18px !important;}
-
-
-  .photo-container { position: relative;
-    .next-slide, .prev-slide { bottom: 50%; font-size: 30px; padding: 0 10px; margin-bottom: -15px; background: black; opacity: 0.6;
-      color: white; z-index: 10}
-    .next-slide { right: 0;}
-    .prev-slide { right: auto; left: 0;}
-  }
-
-  #main .news-blog h1 a, #main .news-blog .grid-info-tags li.category-header { font-size: 22px !important;}
-
-  .page-board-committees, .page-template-quote-pages {
-    #main .content h4 { margin-top: 20px !important;}
-  }
-
-  .page-template-quote-pages #main .timeline-page-container .content-wrapper h4 { margin-top: 0 !important;}
-
-  .mobile-grid .grid-alt .right-col ul, .tablet-grid .grid-alt .right-col ul, .mobile-grid .grid-alt .left-col ul, .tablet-grid .grid-alt .left-col ul { margin-top: 20px;}
-  .tablet-grid .grid-alt .right-col ul {
-    &:first-child { margin-top: 0;}
-  }
-
-  header #menu .menu li.search { position: relative;
-    input.input.keyword { position: absolute !important; top: 100%; right: 0; margin-top: 8px;}
-  }
-
-  .search .news { padding: 0 40px 40px;}
-
-  header #menu .menu li.search { display: none;}
-  .search-phone { display: block;
-    input { background-color: white; height: 30px; width: 100px; min-width: initial;}
-  }
-
-  header a.mmenu { display: block !important;}
-  .search-phone { margin: 0;}
-  header #menu { display: none; clear: both;
-    &.active { display: block;}
-
-    .menu { float: none;
-      li { display: block; float: none; margin: 0 0 5px;
-        a { display: inline-block; font-size: 20px;}
-      }
-      li ul.sub-menu.show { position: static;
-        a { font-size: 18px;}
-      }
-    }
-  }
-
-  .accor_title { margin-bottom: 20px;}
+  .page-id-64 #mc4wp_email { margin-bottom: 30px;}
 }
 
 @include media($tabletOnly) {
-  .page-template-quote-pages .content-wrapper { padding: 40px 25px;}
+  #filepages11 { margin-bottom: 40px;}
 
-
-  .filter-controls.filter-events-page {
-    .row { @include display(flex); @include align-items(center); padding-top: 10px;}
-  }
+  .board-committees .half_tablet:first-child, .board-committees .half_tablet:last-child { width: 50%;}
 }
 
-@include media($smallTablet) {
-  .about-leadership .active:hover .grid-info-list, .about-leadership .active:active .grid-info-list { display: block !important;}
-
-  .filter-controls.filter-events-page {
-    .row { @include display(block); padding-top: 40px;}
-  }
-
-  .board-committees .half_tablet { width: 100% !important;}
-}
-
-#main .content .teaser.teaser-twitter { position: relative;
-  .bpca-twitter:last-child { position: absolute; left: 40px; bottom: 40px;}
-}
-
-@include media($notMobile) {
-  #main .content .teaser.teaser-events {
-    .grid-info { margin-bottom: -10px;}
-    .grid-info-tags { padding-top: 40px;}
-    .grid-info-list, .grid-info-tags { margin-bottom: 0 !important;}
-  }
-
-  .grid-info-list { padding: 40px 40px 0 !important;}
-  .grid-info-tags { padding-top: 40px;}
+@include media($bigTabletOnly) {
+  #main .content .teaser.teaser-leadership li, #main .content .teaser.teaser-twitter * { font-size: 16px !important;}
 }
 
 @include media($mobile) {
-  header { padding-left: 20px; padding-right: 20px;}
+  .page-id-58 .calendar-container { margin-top: 20px;}
 
-  #main .content .teaser.teaser-twitter {
-    .bpca-twitter:last-child { left: 20px; bottom: 20px;}
-  }
+  header.sticky { padding: 0 20px 30px !important;}
+  .nygov-universal-navigation header>div, .nygov-universal-navigation .l-header.nygov-header { padding: 0 !important;}
+  #main .content .teaser .btn-bpca { line-height: 0 !important;}
 
-  .page-id-52 .content-wrapper .btn-bpca { margin-bottom: 30px;}
+  .filter-controls.filter-events-page .row { padding-top: 0;}
+  .building-filter .filter-controls, .page-id-62 .filter-controls { padding: 20px 0 !important;}
+  .page-id-62 .post-filter .grid-info-tags { width: 100% !important;}
 
-  #main .content .teaser.teaser-events { padding-top: 0 !important;
-    .grid-info-tags, .grid-info-list { margin-bottom: 0;}
-    .grid-info-list { min-height: 110px; padding-bottom: 0 !important;}
-  }
+  #main .content .teaser.teaser-leadership li, #main .content .teaser.teaser-twitter * { font-size: 16px !important;}
 
-  .timeline-page .col-md-4 { min-height: initial;}
+  .about-leadership .active:hover .grid-info .grid-info-list, .about-leadership .active:active .grid-info .grid-info-list { display: block !important;}
 
-  .page-template-quote-pages #main .board-committees {
-    h1, h2, h3, h4 {
-      &:first-child { margin-top: 0 !important;}
-    }
-  }
+  img[alt="bpca_diagrams_large"] { display: none;}
 
-  .page-id-38 #main .header { padding: 0 !important;
-    .content { padding: 20px !important;}
-  }
+  .tablet-grid { display: none;}
 
-  #main .content .teaser.blog-post { padding-left: 0 !important;
-    h1 { padding-left: 120px; min-height: 85px;}
-
-    .btn-bpca { left: 20px !important; right: auto !important; position: absolute !important; bottom: 15px !important;}
-    .grid-info { border-bottom: none;
-      > div { margin-left: 0; padding-bottom: 20px; padding-left: 20px;}
-    }
-  }
-  .col-md-8.blog-post {
-    .grid-info div .grid-aside-content, p { margin-left: 0 !important; width: 100%;}
-  }
-
-  .col-md-8.blog-post p { margin-bottom: 20px;}
-
-  .residential-buildings, .news-events {
-    .grid-info-tags { padding-top: 20px;}
-  }
-
-  #main .content .teaser h1 a { font-size: 22px !important;}
-  #main .content .news-blog .teaser .btn-bpca { right: auto !important; left: 140px; font-size: 18px !important;}
-  #main .content .teaser .btn-bpca { line-height: 22px !important;}
-
-  .home #main .content .teaser.gold {
-    h6 { margin-bottom: 20px;}
-  }
-  .home #main .content .teaser {
-    .btn-bpca { right: 40px !important; bottom: 40px !important;}
-  }
-
-  .home #main .content.leadership .leadership-list a { font-size: 16px !important;}
-  #main .content .teaser.teaser-leadership li { font-size: 14px; margin-bottom: 5px;}
-  #main .content .teaser-leadership h6 { margin-bottom: 10px;}
-
-  .page-who-we-are .content > p { margin: 0;}
-
-  .page-id-62 .post-filter .grid-info-tags { width: 100%;}
-
-  .filter-controls.filter-events-page { padding: 20px 0 !important;
-    .left-panel, .right-panel, .calendar, .post-filter { padding: 0; float: none;}
-    .post-filter, .calendar-container { width: 100%;}
-  }
-  .news-events { clear: both;}
-
-  .board-committees {
-    > div { padding: 0;}
-  }
-  #main .content .news-blog .grid-info-tags { margin-right: 20px;}
-
-  .col-md-8.blog-post .grid-info div { margin-top: 0;}
-  .row.blog { padding-bottom: 0;}
-
-  .news.news-blog .grid-info { border: none;}
-
-  #main .content.header img { margin-left: 0; left: 50%; @include transform(translateX(-50%));}
-
-  .filter-controls { padding: 20px 0 !important;}
-
-  #main .pagination { padding-bottom: 20px; background: white; position: relative; top: -1px;}
-
-  .slides-counter { bottom: 18px; right: 20px;}
-  .photo-caption-text, .archive-share-buttons { margin: 20px;}
-  .archive-share-buttons { margin-bottom: 0;}
-
-  #main .news-blog h1 { margin-top: 20px; }
-  .grid-info-tags { padding-top: 20px; }
-
-  #main .content .teaser.blue h6 { font-size: 30px;}
-
-  #footer {
-    .resources, .newsletter { font-size: 18px;}
-  }
-
-  .page-who-we-are #main .board-committees h4 { margin-top: 30px !important; }
-
-  #main .content .teaser.black h6 { font-size: 32px;}
-
-  #main .content .news.news-blog .teaser { height: auto; padding-left: 0 !important; padding-top: 0 !important;
-    .grid-info { position: relative; padding-bottom: 80px;}
-    .grid-info-tags { padding-top: 0;}
-    img, p { display: none;}
-    .btn-bpca { bottom: 20px;}
-  }
-
-  .page-links #main .content-wrapper h4 { margin-top: 40px !important;
-    &:first-child { margin-top: 0 !important;}
-  }
-
-  .search {
-    .header { margin-bottom: 0 !important;}
-    .news { padding: 20px;}
-  }
-
-  #filepages11 { margin-top: 20px;}
-
-  .mobile-grid .grid { background: white;}
-
-  .filter_popup { padding: 20px; top: 0; left: 0; width: 100% !important;}
+  .half_tablet:first-child { padding-bottom: 0;}
 }
