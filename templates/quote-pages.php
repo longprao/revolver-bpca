@@ -126,11 +126,9 @@ if (array_key_exists('down-files', $_POST)) {
          <a target="_blank" href="http://twitter.com/share?text=<?php echo $thiscaption;?>&url=<?php echo $imagedata[0]->imglink;?>">
          <div class="social-icon"><i class="fa fa-twitter"></i></div><div class="share-text-black">Share on Twitter</div>
          </a><br />
-                            <a target="_blank"
-                               href="https://www.facebook.com/sharer/sharer.php?u='<?php echo $imagedata[0]->imglink; ?>">
-                                <div class="social-icon"><i class="fa fa-facebook"></i></div>
-                                <div class="share-text-black">Share on Facebook</div>
-                            </a><br/>
+         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='<?php echo $imagedata[0]->imglink;?>">
+         <div class="social-icon"><i class="fa fa-facebook"></i></div><div class="share-text-black">Share on Facebook</div>
+         </a><br />
          
                         </div>
                         <iframe id="downframe" style="display:none"></iframe>

@@ -1,0 +1,43 @@
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.visible-tablet { display: none; }
+@media screen and (max-width: 991px) { .visible-tablet { display: inline-block; } }
+
+.visible-phone { display: none; }
+@media screen and (max-width: 550px) { .visible-phone { display: inline-block; } }
+
+@media screen and (max-width: 991px) { .hidden-tablet { display: none !important; } }
+
+@media screen and (max-width: 550px) { .hidden-phone { display: none !important; } }
+
+.gform_confirmation_wrapper { padding-top: 0; }
+
+.gform_wrapper h3.gform_title { font-size: 16px !important; }
+
+.content-wrapper ol { padding-left: 20px; font-size: 16px; }
+@media screen and (max-width: 991px) { .content-wrapper ol { font-size: 18px; } }
+
+#main .board-committees h4 { margin: 10px 0 5px; }
+
+.page-id-50 #main .board-committees h4 { margin: 10px 0 0; }
+
+.post-filter .grid-info-tags li span { font-weight: normal !important; }
+
+@media screen and (min-width: 992px) { .hideuntilsubmit { margin-top: -200px; margin-left: 45%; }
+  .page-template-quote-pages .content-wrapper { padding-top: 35px; }
+  .page-id-50 .board-committees .content-wrapper, .page-id-64 .board-committees .content-wrapper, .page-id-60 .board-committees .content-wrapper, .page-id-74 .board-committees .content-wrapper { padding-bottom: 26px; }
+  .page-id-74 .download-link-area { margin-bottom: 10px; }
+  .page-id-76 .board-committees .content-wrapper { padding-bottom: 40px; }
+  .page-id-52 .board-committees .col-md-4 .content-wrapper { padding-bottom: 26px; }
+  .page-id-52 .board-committees .col-sm-5 .content-wrapper { padding-bottom: 40px; }
+  .page-id-78 .board-committees .content-wrapper, .page-id-85 .board-committees .content-wrapper { padding-bottom: 36px; }
+  .page-id-27 .board-committees .col-md-8 .content-wrapper { padding-bottom: 16px; }
+  .page-id-60 .board-committees .content-wrapper p:first-child img { margin-top: 0; }
+  #scrollUp { display: none !important; } }
+@media screen and (min-width: 992px) and (max-width: 1200px) { .hideuntilsubmit { margin-top: -215px; } }
+@media screen and (max-width: 1200px) { .download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 25px; }
+  .download-link-area .fa { margin-right: 14px !important; } }
+@media screen and (min-width: 551px) and (max-width: 991px) { .page-id-38 .content-wrapper { padding-top: 20px; padding-bottom: 30px; }
+  .board-committees-public-info.board-committees .half_tablet:nth-child(2) .col-md-4:first-child .content.content-wrapper { padding: 0; } }
+
+/*# sourceMappingURL=long2.css.map */

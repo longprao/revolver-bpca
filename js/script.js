@@ -4,8 +4,6 @@
 
     $(document).bind("mobileinit", function() {
         $.mobile.ajaxEnabled = false;
-        $.mobile.pushStateEnabled = false;
-        $.mobile.ignoreContentEnabled = true;
     });
 
     $(document).on('pageinit', function(event){

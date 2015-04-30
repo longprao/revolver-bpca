@@ -8,4 +8,5 @@ $tabletOnly: new-breakpoint(min-width 551px max-width 991px 8);
 $desktop: new-breakpoint(min-width 992px 12);
 $notMobile: new-breakpoint(min-width 551px 8);
 $smallDesktop: new-breakpoint(max-width 1200px 8);
+$smallDesktopOnly: new-breakpoint(min-width 992px max-width 1200px 8);
 $largeDesktop: new-breakpoint(min-width 1201px 8);

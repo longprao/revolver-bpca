@@ -376,9 +376,6 @@ h4.extra-space,
   text-align: left !important;
 }
 
-#gform_confirmation_message_1{
-    padding-bottom:34px;
-}
 .teaserMap img,.exploreTeaser .content.image img{display:block!important; height:350px;  }
 .exploreTeaser{overflow:hidden;}
 /* End Gravity Forms Style */

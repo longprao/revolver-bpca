@@ -146,6 +146,9 @@ $('html, body').animate({
        $('.hideuntilsubmit').addClass('showlayer');
 	   jQuery('#gform_fields_1 input').val('');
 		jQuery('#gform_1 .gform_title').after(jQuery('.form_success_message'));
+		jQuery('html, body').animate({
+			scrollTop: jQuery( '#gform_wrapper_1' ).offset().top
+		}, 0);
   }
 
   $(".accordion-child > .downloadform ul li").closest('.accordion').addClass('show');

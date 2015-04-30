@@ -46,7 +46,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="http://twitter.com/share?text=<?php echo urlencode( get_the_title() ); ?>&url=<?php echo urlencode(get_the_permalink()) ?>" target="_blank">
+										<a class="fb-share" href="http://twitter.com/share?text=<?php echo urlencode( get_the_title() ); ?>&url=<?php echo urlencode(get_the_permalink()) ?>" target="_blank">
 											<i class="fa fa-twitter"></i>Share on Twitter
 										</a>
 									</li>

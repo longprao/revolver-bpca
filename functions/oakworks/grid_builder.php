@@ -226,7 +226,7 @@ $output .= <<< HTML
 				<ul>
 					<li class="grid-thumbnail places">{$post['img']}</li>
 					<li class="grid-map places">
-						<a href="http://maps.google.com/maps/?daddr={$post['address']}" target="_blank">
+						<a href="http://maps.google.com/maps/?daddr={$post['map_address']}" target="_blank">
 							{$post['map_img']}
 						</a>
 					</li>
@@ -263,7 +263,7 @@ HTML;
 
         $output .= <<< HTML
 							<li>
-								<a href="http://twitter.com/share?text={$post['title']}&url={$permalink}"" target="_blank">
+								<a class="fb-share" href="http://twitter.com/share?text={$post['title']}&url={$permalink}"" target="_blank">
 									<i class="fa fa-twitter"></i>Share on Twitter
 								</a>
 							</li>

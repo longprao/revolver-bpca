@@ -461,11 +461,6 @@ a.mmenu { cursor: pointer;}
   .filter-controls.filter-events-page {
     .row { @include display(flex); @include align-items(center); padding-top: 10px;}
   }
-
-  .board-committees .half_tablet {
-    &:first-child { width: 40%;}
-    &:last-child { width: 60%;}
-  }
 }
 
 @include media($smallTablet) {

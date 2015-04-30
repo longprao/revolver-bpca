@@ -1,0 +1,89 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+$red: #790000;
+$blue: #197bc2;
+
+$proxima_nova_ltsemibold: proxima_nova_ltsemibold, $helvetica;
+$proxima_nova_rgbold: proxima_nova_rgbold, $helvetica;
+
+$currentMenuItem: '&.current-menu-item, &.current_page_item, &.current-menu-ancestor, &.current-menu-parent';
+
+.visible-tablet { display: none;
+  @include media($tablet) { display: inline-block;}
+}
+.visible-phone { display: none;
+  @include media($mobile) { display: inline-block;}
+}
+.hidden-tablet {
+  @include media($tablet) { display: none !important;}
+}
+.hidden-phone {
+  @include media($mobile) { display: none !important;}
+}
+
+.gform_confirmation_wrapper { padding-top: 0;}
+
+.gform_wrapper h3.gform_title { font-size: 16px !important;}
+
+.content-wrapper ol { padding-left: 20px; font-size: 16px;
+  @include media($tablet) { font-size: 18px;}
+}
+
+#main .board-committees h4 { margin: 10px 0 5px;}
+.page-id-50 #main .board-committees h4 { margin: 10px 0 0;}
+
+.post-filter .grid-info-tags li span { font-weight: normal !important;}
+
+@include media($desktop) {
+  .hideuntilsubmit { margin-top: -200px; margin-left: 45%;}
+
+  .page-template-quote-pages .content-wrapper { padding-top: 35px;}
+
+  .page-id-50, .page-id-64, .page-id-60, .page-id-74 {
+    .board-committees .content-wrapper { padding-bottom: 26px; }
+  }
+
+  .page-id-74 {
+    .download-link-area { margin-bottom: 10px;}
+  }
+
+  .page-id-76 {
+    .board-committees .content-wrapper { padding-bottom: 40px; }
+  }
+
+  .page-id-52 {
+    .board-committees .col-md-4 .content-wrapper { padding-bottom: 26px; }
+    .board-committees .col-sm-5 .content-wrapper { padding-bottom: 40px; }
+  }
+
+  .page-id-78, .page-id-85 {
+    .board-committees .content-wrapper { padding-bottom: 36px; }
+  }
+
+  .page-id-27 {
+    .board-committees .col-md-8 .content-wrapper { padding-bottom: 16px; }
+  }
+
+  .page-id-60 {
+    .board-committees .content-wrapper p:first-child img { margin-top: 0;}
+  }
+
+  #scrollUp { display: none !important;}
+}
+
+@include media($smallDesktopOnly) {
+  .hideuntilsubmit { margin-top: -215px;}
+}
+
+@include media($smallDesktop) {
+  .download-items .fa, .forward-to-friends .fa, .grid-aside-content i { width: 25px; }
+  .download-link-area .fa { margin-right: 14px !important;}
+}
+
+@include media($tabletOnly) {
+  .page-id-38 .content-wrapper { padding-top: 20px; padding-bottom: 30px; }
+
+  .board-committees-public-info.board-committees .half_tablet:nth-child(2) .col-md-4:first-child .content.content-wrapper { padding: 0;}
+}

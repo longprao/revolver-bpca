@@ -33,6 +33,7 @@
     <!-- Lukes over-ride css for any global elements -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/luke.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/long.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/long2.css" />
 
 <!--    <script src="--><?php //bloginfo( 'template_url' ); ?><!--/js/jquery.mmenu.min.all.js" type="text/javascript"></script>-->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.flexslider-min.js" type="text/javascript"></script>
